@@ -1,16 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, createStyles, Typography } from '@material-ui/core';
 import * as d3 from 'd3';
 
 import useRefInit from 'hooks/useRefInit';
 import useSimulation from 'hooks/useSimulation';
 
-import recipes from 'data/recipes.json';
+import allRecipes from 'data/recipes.json';
 
 const NODE_RADIUS = 6;
 
-const useStyles = makeStyles( {
+const useStyles = makeStyles( ( theme ) => createStyles( {
   canvasContainer: {
+    position: 'relative',
     width: '100%',
     height: '100%',
     overflow: 'hidden',
@@ -19,18 +20,13 @@ const useStyles = makeStyles( {
     width: '100%',
     height: '100%',
   },
-  svg: {
-    width: '100%',
-    height: '100%',
+  information: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    margin: theme.spacing( 2 ),
   },
-  link: {
-    strokeWidth: '1px',
-    stroke: 'white',
-  },
-  node: {
-    fill: 'blue',
-  },
-} );
+} ) );
 
 interface NodeDatum extends d3.SimulationNodeDatum
 {
@@ -62,8 +58,8 @@ const DISPLAYED_CATEGORIES = new Set( [
   // 'Las Vegas Cantina Menu',
   'Vegetarian Menu',
 ] );
-const filteredRecipes = recipes.filter( ( recipe ) => DISPLAYED_CATEGORIES.has( recipe.category ) );
-console.log( 'Filtered Recipe Count:', filteredRecipes.length, 'Total Recipe Count:', recipes.length );
+const recipes = allRecipes.filter( ( recipe ) => DISPLAYED_CATEGORIES.has( recipe.category ) );
+console.log( 'Filtered Recipe Count:', recipes.length, 'Total Recipe Count:', allRecipes.length );
 
 const recipeId = ( name: string ) => `recipe_${name}`;
 const ingredientId = ( name: string ) => `ingredient_${name}`;
@@ -74,8 +70,8 @@ const IngredientGraph: React.FC = () =>
 
   const nodesRef = useRefInit<NodeDatum[]>( () =>
   {
-    const ingredients = Array.from( new Set( filteredRecipes.flatMap( ( recipe ) => recipe.ingredients ) ) );
-    const recipeNames = Array.from( new Set( filteredRecipes.map( ( recipe ) => recipe.name ) ) );
+    const ingredients = Array.from( new Set( recipes.flatMap( ( recipe ) => recipe.ingredients ) ) );
+    const recipeNames = Array.from( new Set( recipes.map( ( recipe ) => recipe.name ) ) );
 
     return [
       ...ingredients.map<NodeDatum>( ( ingredient ) => ( {
@@ -85,14 +81,14 @@ const IngredientGraph: React.FC = () =>
       } ) ),
       ...recipeNames.map<NodeDatum>( ( recipeName ) => ( {
         id: recipeId( recipeName ),
-        name: `${recipeName} (${filteredRecipes.find( ( r ) => r.name === recipeName )!.category})`,
+        name: `${recipeName} (${recipes.find( ( r ) => r.name === recipeName )!.category})`,
         type: 'recipe',
       } ) )
     ];
   } );
 
   const linksRef = useRefInit<LinkDatum[]>( () =>
-    filteredRecipes
+    recipes
       .flatMap( ( { name, ingredients } ) =>
         ingredients
           .map( ( ingredient ) => ( {
@@ -239,6 +235,32 @@ const IngredientGraph: React.FC = () =>
     return distance <= NODE_RADIUS;
   } );
 
+  let minIngredientRecipe = recipes.reduce( ( currentMax, node ) =>
+  {
+    if( !currentMax
+      || node.ingredients.length < currentMax.ingredients.length )
+    {
+      return node;
+    }
+    else
+    {
+      return currentMax;
+    }
+  } );
+
+  let maxIngredientRecipe = recipes.reduce( ( currentMax, node ) =>
+  {
+    if( !currentMax
+      || node.ingredients.length > currentMax.ingredients.length )
+    {
+      return node;
+    }
+    else
+    {
+      return currentMax;
+    }
+  } );
+
   return (
     <div className={styles.canvasContainer}>
       <canvas
@@ -250,39 +272,40 @@ const IngredientGraph: React.FC = () =>
         onMouseMove={onMouseMove}
         onMouseLeave={( e ) => setMousePosition( undefined )}
       />
+      <div className={styles.information}>
+        <table>
+          <tbody>
+            <tr>
+              <Typography component="td"># of Recipes:</Typography>
+              <Typography component="td">{recipes.length}</Typography>
+            </tr>
+            <tr>
+              <Typography component="td"># of Ingredients:</Typography>
+              <Typography component="td">{nodesRef.current.filter( ( n ) => n.type === 'ingredient' ).length}</Typography>
+            </tr>
+            <tr>
+              <Typography component="td">Avg Ingredient/Recipe:</Typography>
+              <Typography component="td">
+                {( recipes.reduce( ( total, node ) => total + node.ingredients.length, 0 ) / recipes.length ).toFixed( 2 )}
+              </Typography>
+            </tr>
+            {minIngredientRecipe && (
+              <tr>
+                <Typography component="td">Min Ingredient/Recipe:</Typography>
+                <Typography component="td">{minIngredientRecipe.ingredients.length} ({minIngredientRecipe.name})</Typography>
+              </tr>
+            )}
+            {maxIngredientRecipe && (
+              <tr>
+                <Typography component="td">Max Ingredient/Recipe:</Typography>
+                <Typography component="td">{maxIngredientRecipe.ingredients.length} ({maxIngredientRecipe.name})</Typography>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
-
-  // return (
-  //   <svg
-  //     className={styles.svg}
-  //     viewBox="-1000 -1000 2000 2000"
-  //   >
-  //     {linksRef.current.map( ( link ) =>
-  //       (
-  //         <line
-  //           key={link.index}
-  //           className={styles.link}
-  //           x1={( link.source as IngredientNodeDatum ).x}
-  //           y1={( link.source as IngredientNodeDatum ).y}
-  //           x2={( link.target as IngredientNodeDatum ).x}
-  //           y2={( link.target as IngredientNodeDatum ).y}
-  //         />
-  //       )
-  //     )}
-  //     {nodesRef.current.map( ( node ) =>
-  //       (
-  //         <circle
-  //           key={node.name}
-  //           className={styles.node}
-  //           cx={node.x}
-  //           cy={node.y}
-  //           r={10}
-  //         />
-  //       )
-  //     )}
-  //   </svg>
-  // );
 };
 
 export default IngredientGraph;
