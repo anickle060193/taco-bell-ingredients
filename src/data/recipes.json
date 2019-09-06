@@ -1,0 +1,2702 @@
+[
+  {
+    "name": "Breakfast Crunchwrap - Bacon",
+    "ingredients": [
+      "Flour Tortilla",
+      "Hashbrown",
+      "Cheddar Cheese",
+      "Eggs",
+      "Bacon",
+      "Creamy Jalapeno Sauce"
+    ]
+  },
+  {
+    "name": "Breakfast Crunchwrap - Sausage",
+    "ingredients": [
+      "Flour Tortilla",
+      "Hashbrown",
+      "Cheddar Cheese",
+      "Eggs",
+      "Sausage Patty",
+      "Creamy Jalapeno Sauce"
+    ]
+  },
+  {
+    "name": "Breakfast Crunchwrap - Steak",
+    "ingredients": [
+      "Flour Tortilla",
+      "Hashbrown",
+      "USDA Select Marinated Grilled Steak",
+      "Cheddar Cheese",
+      "Eggs",
+      "Creamy Jalapeno Sauce"
+    ]
+  },
+  {
+    "name": "Breakfast Quesadilla - Bacon",
+    "ingredients": [
+      "Flour Tortilla",
+      "Three Cheese Blend",
+      "Eggs",
+      "Bacon"
+    ]
+  },
+  {
+    "name": "Breakfast Quesadilla - Sausage",
+    "ingredients": [
+      "Flour Tortilla",
+      "Three Cheese Blend",
+      "Eggs",
+      "Sausage Crumbles"
+    ]
+  },
+  {
+    "name": "Breakfast Quesadilla - Steak",
+    "ingredients": [
+      "Flour Tortilla",
+      "Three Cheese Blend",
+      "USDA Select Marinated Grilled Steak",
+      "Eggs"
+    ]
+  },
+  {
+    "name": "Breakfast Soft Taco - Bacon",
+    "ingredients": [
+      "Eggs",
+      "Flour Tortilla",
+      "Bacon",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Breakfast Soft Taco - Egg & Cheese",
+    "ingredients": [
+      "Eggs",
+      "Flour Tortilla",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Breakfast Soft Taco - Sausage",
+    "ingredients": [
+      "Eggs",
+      "Flour Tortilla",
+      "Sausage Crumbles",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Cinnabon® Delights™ (2 Pack)",
+    "ingredients": [
+      "Cinnabon® Delights™"
+    ]
+  },
+  {
+    "name": "Cinnabon® Delights™ (4 Pack)",
+    "ingredients": [
+      "Cinnabon® Delights™"
+    ]
+  },
+  {
+    "name": "Cinnabon® Delights™ (12 Pack - Serves 4)",
+    "ingredients": [
+      "Cinnabon® Delights™"
+    ]
+  },
+  {
+    "name": "Grande Scrambler Burrito - Bacon",
+    "ingredients": [
+      "Potato Bites",
+      "Flour Tortilla",
+      "Eggs",
+      "Pico de Gallo",
+      "Nacho Cheese Sauce",
+      "Reduced-Fat Sour Cream",
+      "Bacon",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Grande Scrambler Burrito - Sausage",
+    "ingredients": [
+      "Potato Bites",
+      "Flour Tortilla",
+      "Eggs",
+      "Pico de Gallo",
+      "Nacho Cheese Sauce",
+      "Reduced-Fat Sour Cream",
+      "Sausage Crumbles",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Grande Scrambler Burrito - Steak",
+    "ingredients": [
+      "Potato Bites",
+      "Flour Tortilla",
+      "Eggs",
+      "USDA Select Marinated Grilled Steak",
+      "Pico de Gallo",
+      "Nacho Cheese Sauce",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Grilled Breakfast Burrito - Bacon",
+    "ingredients": [
+      "Flour Tortilla",
+      "Eggs",
+      "Nacho Cheese Sauce",
+      "Bacon"
+    ]
+  },
+  {
+    "name": "Grilled Breakfast Burrito - Fiesta Potato",
+    "ingredients": [
+      "Flour Tortilla",
+      "Eggs",
+      "Pico de Gallo",
+      "Potato Bites",
+      "Nacho Cheese Sauce"
+    ]
+  },
+  {
+    "name": "Grilled Breakfast Burrito - Sausage",
+    "ingredients": [
+      "Flour Tortilla",
+      "Eggs",
+      "Nacho Cheese Sauce",
+      "Sausage Crumbles"
+    ]
+  },
+  {
+    "name": "Hashbrown",
+    "ingredients": [
+      "Hashbrown"
+    ]
+  },
+  {
+    "name": "Iced Regular Coffee",
+    "ingredients": [
+      "Rainforest Coffee"
+    ]
+  },
+  {
+    "name": "Mini Skillet Bowl",
+    "ingredients": [
+      "Potato Bites",
+      "Eggs",
+      "Pico de Gallo",
+      "Nacho Cheese Sauce"
+    ]
+  },
+  {
+    "name": "Mtn Dew® Kickstart™ Orange Citrus",
+    "ingredients": [
+      "Mtn Dew® Kickstart™ Orange Citrus (16 fl oz)"
+    ]
+  },
+  {
+    "name": "Nestle® Coffee-Mate™ Sweetened Original Creamer (1 portion creamer)",
+    "ingredients": [
+      "Nestle® Coffee-Mate™ Sweetened Original Creamer"
+    ]
+  },
+  {
+    "name": "Rainforest Coffee",
+    "ingredients": [
+      "Rainforest Coffee"
+    ]
+  },
+  {
+    "name": "Rainforest Coffee with Nestle® Coffee-Mate™ Sweetened Original Creamer (1 portion creamer)",
+    "ingredients": [
+      "Rainforest Coffee",
+      "Nestle® Coffee-Mate™ Sweetened Original Creamer"
+    ]
+  },
+  {
+    "name": "Sausage Flatbread Quesadilla",
+    "ingredients": [
+      "Gordita Flatbread",
+      "Eggs",
+      "Three Cheese Blend",
+      "Sausage Crumbles"
+    ]
+  },
+  {
+    "name": "Tropicana® Orange Juice",
+    "ingredients": [
+      "Tropicana® Orange Juice"
+    ]
+  },
+  {
+    "name": "Breakfast Soft Taco - Bacon",
+    "ingredients": [
+      "Eggs",
+      "Flour Tortilla",
+      "Bacon",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Breakfast Soft Taco - Egg & Cheese",
+    "ingredients": [
+      "Eggs",
+      "Flour Tortilla",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Breakfast Soft Taco - Sausage",
+    "ingredients": [
+      "Eggs",
+      "Flour Tortilla",
+      "Sausage Crumbles",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Cinnabon® Delights™ (2 Pack)",
+    "ingredients": [
+      "Cinnabon® Delights™"
+    ]
+  },
+  {
+    "name": "Grilled Breakfast Burrito - Bacon",
+    "ingredients": [
+      "Flour Tortilla",
+      "Eggs",
+      "Nacho Cheese Sauce",
+      "Bacon"
+    ]
+  },
+  {
+    "name": "Grilled Breakfast Burrito - Fiesta Potato",
+    "ingredients": [
+      "Flour Tortilla",
+      "Eggs",
+      "Pico de Gallo",
+      "Potato Bites",
+      "Nacho Cheese Sauce"
+    ]
+  },
+  {
+    "name": "Grilled Breakfast Burrito - Sausage",
+    "ingredients": [
+      "Flour Tortilla",
+      "Eggs",
+      "Nacho Cheese Sauce",
+      "Sausage Crumbles"
+    ]
+  },
+  {
+    "name": "Hashbrown",
+    "ingredients": [
+      "Hashbrown"
+    ]
+  },
+  {
+    "name": "Iced Regular Coffee",
+    "ingredients": [
+      "Rainforest Coffee"
+    ]
+  },
+  {
+    "name": "Mini Skillet Bowl",
+    "ingredients": [
+      "Potato Bites",
+      "Eggs",
+      "Pico de Gallo",
+      "Nacho Cheese Sauce"
+    ]
+  },
+  {
+    "name": "Mtn Dew® Kickstart™ Orange Citrus",
+    "ingredients": [
+      "Mtn Dew® Kickstart™ Orange Citrus (16 fl oz)"
+    ]
+  },
+  {
+    "name": "Rainforest Coffee",
+    "ingredients": [
+      "Rainforest Coffee"
+    ]
+  },
+  {
+    "name": "Rainforest Coffee with Nestle® Coffee-Mate™ Sweetened Original Creamer (1 portion creamer)",
+    "ingredients": [
+      "Rainforest Coffee",
+      "Nestle® Coffee-Mate™ Sweetened Original Creamer"
+    ]
+  },
+  {
+    "name": "Sausage Flatbread Quesadilla",
+    "ingredients": [
+      "Gordita Flatbread",
+      "Eggs",
+      "Three Cheese Blend",
+      "Sausage Crumbles"
+    ]
+  },
+  {
+    "name": "7-Layer Burrito",
+    "ingredients": [
+      "Flour Tortilla",
+      "Refried Beans",
+      "Seasoned Rice",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Three Cheese Blend",
+      "Iceberg Lettuce",
+      "Tomatoes"
+    ]
+  },
+  {
+    "name": "Bean Burrito",
+    "ingredients": [
+      "Refried Beans",
+      "Flour Tortilla",
+      "Red Sauce",
+      "Cheddar Cheese",
+      "Onions"
+    ]
+  },
+  {
+    "name": "Beefy 5-Layer Burrito",
+    "ingredients": [
+      "Flour Tortilla",
+      "Refried Beans",
+      "Seasoned Beef",
+      "Nacho Cheese Sauce",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Beefy Fritos® Burrito",
+    "ingredients": [
+      "Flour Tortilla",
+      "Seasoned Beef",
+      "Seasoned Rice",
+      "Nacho Cheese Sauce",
+      "Fritos® Chips"
+    ]
+  },
+  {
+    "name": "Beefy Nacho Loaded Griller",
+    "ingredients": [
+      "Flour Tortilla",
+      "Seasoned Beef",
+      "Nacho Cheese Sauce",
+      "Red Strips"
+    ]
+  },
+  {
+    "name": "Black Bean Burrito",
+    "ingredients": [
+      "Flour Tortilla",
+      "Black Beans",
+      "Seasoned Rice",
+      "Red Sauce",
+      "Three Cheese Blend"
+    ]
+  },
+  {
+    "name": "Burrito Supreme® - Beef",
+    "ingredients": [
+      "Flour Tortilla",
+      "Refried Beans",
+      "Seasoned Beef",
+      "Red Sauce",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Cheddar Cheese",
+      "Onions"
+    ]
+  },
+  {
+    "name": "Burrito Supreme® - Chicken",
+    "ingredients": [
+      "Flour Tortilla",
+      "Fire Grilled Chicken",
+      "Refried Beans",
+      "Red Sauce",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Cheddar Cheese",
+      "Onions"
+    ]
+  },
+  {
+    "name": "Burrito Supreme® - Steak",
+    "ingredients": [
+      "Flour Tortilla",
+      "Refried Beans",
+      "USDA Select Marinated Grilled Steak",
+      "Red Sauce",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Cheddar Cheese",
+      "Onions"
+    ]
+  },
+  {
+    "name": "Cheesy Bean & Rice Burrito",
+    "ingredients": [
+      "Flour Tortilla",
+      "Refried Beans",
+      "Seasoned Rice",
+      "Nacho Cheese Sauce",
+      "Creamy Jalapeno Sauce"
+    ]
+  },
+  {
+    "name": "Cheesy Potato Griller",
+    "ingredients": [
+      "Flour Tortilla",
+      "Potato Bites",
+      "Nacho Cheese Sauce",
+      "Reduced-Fat Sour Cream"
+    ]
+  },
+  {
+    "name": "Chili Cheese Burrito (regional)",
+    "ingredients": [
+      "Flour Tortilla",
+      "Chili (Regional)",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Chipotle Chicken Loaded Griller",
+    "ingredients": [
+      "Flour Tortilla",
+      "Fire Grilled Chicken",
+      "Reduced-Fat Sour Cream",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Quesarito - Beef",
+    "ingredients": [
+      "Flour Tortilla",
+      "Seasoned Beef",
+      "Seasoned Rice",
+      "Cheddar Cheese",
+      "Nacho Cheese Sauce",
+      "Reduced-Fat Sour Cream",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Quesarito - Chicken",
+    "ingredients": [
+      "Flour Tortilla",
+      "Shredded Chicken",
+      "Seasoned Rice",
+      "Cheddar Cheese",
+      "Nacho Cheese Sauce",
+      "Reduced-Fat Sour Cream",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Quesarito - Steak",
+    "ingredients": [
+      "Flour Tortilla",
+      "Seasoned Rice",
+      "USDA Select Marinated Grilled Steak",
+      "Cheddar Cheese",
+      "Nacho Cheese Sauce",
+      "Reduced-Fat Sour Cream",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Shredded Chicken Burrito",
+    "ingredients": [
+      "Flour Tortilla",
+      "Shredded Chicken",
+      "Seasoned Rice",
+      "Avocado Ranch Sauce",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "XXL Grilled Stuft Burrito - Beef",
+    "ingredients": [
+      "Flour Tortilla",
+      "Seasoned Beef",
+      "Seasoned Rice",
+      "Pico de Gallo",
+      "Refried Beans",
+      "Three Cheese Blend",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "XXL Grilled Stuft Burrito - Chicken",
+    "ingredients": [
+      "Flour Tortilla",
+      "Fire Grilled Chicken",
+      "Seasoned Rice",
+      "Pico de Gallo",
+      "Refried Beans",
+      "Three Cheese Blend",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "XXL Grilled Stuft Burrito - Steak",
+    "ingredients": [
+      "Flour Tortilla",
+      "Seasoned Rice",
+      "USDA Select Marinated Grilled Steak",
+      "Pico de Gallo",
+      "Refried Beans",
+      "Three Cheese Blend",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "Beefy Fritos® Burrito",
+    "ingredients": [
+      "Flour Tortilla",
+      "Seasoned Beef",
+      "Seasoned Rice",
+      "Nacho Cheese Sauce",
+      "Fritos® Chips"
+    ]
+  },
+  {
+    "name": "Beefy Mini Quesadilla",
+    "ingredients": [
+      "Seasoned Beef",
+      "Flour Tortilla",
+      "Three Cheese Blend",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Cheesy Bean & Rice Burrito",
+    "ingredients": [
+      "Flour Tortilla",
+      "Refried Beans",
+      "Seasoned Rice",
+      "Nacho Cheese Sauce",
+      "Creamy Jalapeno Sauce"
+    ]
+  },
+  {
+    "name": "Cheesy Roll Up",
+    "ingredients": [
+      "Three Cheese Blend",
+      "Flour Tortilla"
+    ]
+  },
+  {
+    "name": "Cinnabon® Delights™ (2 Pack)",
+    "ingredients": [
+      "Cinnabon® Delights™"
+    ]
+  },
+  {
+    "name": "Cinnamon Twists",
+    "ingredients": [
+      "Cinnamon Twists"
+    ]
+  },
+  {
+    "name": "Shredded Chicken Mini Quesadilla",
+    "ingredients": [
+      "Shredded Chicken",
+      "Flour Tortilla",
+      "Three Cheese Blend",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Spicy Potato Soft Taco",
+    "ingredients": [
+      "Potato Bites",
+      "Flour Tortilla",
+      "Iceberg Lettuce",
+      "Cheddar Cheese",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Spicy Tostada",
+    "ingredients": [
+      "Refried Beans",
+      "Red Sauce",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Tostada Shell",
+      "Cheddar Cheese",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Triple Layer Nachos",
+    "ingredients": [
+      "Nacho Chips",
+      "Refried Beans",
+      "Red Sauce",
+      "Nacho Cheese Sauce"
+    ]
+  },
+  {
+    "name": "Cherry Sunset Freeze™ (16 oz)",
+    "ingredients": [
+      "Cherry Flavored Syrup",
+      "Pineapple Freeze - 16 oz"
+    ]
+  },
+  {
+    "name": "Cherry Sunset Freeze™ (20 oz)",
+    "ingredients": [
+      "Cherry Flavored Syrup",
+      "Pineapple Freeze - 20 oz"
+    ]
+  },
+  {
+    "name": "Mtn Dew® Baja Blast Freeze™ (16 oz)",
+    "ingredients": [
+      "Mtn Dew® Baja Blast Freeze™ (16 oz)"
+    ]
+  },
+  {
+    "name": "Mtn Dew® Baja Blast Freeze™ (20 oz)",
+    "ingredients": [
+      "Mtn Dew® Baja Blast Freeze™ (20 oz)"
+    ]
+  },
+  {
+    "name": "Strawberry Skittles Freeze™ (16 oz)",
+    "ingredients": [
+      "Strawberry Skittles Freeze™"
+    ]
+  },
+  {
+    "name": "Strawberry Skittles Freeze™ (20 oz)",
+    "ingredients": [
+      "Strawberry Skittles Freeze™"
+    ]
+  },
+  {
+    "name": "Fresco Bean Burrito",
+    "ingredients": [
+      "Refried Beans",
+      "Flour Tortilla",
+      "Red Sauce",
+      "Pico de Gallo",
+      "Onions"
+    ]
+  },
+  {
+    "name": "Fresco Burrito Supreme® - Chicken",
+    "ingredients": [
+      "Flour Tortilla",
+      "Fire Grilled Chicken",
+      "Refried Beans",
+      "Red Sauce",
+      "Pico de Gallo",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Onions"
+    ]
+  },
+  {
+    "name": "Fresco Burrito Supreme® - Steak",
+    "ingredients": [
+      "Flour Tortilla",
+      "Refried Beans",
+      "USDA Select Marinated Grilled Steak",
+      "Red Sauce",
+      "Pico de Gallo",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Onions"
+    ]
+  },
+  {
+    "name": "Fresco Crunchy Taco - Beef",
+    "ingredients": [
+      "Seasoned Beef",
+      "Pico de Gallo",
+      "Iceberg Lettuce",
+      "Taco Shell"
+    ]
+  },
+  {
+    "name": "Fresco Soft Taco - Beef",
+    "ingredients": [
+      "Seasoned Beef",
+      "Flour Tortilla",
+      "Pico de Gallo",
+      "Iceberg Lettuce"
+    ]
+  },
+  {
+    "name": "Fresco Soft Taco - Shredded Chicken",
+    "ingredients": [
+      "Shredded Chicken",
+      "Flour Tortilla",
+      "Pico de Gallo",
+      "Iceberg Lettuce"
+    ]
+  },
+  {
+    "name": "Fresco Soft Taco - Steak",
+    "ingredients": [
+      "USDA Select Marinated Grilled Steak",
+      "Flour Tortilla",
+      "Pico de Gallo",
+      "Iceberg Lettuce",
+      "Tomatoes"
+    ]
+  },
+  {
+    "name": "Triple Double Crunchwrap - Original",
+    "ingredients": [
+      "Flour Tortilla",
+      "Seasoned Beef",
+      "Nacho Cheese Sauce",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Tostada Shell",
+      "Reduced-Fat Sour Cream"
+    ]
+  },
+  {
+    "name": "Power Menu Bowl - Chicken",
+    "ingredients": [
+      "Seasoned Rice",
+      "Fire Grilled Chicken",
+      "Black Beans",
+      "Romaine Lettuce",
+      "Pico de Gallo",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "Power Menu Bowl - Steak",
+    "ingredients": [
+      "Seasoned Rice",
+      "USDA Select Marinated Grilled Steak",
+      "Black Beans",
+      "Romaine Lettuce",
+      "Pico de Gallo",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "Power Menu Bowl - Veggie",
+    "ingredients": [
+      "Black Beans",
+      "Seasoned Rice",
+      "Romaine Lettuce",
+      "Pico de Gallo",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "Power Menu Burrito - Chicken",
+    "ingredients": [
+      "Fire Grilled Chicken",
+      "Flour Tortilla",
+      "Romaine Lettuce",
+      "Pico de Gallo",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "Power Menu Burrito - Steak",
+    "ingredients": [
+      "USDA Select Marinated Grilled Steak",
+      "Flour Tortilla",
+      "Romaine Lettuce",
+      "Pico de Gallo",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "Power Menu Burrito - Veggie",
+    "ingredients": [
+      "Flour Tortilla",
+      "Black Beans",
+      "Romaine Lettuce",
+      "Pico de Gallo",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "Black Beans",
+    "ingredients": [
+      "Black Beans"
+    ]
+  },
+  {
+    "name": "Black Beans & Rice",
+    "ingredients": [
+      "Seasoned Rice",
+      "Black Beans"
+    ]
+  },
+  {
+    "name": "Cheesy Fiesta Potatoes",
+    "ingredients": [
+      "Potato Bites",
+      "Nacho Cheese Sauce",
+      "Reduced-Fat Sour Cream"
+    ]
+  },
+  {
+    "name": "Chips and Guacamole",
+    "ingredients": [
+      "Premium Guacamole",
+      "Nacho Chips"
+    ]
+  },
+  {
+    "name": "Chips and Nacho Cheese Sauce",
+    "ingredients": [
+      "Nacho Cheese Sauce",
+      "Nacho Chips"
+    ]
+  },
+  {
+    "name": "Chips and Pico de Gallo",
+    "ingredients": [
+      "Pico de Gallo",
+      "Nacho Chips"
+    ]
+  },
+  {
+    "name": "Chips and Salsa",
+    "ingredients": [
+      "Fire Roasted Salsa",
+      "Nacho Chips"
+    ]
+  },
+  {
+    "name": "Pintos 'n Cheese",
+    "ingredients": [
+      "Refried Beans",
+      "Red Sauce",
+      "Three Cheese Blend"
+    ]
+  },
+  {
+    "name": "Seasoned Rice",
+    "ingredients": [
+      "Seasoned Rice"
+    ]
+  },
+  {
+    "name": "Beefy Mini Quesadilla",
+    "ingredients": [
+      "Seasoned Beef",
+      "Flour Tortilla",
+      "Three Cheese Blend",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Chalupa Supreme® - Beef",
+    "ingredients": [
+      "Chalupa Shell",
+      "Seasoned Beef",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Three Cheese Blend"
+    ]
+  },
+  {
+    "name": "Chalupa Supreme® - Chicken",
+    "ingredients": [
+      "Chalupa Shell",
+      "Fire Grilled Chicken",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Three Cheese Blend"
+    ]
+  },
+  {
+    "name": "Chalupa Supreme® - Steak",
+    "ingredients": [
+      "Chalupa Shell",
+      "USDA Select Marinated Grilled Steak",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Three Cheese Blend"
+    ]
+  },
+  {
+    "name": "Cheesy Gordita Crunch",
+    "ingredients": [
+      "Gordita Flatbread",
+      "Seasoned Beef",
+      "Three Cheese Blend",
+      "Iceberg Lettuce",
+      "Spicy Ranch Sauce",
+      "Taco Shell",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Cheesy Gordita Crunch Supreme®",
+    "ingredients": [
+      "Gordita Flatbread",
+      "Seasoned Beef",
+      "Three Cheese Blend",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Spicy Ranch Sauce",
+      "Taco Shell",
+      "Tomatoes",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Cheesy Roll Up",
+    "ingredients": [
+      "Three Cheese Blend",
+      "Flour Tortilla"
+    ]
+  },
+  {
+    "name": "Crunchwrap Supreme®",
+    "ingredients": [
+      "Flour Tortilla",
+      "Seasoned Beef",
+      "Nacho Cheese Sauce",
+      "Iceberg Lettuce",
+      "Reduced-Fat Sour Cream",
+      "Tomatoes",
+      "Tostada Shell"
+    ]
+  },
+  {
+    "name": "Double Tostada (regional)",
+    "ingredients": [
+      "Refried Beans",
+      "Red Sauce",
+      "Cheddar Cheese",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Tostada Shell"
+    ]
+  },
+  {
+    "name": "Express Fiesta Taco Salad (regional)",
+    "ingredients": [
+      "Seasoned Beef",
+      "Iceberg Lettuce",
+      "Fire Roasted Salsa",
+      "Express Nacho Chips (Regional)",
+      "Refried Beans",
+      "Seasoned Rice",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese",
+      "Tomatoes"
+    ]
+  },
+  {
+    "name": "Fiesta Taco Salad - Beef",
+    "ingredients": [
+      "Seasoned Beef",
+      "Iceberg Lettuce",
+      "Taco Salad Shell",
+      "Fire Roasted Salsa",
+      "Refried Beans",
+      "Seasoned Rice",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese",
+      "Red Strips",
+      "Tomatoes"
+    ]
+  },
+  {
+    "name": "Gordita Supreme® - Beef",
+    "ingredients": [
+      "Gordita Flatbread",
+      "Seasoned Beef",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Three Cheese Blend"
+    ]
+  },
+  {
+    "name": "Gordita Supreme® - Chicken",
+    "ingredients": [
+      "Gordita Flatbread",
+      "Fire Grilled Chicken",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Three Cheese Blend"
+    ]
+  },
+  {
+    "name": "Gordita Supreme® - Steak",
+    "ingredients": [
+      "Gordita Flatbread",
+      "USDA Select Marinated Grilled Steak",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Three Cheese Blend"
+    ]
+  },
+  {
+    "name": "Mexican Pizza",
+    "ingredients": [
+      "Mexican Pizza Shell",
+      "Refried Beans",
+      "Seasoned Beef",
+      "Three Cheese Blend",
+      "Mexican Pizza Sauce",
+      "Tomatoes"
+    ]
+  },
+  {
+    "name": "Meximelt®",
+    "ingredients": [
+      "Seasoned Beef",
+      "Three Cheese Blend",
+      "Flour Tortilla",
+      "Pico de Gallo"
+    ]
+  },
+  {
+    "name": "Nachos BellGrande®",
+    "ingredients": [
+      "Nacho Chips",
+      "Refried Beans",
+      "Nacho Cheese Sauce",
+      "Seasoned Beef",
+      "Reduced-Fat Sour Cream",
+      "Tomatoes"
+    ]
+  },
+  {
+    "name": "Nachos BellGrande® - Chicken",
+    "ingredients": [
+      "Nacho Chips",
+      "Refried Beans",
+      "Nacho Cheese Sauce",
+      "Fire Grilled Chicken",
+      "Reduced-Fat Sour Cream",
+      "Tomatoes"
+    ]
+  },
+  {
+    "name": "Nachos BellGrande® - Steak",
+    "ingredients": [
+      "Nacho Chips",
+      "Refried Beans",
+      "Nacho Cheese Sauce",
+      "USDA Select Marinated Grilled Steak",
+      "Reduced-Fat Sour Cream",
+      "Tomatoes"
+    ]
+  },
+  {
+    "name": "Nachos Supreme®",
+    "ingredients": [
+      "Nacho Chips",
+      "Refried Beans",
+      "Seasoned Beef",
+      "Nacho Cheese Sauce",
+      "Reduced-Fat Sour Cream",
+      "Tomatoes"
+    ]
+  },
+  {
+    "name": "Quesadilla - Cheese",
+    "ingredients": [
+      "Flour Tortilla",
+      "Three Cheese Blend",
+      "Creamy Jalapeno Sauce"
+    ]
+  },
+  {
+    "name": "Quesadilla - Chicken",
+    "ingredients": [
+      "Flour Tortilla",
+      "Three Cheese Blend",
+      "Fire Grilled Chicken",
+      "Creamy Jalapeno Sauce"
+    ]
+  },
+  {
+    "name": "Quesadilla - Steak",
+    "ingredients": [
+      "Flour Tortilla",
+      "Three Cheese Blend",
+      "USDA Select Marinated Grilled Steak",
+      "Creamy Jalapeno Sauce"
+    ]
+  },
+  {
+    "name": "Shredded Chicken Mini Quesadilla",
+    "ingredients": [
+      "Shredded Chicken",
+      "Flour Tortilla",
+      "Three Cheese Blend",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Spicy Tostada",
+    "ingredients": [
+      "Refried Beans",
+      "Red Sauce",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Tostada Shell",
+      "Cheddar Cheese",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Triple Layer Nachos",
+    "ingredients": [
+      "Nacho Chips",
+      "Refried Beans",
+      "Red Sauce",
+      "Nacho Cheese Sauce"
+    ]
+  },
+  {
+    "name": "Cinnabon® Delights™ (2 Pack)",
+    "ingredients": [
+      "Cinnabon® Delights™"
+    ]
+  },
+  {
+    "name": "Cinnabon® Delights™ (4 Pack)",
+    "ingredients": [
+      "Cinnabon® Delights™"
+    ]
+  },
+  {
+    "name": "Cinnabon® Delights™ (12 Pack - Serves 4)",
+    "ingredients": [
+      "Cinnabon® Delights™"
+    ]
+  },
+  {
+    "name": "Cinnamon Twists",
+    "ingredients": [
+      "Cinnamon Twists"
+    ]
+  },
+  {
+    "name": "Lowfat Milk - CA (Regional)",
+    "ingredients": [
+      "Lowfat Milk - CA (Regional)"
+    ]
+  },
+  {
+    "name": "Lowfat Milk - Federal (Regional)",
+    "ingredients": [
+      "Lowfat Milk - Federal (Regional)"
+    ]
+  },
+  {
+    "name": "Water",
+    "ingredients": [
+      "Water"
+    ]
+  },
+  {
+    "name": "Cool Ranch® Doritos® Double Decker® Taco",
+    "ingredients": [
+      "Refried Beans",
+      "Seasoned Beef",
+      "Flour Tortilla",
+      "Doritos® Locos Taco Cool Ranch® Shell",
+      "Iceberg Lettuce",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Cool Ranch® Doritos® Locos Taco",
+    "ingredients": [
+      "Seasoned Beef",
+      "Doritos® Locos Taco Cool Ranch® Shell",
+      "Iceberg Lettuce",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Cool Ranch® Doritos® Locos Taco Supreme®",
+    "ingredients": [
+      "Seasoned Beef",
+      "Reduced-Fat Sour Cream",
+      "Doritos® Locos Taco Cool Ranch® Shell",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Crunchy Taco",
+    "ingredients": [
+      "Seasoned Beef",
+      "Iceberg Lettuce",
+      "Taco Shell",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Crunchy Taco Supreme®",
+    "ingredients": [
+      "Seasoned Beef",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Taco Shell",
+      "Tomatoes",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Double Decker® Taco",
+    "ingredients": [
+      "Refried Beans",
+      "Seasoned Beef",
+      "Flour Tortilla",
+      "Iceberg Lettuce",
+      "Taco Shell",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Double Decker® Taco Supreme®",
+    "ingredients": [
+      "Refried Beans",
+      "Seasoned Beef",
+      "Flour Tortilla",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Taco Shell",
+      "Tomatoes",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Fiery Doritos® Double Decker® Taco",
+    "ingredients": [
+      "Refried Beans",
+      "Seasoned Beef",
+      "Flour Tortilla",
+      "Doritos® Locos Taco Fiery Shell",
+      "Iceberg Lettuce",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Fiery Doritos® Locos Taco",
+    "ingredients": [
+      "Seasoned Beef",
+      "Doritos® Locos Taco Fiery Shell",
+      "Iceberg Lettuce",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Fiery Doritos® Locos Taco Supreme®",
+    "ingredients": [
+      "Seasoned Beef",
+      "Reduced-Fat Sour Cream",
+      "Doritos® Locos Taco Fiery Shell",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Grilled Steak Soft Taco",
+    "ingredients": [
+      "USDA Select Marinated Grilled Steak",
+      "Flour Tortilla",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Cheddar Cheese",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "Nacho Cheese Doritos® Double Decker® Taco",
+    "ingredients": [
+      "Refried Beans",
+      "Seasoned Beef",
+      "Flour Tortilla",
+      "Doritos® Locos Taco Nacho Cheese Shell",
+      "Iceberg Lettuce",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Nacho Cheese Doritos® Locos Taco",
+    "ingredients": [
+      "Seasoned Beef",
+      "Doritos® Locos Taco Nacho Cheese Shell",
+      "Iceberg Lettuce",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Nacho Cheese Doritos® Locos Taco Supreme®",
+    "ingredients": [
+      "Seasoned Beef",
+      "Reduced-Fat Sour Cream",
+      "Doritos® Locos Taco Nacho Cheese Shell",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Soft Taco - Beef",
+    "ingredients": [
+      "Seasoned Beef",
+      "Flour Tortilla",
+      "Iceberg Lettuce",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Soft Taco - Chicken",
+    "ingredients": [
+      "Shredded Chicken",
+      "Flour Tortilla",
+      "Iceberg Lettuce",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Soft Taco Supreme® - Beef",
+    "ingredients": [
+      "Seasoned Beef",
+      "Flour Tortilla",
+      "Reduced-Fat Sour Cream",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Spicy Potato Soft Taco",
+    "ingredients": [
+      "Potato Bites",
+      "Flour Tortilla",
+      "Iceberg Lettuce",
+      "Cheddar Cheese",
+      "Creamy Chipotle Sauce"
+    ]
+  },
+  {
+    "name": "Beach Berry Freeze™ (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Beach Berry Freeze™(20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Berry Sangria Freeze™ (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Berry Sangria Freeze™ (20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Blue Raspberry Freeze™ (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Blue Raspberry Freeze™ (20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Caleb's Kola (20 oz)",
+    "ingredients": [
+      "Caleb's Kola"
+    ]
+  },
+  {
+    "name": "Chicken Enchilada Nachos",
+    "ingredients": [
+      "Nacho Chips",
+      "Red Sauce",
+      "Shredded Chicken",
+      "Nacho Cheese Sauce",
+      "Cheddar Cheese",
+      "Pico de Gallo",
+      "Reduced-Fat Sour Cream"
+    ]
+  },
+  {
+    "name": "Fiesta Taco Salad Nachos",
+    "ingredients": [
+      "Nacho Chips",
+      "Seasoned Beef",
+      "Iceberg Lettuce",
+      "Refried Beans",
+      "Seasoned Rice",
+      "Cheddar Cheese",
+      "Avocado Ranch Sauce",
+      "Red Strips",
+      "Reduced-Fat Sour Cream",
+      "Tomatoes"
+    ]
+  },
+  {
+    "name": "IZZE Sparkling Clementine (20 oz)",
+    "ingredients": [
+      "IZZE Sparkling Clementine"
+    ]
+  },
+  {
+    "name": "Lemonade Freeze™ (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Lemonade Freeze™ (20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Margarita Freeze™ (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Margarita Freeze™ (20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Mtn Dew® Baja Blast Freeze™ (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Mtn Dew® Baja Blast Freeze™ (20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Mtn Dew® Freeze™ (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Mtn Dew® Freeze™ (20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Orange Cream Pop Freeze™ (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Orange Cream Pop Freeze™ (20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Pepsi® Freeze™ (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Pepsi® Freeze™ (20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Pina Colada Freeze™ (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Pina Colada Freeze™ (20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Prosecco Sparkling Wine (350 mL)",
+    "ingredients": [
+      "Prosecco Sparkling Wine"
+    ]
+  },
+  {
+    "name": "Red Cherry Freeze™ (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Red Cherry Freeze™ (20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Red Sangria (16 oz)",
+    "ingredients": [
+      "Red Sangria"
+    ]
+  },
+  {
+    "name": "Red Wine (6.3 fl oz)",
+    "ingredients": [
+      "Red Wine"
+    ]
+  },
+  {
+    "name": "Rum (80 proof)",
+    "ingredients": [
+      "Rum (80 proof)"
+    ]
+  },
+  {
+    "name": "Steak Nachos",
+    "ingredients": [
+      "Nacho Chips",
+      "Nacho Cheese Sauce",
+      "USDA Select Marinated Grilled Steak",
+      "Cheddar Cheese",
+      "Red Strips",
+      "Pico de Gallo",
+      "Reduced-Fat Sour Cream"
+    ]
+  },
+  {
+    "name": "Strawberry Skittles Freeze™ (16 oz)",
+    "ingredients": [
+      "Strawberry Skittles Freeze™"
+    ]
+  },
+  {
+    "name": "Strawberry Skittles Freeze™ (20 oz)",
+    "ingredients": [
+      "Strawberry Skittles Freeze™"
+    ]
+  },
+  {
+    "name": "Stubborn Soda - Black Cherry Tarragon (20 oz)",
+    "ingredients": [
+      "Stubborn Soda - Black Cherry with Tarragon"
+    ]
+  },
+  {
+    "name": "Stubborn Soda - Classic Root Beer (20 oz)",
+    "ingredients": [
+      "Stubborn Soda - Classic Root Beer"
+    ]
+  },
+  {
+    "name": "Tequila (80 proof)",
+    "ingredients": [
+      "Tequila (80 proof)"
+    ]
+  },
+  {
+    "name": "Vodka (80 proof)",
+    "ingredients": [
+      "Vodka (80 proof)"
+    ]
+  },
+  {
+    "name": "Barrio Blonde (12 oz)",
+    "ingredients": [
+      "Barrio Blonde"
+    ]
+  },
+  {
+    "name": "Barrio Blonde (16 oz)",
+    "ingredients": [
+      "Barrio Blonde"
+    ]
+  },
+  {
+    "name": "Beach Bell Beer (12 oz)",
+    "ingredients": [
+      "Beach Bell Beer"
+    ]
+  },
+  {
+    "name": "Beach Bell Beer (16 oz)",
+    "ingredients": [
+      "Beach Bell Beer"
+    ]
+  },
+  {
+    "name": "Beer - General (12 oz)",
+    "ingredients": [
+      "Beer - General"
+    ]
+  },
+  {
+    "name": "Beer - General (16 oz)",
+    "ingredients": [
+      "Beer - General"
+    ]
+  },
+  {
+    "name": "Bell Tower Cerveza (12 oz)",
+    "ingredients": [
+      "Bell Tower Cerveza"
+    ]
+  },
+  {
+    "name": "Bell Tower Cerveza (16 oz)",
+    "ingredients": [
+      "Bell Tower Cerveza"
+    ]
+  },
+  {
+    "name": "Blue Moon Belgian White (12 oz)",
+    "ingredients": [
+      "Blue Moon Belgian White"
+    ]
+  },
+  {
+    "name": "Blue Moon Belgian White (16 oz)",
+    "ingredients": [
+      "Blue Moon Belgian White"
+    ]
+  },
+  {
+    "name": "Blue Point Big City Bells Pilsner (12 oz)",
+    "ingredients": [
+      "Blue Point Big City Bells Pilsner"
+    ]
+  },
+  {
+    "name": "Blue Point Big City Bells Pilsner (16 oz)",
+    "ingredients": [
+      "Blue Point Big City Bells Pilsner"
+    ]
+  },
+  {
+    "name": "Blue Point Hoptical Illusion IPA (12 oz)",
+    "ingredients": [
+      "Blue Point Hoptical Illusion IPA"
+    ]
+  },
+  {
+    "name": "Blue Point Hoptical Illusion IPA (16 oz)",
+    "ingredients": [
+      "Blue Point Hoptical Illusion IPA"
+    ]
+  },
+  {
+    "name": "Blue Point Toasted Lager (12 oz)",
+    "ingredients": [
+      "Blue Point Toasted Lager"
+    ]
+  },
+  {
+    "name": "Blue Point Toasted Lager (16 oz)",
+    "ingredients": [
+      "Blue Point Toasted Lager"
+    ]
+  },
+  {
+    "name": "Brooklyn Lager (12 oz)",
+    "ingredients": [
+      "Brooklyn Lager"
+    ]
+  },
+  {
+    "name": "Brooklyn Lager (16 oz)",
+    "ingredients": [
+      "Brooklyn Lager"
+    ]
+  },
+  {
+    "name": "Bud Light (12 oz)",
+    "ingredients": [
+      "Bud Light"
+    ]
+  },
+  {
+    "name": "Bud Light (16 oz)",
+    "ingredients": [
+      "Bud Light"
+    ]
+  },
+  {
+    "name": "Budweiser (12 oz)",
+    "ingredients": [
+      "Budweiser"
+    ]
+  },
+  {
+    "name": "Budweiser (16 oz)",
+    "ingredients": [
+      "Budweiser"
+    ]
+  },
+  {
+    "name": "Coors (Coors Banquet) (12 oz)",
+    "ingredients": [
+      "Coors (Coors Banquet)"
+    ]
+  },
+  {
+    "name": "Coors (Coors Banquet) (16 oz)",
+    "ingredients": [
+      "Coors (Coors Banquet)"
+    ]
+  },
+  {
+    "name": "Coors Light (12 oz)",
+    "ingredients": [
+      "Coors Light"
+    ]
+  },
+  {
+    "name": "Coors Light (16 oz)",
+    "ingredients": [
+      "Coors Light"
+    ]
+  },
+  {
+    "name": "Copperhead Red (12 oz)",
+    "ingredients": [
+      "Copperhead Red"
+    ]
+  },
+  {
+    "name": "Copperhead Red (16 oz)",
+    "ingredients": [
+      "Copperhead Red"
+    ]
+  },
+  {
+    "name": "Corona Extra (12 oz)",
+    "ingredients": [
+      "Corona Extra"
+    ]
+  },
+  {
+    "name": "Corona Extra (16 oz)",
+    "ingredients": [
+      "Corona Extra"
+    ]
+  },
+  {
+    "name": "Corona Light (12 oz)",
+    "ingredients": [
+      "Corona Light"
+    ]
+  },
+  {
+    "name": "Corona Light (16 oz)",
+    "ingredients": [
+      "Corona Light"
+    ]
+  },
+  {
+    "name": "Corona Premier (12 oz)",
+    "ingredients": [
+      "Corona Premier"
+    ]
+  },
+  {
+    "name": "Corona Premier (16 oz)",
+    "ingredients": [
+      "Corona Premier"
+    ]
+  },
+  {
+    "name": "Dos Equis Lager Especial (12 oz)",
+    "ingredients": [
+      "Dos Equis Lager Especial"
+    ]
+  },
+  {
+    "name": "Dos Equis Lager Especial (16 oz)",
+    "ingredients": [
+      "Dos Equis Lager Especial"
+    ]
+  },
+  {
+    "name": "Dos Equis Mexican Pale Ale (12 oz)",
+    "ingredients": [
+      "Dos Equis Mexican Pale Ale"
+    ]
+  },
+  {
+    "name": "Dos Equis Mexican Pale Ale (16 oz)",
+    "ingredients": [
+      "Dos Equis Mexican Pale Ale"
+    ]
+  },
+  {
+    "name": "Fair Winds® Howling Gail (12 oz)",
+    "ingredients": [
+      "Fair Winds® Howling Gale"
+    ]
+  },
+  {
+    "name": "Fair Winds® Howling Gail (16 oz)",
+    "ingredients": [
+      "Fair Winds® Howling Gale"
+    ]
+  },
+  {
+    "name": "Fat Tire Amber Ale (12 oz)",
+    "ingredients": [
+      "Fat Tire Amber Ale"
+    ]
+  },
+  {
+    "name": "Fat Tire Amber Ale (16 oz)",
+    "ingredients": [
+      "Fat Tire Amber Ale"
+    ]
+  },
+  {
+    "name": "Firestone 805 (12 oz)",
+    "ingredients": [
+      "Firestone 805"
+    ]
+  },
+  {
+    "name": "Firestone 805 (16 oz)",
+    "ingredients": [
+      "Firestone 805"
+    ]
+  },
+  {
+    "name": "Four Peaks Kilt Lifter (12 oz)",
+    "ingredients": [
+      "Four Peaks Kilt Lifter"
+    ]
+  },
+  {
+    "name": "Four Peaks Kilt Lifter (16 oz)",
+    "ingredients": [
+      "Four Peaks Kilt Lifter"
+    ]
+  },
+  {
+    "name": "Heineken (12 oz)",
+    "ingredients": [
+      "Heineken"
+    ]
+  },
+  {
+    "name": "Heineken (16 oz)",
+    "ingredients": [
+      "Heineken"
+    ]
+  },
+  {
+    "name": "Heineken Light (12 oz)",
+    "ingredients": [
+      "Heineken Light"
+    ]
+  },
+  {
+    "name": "Heineken Light (16 oz)",
+    "ingredients": [
+      "Heineken Light"
+    ]
+  },
+  {
+    "name": "Kona Big Wave Golden Ale (12 oz)",
+    "ingredients": [
+      "Kona Big Wave Golden Ale"
+    ]
+  },
+  {
+    "name": "Kona Big Wave Golden Ale (16 oz)",
+    "ingredients": [
+      "Kona Big Wave Golden Ale"
+    ]
+  },
+  {
+    "name": "Lagunitas IPA (12 oz)",
+    "ingredients": [
+      "Lagunitas IPA"
+    ]
+  },
+  {
+    "name": "Lagunitas IPA (16 oz)",
+    "ingredients": [
+      "Lagunitas IPA"
+    ]
+  },
+  {
+    "name": "Landshark Lager (12 oz)",
+    "ingredients": [
+      "Landshark Lager"
+    ]
+  },
+  {
+    "name": "Landshark Lager (16 oz)",
+    "ingredients": [
+      "Landshark Lager"
+    ]
+  },
+  {
+    "name": "Michelob Original Lager (12 oz)",
+    "ingredients": [
+      "Michelob Original Lager"
+    ]
+  },
+  {
+    "name": "Michelob Original Lager (16 oz)",
+    "ingredients": [
+      "Michelob Original Lager"
+    ]
+  },
+  {
+    "name": "Michelob Ultra (12 oz)",
+    "ingredients": [
+      "Michelob Ultra"
+    ]
+  },
+  {
+    "name": "Michelob Ultra (16 oz)",
+    "ingredients": [
+      "Michelob Ultra"
+    ]
+  },
+  {
+    "name": "Miller Genuine Draft (12 oz)",
+    "ingredients": [
+      "Miller Genuine Draft"
+    ]
+  },
+  {
+    "name": "Miller Genuine Draft (16 oz)",
+    "ingredients": [
+      "Miller Genuine Draft"
+    ]
+  },
+  {
+    "name": "Miller High Life (12 oz)",
+    "ingredients": [
+      "Miller High Life"
+    ]
+  },
+  {
+    "name": "Miller High Life (16 oz)",
+    "ingredients": [
+      "Miller High Life"
+    ]
+  },
+  {
+    "name": "Miller Lite (12 oz)",
+    "ingredients": [
+      "Miller Lite"
+    ]
+  },
+  {
+    "name": "Miller Lite (16 oz)",
+    "ingredients": [
+      "Miller Lite"
+    ]
+  },
+  {
+    "name": "Modelo Especial (12 oz)",
+    "ingredients": [
+      "Modelo Especial"
+    ]
+  },
+  {
+    "name": "Modelo Especial (16 oz)",
+    "ingredients": [
+      "Modelo Especial"
+    ]
+  },
+  {
+    "name": "Modelo Negra (12 oz)",
+    "ingredients": [
+      "Modelo Negra"
+    ]
+  },
+  {
+    "name": "Modelo Negra (16 oz)",
+    "ingredients": [
+      "Modelo Negra"
+    ]
+  },
+  {
+    "name": "Motorworks Intellectual Property IPA (12 oz)",
+    "ingredients": [
+      "Motorworks Intellectual Property IPA"
+    ]
+  },
+  {
+    "name": "Motorworks Intellectual Property IPA (16 oz)",
+    "ingredients": [
+      "Motorworks Intellectual Property IPA"
+    ]
+  },
+  {
+    "name": "Motorworks Pulp Fiction IPA (12 oz)",
+    "ingredients": [
+      "Motorworks Pulp Fiction IPA"
+    ]
+  },
+  {
+    "name": "Motorworks Pulp Fiction IPA (16 oz)",
+    "ingredients": [
+      "Motorworks Pulp Fiction IPA"
+    ]
+  },
+  {
+    "name": "Newcastle Brown Ale (12 oz)",
+    "ingredients": [
+      "Newcastle Brown Ale"
+    ]
+  },
+  {
+    "name": "Newcastle Brown Ale (16 oz)",
+    "ingredients": [
+      "Newcastle Brown Ale"
+    ]
+  },
+  {
+    "name": "Old Elephant IPA (12 oz)",
+    "ingredients": [
+      "Old Elephant IPA"
+    ]
+  },
+  {
+    "name": "Old Elephant IPA (16 oz)",
+    "ingredients": [
+      "Old Elephant IPA"
+    ]
+  },
+  {
+    "name": "Pabst Blue Ribbon Original (12 oz)",
+    "ingredients": [
+      "Pabst Blue Ribbon Original"
+    ]
+  },
+  {
+    "name": "Pabst Blue Ribbon Original (16 oz)",
+    "ingredients": [
+      "Pabst Blue Ribbon Original"
+    ]
+  },
+  {
+    "name": "Pacifico (12 oz)",
+    "ingredients": [
+      "Pacifico"
+    ]
+  },
+  {
+    "name": "Pacifico (16 oz)",
+    "ingredients": [
+      "Pacifico"
+    ]
+  },
+  {
+    "name": "Patriot Ale (12 oz)",
+    "ingredients": [
+      "Patriot Ale"
+    ]
+  },
+  {
+    "name": "Patriot Ale (16 oz)",
+    "ingredients": [
+      "Patriot Ale"
+    ]
+  },
+  {
+    "name": "Revolution Anti Hero (12 oz)",
+    "ingredients": [
+      "Revolution Anti Hero"
+    ]
+  },
+  {
+    "name": "Revolution Anti Hero (16 oz)",
+    "ingredients": [
+      "Revolution Anti Hero"
+    ]
+  },
+  {
+    "name": "Road 2 Ruin Double IPA (12 oz)",
+    "ingredients": [
+      "Road 2 Ruin Double IPA"
+    ]
+  },
+  {
+    "name": "Road 2 Ruin Double IPA (16 oz)",
+    "ingredients": [
+      "Road 2 Ruin Double IPA"
+    ]
+  },
+  {
+    "name": "Samuel Adams® Winter Lager (12 oz)",
+    "ingredients": [
+      "Samuel Adams Winter Lager"
+    ]
+  },
+  {
+    "name": "Samuel Adams® Winter Lager (16 oz)",
+    "ingredients": [
+      "Samuel Adams Winter Lager"
+    ]
+  },
+  {
+    "name": "Sea Hag IPA (12 oz)",
+    "ingredients": [
+      "Sea Hag IPA"
+    ]
+  },
+  {
+    "name": "Sea Hag IPA (16 oz)",
+    "ingredients": [
+      "Sea Hag IPA"
+    ]
+  },
+  {
+    "name": "Shock Top Belgian White (12 oz)",
+    "ingredients": [
+      "Shock Top Belgian White"
+    ]
+  },
+  {
+    "name": "Shock Top Belgian White (16 oz)",
+    "ingredients": [
+      "Shock Top Belgian White"
+    ]
+  },
+  {
+    "name": "Sol Cervesa (12 oz)",
+    "ingredients": [
+      "Sol Cervesa"
+    ]
+  },
+  {
+    "name": "Sol Cervesa (16 oz)",
+    "ingredients": [
+      "Sol Cervesa"
+    ]
+  },
+  {
+    "name": "Stella Artois (12 oz)",
+    "ingredients": [
+      "Stella Artois"
+    ]
+  },
+  {
+    "name": "Stella Artois (16 oz)",
+    "ingredients": [
+      "Stella Artois"
+    ]
+  },
+  {
+    "name": "Sweetwater 420 Extra Pale Ale (12 oz)",
+    "ingredients": [
+      "Sweetwater 420 Extra Pale Ale"
+    ]
+  },
+  {
+    "name": "Sweetwater 420 Extra Pale Ale (16 oz)",
+    "ingredients": [
+      "Sweetwater 420 Extra Pale Ale"
+    ]
+  },
+  {
+    "name": "Tecate Light (12 oz)",
+    "ingredients": [
+      "Tecate Light"
+    ]
+  },
+  {
+    "name": "Tecate Light (16 oz)",
+    "ingredients": [
+      "Tecate Light"
+    ]
+  },
+  {
+    "name": "Tecate Original (12 oz)",
+    "ingredients": [
+      "Tecate Original"
+    ]
+  },
+  {
+    "name": "Tecate Original (16 oz)",
+    "ingredients": [
+      "Tecate Original"
+    ]
+  },
+  {
+    "name": "Victoria (12 oz)",
+    "ingredients": [
+      "Victoria"
+    ]
+  },
+  {
+    "name": "Victoria (16 oz)",
+    "ingredients": [
+      "Victoria"
+    ]
+  },
+  {
+    "name": "White Claw Hard Seltzer (12 oz)",
+    "ingredients": [
+      "White Claw Hard Seltzer"
+    ]
+  },
+  {
+    "name": "Yuengling - Black and Tan (12 oz)",
+    "ingredients": [
+      "Yuengling - Black and Tan"
+    ]
+  },
+  {
+    "name": "Yuengling - Black and Tan (16 oz)",
+    "ingredients": [
+      "Yuengling - Black and Tan"
+    ]
+  },
+  {
+    "name": "Yuengling - Golden Pilsner (12 oz)",
+    "ingredients": [
+      "Yuengling - Golden Pilsner"
+    ]
+  },
+  {
+    "name": "Yuengling - Golden Pilsner (16 oz)",
+    "ingredients": [
+      "Yuengling - Golden Pilsner"
+    ]
+  },
+  {
+    "name": "Yuengling - Lager (12 oz)",
+    "ingredients": [
+      "Yuengling - Lager"
+    ]
+  },
+  {
+    "name": "Yuengling - Lager (16 oz)",
+    "ingredients": [
+      "Yuengling - Lager"
+    ]
+  },
+  {
+    "name": "Yuengling - Light Lager (12 oz)",
+    "ingredients": [
+      "Yuengling - Light Lager"
+    ]
+  },
+  {
+    "name": "Yuengling - Light Lager (16 oz)",
+    "ingredients": [
+      "Yuengling - Light Lager"
+    ]
+  },
+  {
+    "name": "Yuengling - Porter (12 oz)",
+    "ingredients": [
+      "Yuengling - Porter"
+    ]
+  },
+  {
+    "name": "Yuengling - Porter (16 oz)",
+    "ingredients": [
+      "Yuengling - Porter"
+    ]
+  },
+  {
+    "name": "Yuengling - Premium (12 oz)",
+    "ingredients": [
+      "Yuengling - Premium"
+    ]
+  },
+  {
+    "name": "Yuengling - Premium (16 oz)",
+    "ingredients": [
+      "Yuengling - Premium"
+    ]
+  },
+  {
+    "name": "Yuengling - Premium Light (12 oz)",
+    "ingredients": [
+      "Yuengling - Premium Light"
+    ]
+  },
+  {
+    "name": "Yuengling - Premium Light (16 oz)",
+    "ingredients": [
+      "Yuengling - Premium Light"
+    ]
+  },
+  {
+    "name": "Blue Raspberry Freeze™ (16 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Blue Raspberry Freeze™ (20 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Blue Raspberry Freeze™ (32 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Caleb's Kola (20 oz) - LV",
+    "ingredients": [
+      "Caleb's Kola"
+    ]
+  },
+  {
+    "name": "Cherry Freeze™ (16 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Cherry Freeze™ (20 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Cherry Freeze™ (32 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "IZZE Sparkling Clementine (20 oz) - LV",
+    "ingredients": [
+      "IZZE Sparkling Clementine"
+    ]
+  },
+  {
+    "name": "Lemonade Freeze™ (16 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Lemonade Freeze™ (20 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Lemonade Freeze™ (32 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Margarita Freeze™ (16 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Margarita Freeze™ (20 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Margarita Freeze™ (32 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Mtn Dew® Baja Blast Freeze™ (16 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Mtn Dew® Baja Blast Freeze™ (20 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Mtn Dew® Baja Blast Freeze™ (30 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Orange Cream Pop Freeze™ - LV (16 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Orange Cream Pop Freeze™ - LV (20 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Orange Cream Pop Freeze™ - LV (32 oz)",
+    "ingredients": []
+  },
+  {
+    "name": "Pepsi® Freeze™ (16 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Pepsi® Freeze™ (20 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Pepsi® Freeze™ (32 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Pina Colada Freeze™ (16 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Pina Colada Freeze™ (20 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Pina Colada Freeze™ (32 oz) - LV",
+    "ingredients": []
+  },
+  {
+    "name": "Red Sangria - LV",
+    "ingredients": [
+      "Red Sangria - LV"
+    ]
+  },
+  {
+    "name": "Rose Wine (10 fl oz) - LV",
+    "ingredients": [
+      "Rose Wine"
+    ]
+  },
+  {
+    "name": "Rum (80 proof) - Double - LV",
+    "ingredients": [
+      "Rum (80 proof)"
+    ]
+  },
+  {
+    "name": "Rum (80 proof) - Single - LV",
+    "ingredients": [
+      "Rum (80 proof)"
+    ]
+  },
+  {
+    "name": "Strawberry Flavor Shot (16 oz) - LV",
+    "ingredients": [
+      "Strawberry Flavor Shot - LV"
+    ]
+  },
+  {
+    "name": "Strawberry Flavor Shot (32 oz) - LV",
+    "ingredients": [
+      "Strawberry Flavor Shot - LV"
+    ]
+  },
+  {
+    "name": "Strawberry Skittles Freeze™ - LV (16 oz)",
+    "ingredients": [
+      "Strawberry Skittles Freeze™"
+    ]
+  },
+  {
+    "name": "Strawberry Skittles Freeze™ - LV (20 oz)",
+    "ingredients": [
+      "Strawberry Skittles Freeze™"
+    ]
+  },
+  {
+    "name": "Strawberry Skittles Freeze™ - LV (32 oz)",
+    "ingredients": [
+      "Strawberry Skittles Freeze™"
+    ]
+  },
+  {
+    "name": "Stubborn Soda - Black Cherry Taragon (20 oz) - LV",
+    "ingredients": [
+      "Stubborn Soda - Black Cherry with Tarragon"
+    ]
+  },
+  {
+    "name": "Stubborn Soda - Classic Root Beer (20 oz) - LV",
+    "ingredients": [
+      "Stubborn Soda - Classic Root Beer"
+    ]
+  },
+  {
+    "name": "Tequila (80 proof) - Double - LV",
+    "ingredients": [
+      "Tequila (80 proof)"
+    ]
+  },
+  {
+    "name": "Tequila (80 proof) - Single - LV",
+    "ingredients": [
+      "Tequila (80 proof)"
+    ]
+  },
+  {
+    "name": "Vanilla Flavor Shot (16 oz) - LV",
+    "ingredients": [
+      "Vanilla Flavor Shot - LV"
+    ]
+  },
+  {
+    "name": "Vanilla Flavor Shot (32 oz) - LV",
+    "ingredients": [
+      "Vanilla Flavor Shot - LV"
+    ]
+  },
+  {
+    "name": "Vodka (80 proof) - Double - LV",
+    "ingredients": [
+      "Vodka (80 proof)"
+    ]
+  },
+  {
+    "name": "Vodka (80 proof) - Single - LV",
+    "ingredients": [
+      "Vodka (80 proof)"
+    ]
+  },
+  {
+    "name": "Whiskey (80 proof) - Double - LV",
+    "ingredients": [
+      "Whiskey (80 proof) - LV"
+    ]
+  },
+  {
+    "name": "Whiskey (80 proof) - Single - LV",
+    "ingredients": [
+      "Whiskey (80 proof) - LV"
+    ]
+  },
+  {
+    "name": "7-Layer Burrito",
+    "ingredients": [
+      "Flour Tortilla",
+      "Refried Beans",
+      "Seasoned Rice",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Three Cheese Blend",
+      "Iceberg Lettuce",
+      "Tomatoes"
+    ]
+  },
+  {
+    "name": "Bean Burrito",
+    "ingredients": [
+      "Refried Beans",
+      "Flour Tortilla",
+      "Red Sauce",
+      "Cheddar Cheese",
+      "Onions"
+    ]
+  },
+  {
+    "name": "Black Bean Burrito",
+    "ingredients": [
+      "Flour Tortilla",
+      "Black Beans",
+      "Seasoned Rice",
+      "Red Sauce",
+      "Three Cheese Blend"
+    ]
+  },
+  {
+    "name": "Black Beans & Rice",
+    "ingredients": [
+      "Seasoned Rice",
+      "Black Beans"
+    ]
+  },
+  {
+    "name": "Breakfast Soft Taco - Egg & Cheese",
+    "ingredients": [
+      "Eggs",
+      "Flour Tortilla",
+      "Cheddar Cheese"
+    ]
+  },
+  {
+    "name": "Cheesy Roll Up",
+    "ingredients": [
+      "Three Cheese Blend",
+      "Flour Tortilla"
+    ]
+  },
+  {
+    "name": "Double Tostada (regional)",
+    "ingredients": [
+      "Refried Beans",
+      "Red Sauce",
+      "Cheddar Cheese",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Tostada Shell"
+    ]
+  },
+  {
+    "name": "Pintos 'n Cheese",
+    "ingredients": [
+      "Refried Beans",
+      "Red Sauce",
+      "Three Cheese Blend"
+    ]
+  },
+  {
+    "name": "Power Menu Bowl - Veggie",
+    "ingredients": [
+      "Black Beans",
+      "Seasoned Rice",
+      "Romaine Lettuce",
+      "Pico de Gallo",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "Power Menu Burrito - Veggie",
+    "ingredients": [
+      "Flour Tortilla",
+      "Black Beans",
+      "Romaine Lettuce",
+      "Pico de Gallo",
+      "Premium Guacamole",
+      "Reduced-Fat Sour Cream",
+      "Cheddar Cheese",
+      "Avocado Ranch Sauce"
+    ]
+  },
+  {
+    "name": "Quesadilla - Cheese",
+    "ingredients": [
+      "Flour Tortilla",
+      "Three Cheese Blend",
+      "Creamy Jalapeno Sauce"
+    ]
+  },
+  {
+    "name": "Spicy Tostada",
+    "ingredients": [
+      "Refried Beans",
+      "Red Sauce",
+      "Iceberg Lettuce",
+      "Tomatoes",
+      "Tostada Shell",
+      "Cheddar Cheese",
+      "Creamy Chipotle Sauce"
+    ]
+  }
+]
