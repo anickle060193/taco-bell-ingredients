@@ -12,16 +12,30 @@ const ingredientsHtml = fs.readFileSync( ingredientsHtmlFilename, { encoding: 'U
 
 const $ = cheerio.load( ingredientsHtml );
 
-const recipes: Array<{ name: string, ingredients: string[] }> = [];
-
-for( let recipe of Array.from( $( '#ingredientSearchGrid tbody tr.filterTextParent' ) ) )
+interface Recipe
 {
-  let itemName = $( recipe ).find( '.itemName' ).text();
-  let ingredients = Array.from( $( recipe ).find( '.ingredientStatement strong' ) ).map( ( el ) => $( el ).text() );
-  recipes.push( {
-    name: itemName,
-    ingredients: ingredients
-  } );
+  name: string;
+  category: string;
+  ingredients: string[];
+}
+
+const recipes: Recipe[] = [];
+
+for( let category of Array.from( $( '#ingredientSearchGrid tbody tr.subCategory' ) ) )
+{
+  let $category = $( category );
+  let categoryName = $category.find( 'h3' ).text();
+
+  console.log( categoryName );
+  for( let recipe of Array.from( $category.nextUntil( '.subCategory', '.filterTextParent' ) ) )
+  {
+    let $recipe = $( recipe );
+    recipes.push( {
+      name: $recipe.find( '.itemName' ).text(),
+      category: categoryName,
+      ingredients: Array.from( $recipe.find( '.ingredientStatement strong' ) ).map( ( el ) => $( el ).text() )
+    } );
+  }
 }
 
 const ingredientsFilename = path.join( __dirname, '..', 'src', 'data', 'recipes.json' );

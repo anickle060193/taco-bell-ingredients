@@ -44,6 +44,27 @@ interface LinkDatum extends d3.SimulationLinkDatum<NodeDatum>
   id: string;
 }
 
+const DISPLAYED_CATEGORIES = new Set( [
+  // 'Breakfast',
+  // 'Morning Dollar Value Menu',
+  'Burritos',
+  // 'Dollar Cravings Menu',
+  // 'Freezes',
+  'Fresco Menu',
+  'Limited Time Offer',
+  'Power Menu',
+  'Sides',
+  'Specialties',
+  // 'Drinks & Sweets',
+  'Tacos',
+  // 'Cantina Menu',
+  // 'Cantina Beer, Wine and Spirits',
+  // 'Las Vegas Cantina Menu',
+  'Vegetarian Menu',
+] );
+const filteredRecipes = recipes.filter( ( recipe ) => DISPLAYED_CATEGORIES.has( recipe.category ) );
+console.log( 'Filtered Recipe Count:', filteredRecipes.length, 'Total Recipe Count:', recipes.length );
+
 const recipeId = ( name: string ) => `recipe_${name}`;
 const ingredientId = ( name: string ) => `ingredient_${name}`;
 
@@ -53,8 +74,8 @@ const IngredientGraph: React.FC = () =>
 
   const nodesRef = useRefInit<NodeDatum[]>( () =>
   {
-    const ingredients = Array.from( new Set( recipes.flatMap( ( recipe ) => recipe.ingredients ) ) );
-    const recipeNames = Array.from( new Set( recipes.map( ( recipe ) => recipe.name ) ) );
+    const ingredients = Array.from( new Set( filteredRecipes.flatMap( ( recipe ) => recipe.ingredients ) ) );
+    const recipeNames = Array.from( new Set( filteredRecipes.map( ( recipe ) => recipe.name ) ) );
 
     return [
       ...ingredients.map<NodeDatum>( ( ingredient ) => ( {
@@ -64,14 +85,14 @@ const IngredientGraph: React.FC = () =>
       } ) ),
       ...recipeNames.map<NodeDatum>( ( recipeName ) => ( {
         id: recipeId( recipeName ),
-        name: recipeName,
+        name: `${recipeName} (${filteredRecipes.find( ( r ) => r.name === recipeName )!.category})`,
         type: 'recipe',
       } ) )
     ];
   } );
 
   const linksRef = useRefInit<LinkDatum[]>( () =>
-    recipes
+    filteredRecipes
       .flatMap( ( { name, ingredients } ) =>
         ingredients
           .map( ( ingredient ) => ( {
@@ -85,10 +106,13 @@ const IngredientGraph: React.FC = () =>
   useSimulation( () =>
   {
     return d3.forceSimulation<NodeDatum, LinkDatum>( nodesRef.current )
-      .force( 'link', d3.forceLink<NodeDatum, LinkDatum>( linksRef.current ).id( ( node ) => node.id ) )
-      .force( 'charge', d3.forceManyBody() )
+      .force( 'link',
+        d3.forceLink<NodeDatum, LinkDatum>( linksRef.current ).id( ( node ) => node.id )
+          .distance( 100 )
+      )
+      .force( 'charge', d3.forceManyBody().strength( -200 ) )
       .force( 'center', d3.forceCenter( 0, 0 ) )
-      .force( 'collide', d3.forceCollide() );
+      .force( 'collide', d3.forceCollide( NODE_RADIUS ) );
   } );
 
   const canvasRef = useRef<HTMLCanvasElement>( null );

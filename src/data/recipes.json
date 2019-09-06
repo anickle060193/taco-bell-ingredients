@@ -1,6 +1,7 @@
 [
   {
     "name": "Breakfast Crunchwrap - Bacon",
+    "category": "Breakfast",
     "ingredients": [
       "Flour Tortilla",
       "Hashbrown",
@@ -12,6 +13,7 @@
   },
   {
     "name": "Breakfast Crunchwrap - Sausage",
+    "category": "Breakfast",
     "ingredients": [
       "Flour Tortilla",
       "Hashbrown",
@@ -23,6 +25,7 @@
   },
   {
     "name": "Breakfast Crunchwrap - Steak",
+    "category": "Breakfast",
     "ingredients": [
       "Flour Tortilla",
       "Hashbrown",
@@ -34,6 +37,7 @@
   },
   {
     "name": "Breakfast Quesadilla - Bacon",
+    "category": "Breakfast",
     "ingredients": [
       "Flour Tortilla",
       "Three Cheese Blend",
@@ -43,6 +47,7 @@
   },
   {
     "name": "Breakfast Quesadilla - Sausage",
+    "category": "Breakfast",
     "ingredients": [
       "Flour Tortilla",
       "Three Cheese Blend",
@@ -52,6 +57,7 @@
   },
   {
     "name": "Breakfast Quesadilla - Steak",
+    "category": "Breakfast",
     "ingredients": [
       "Flour Tortilla",
       "Three Cheese Blend",
@@ -61,6 +67,7 @@
   },
   {
     "name": "Breakfast Soft Taco - Bacon",
+    "category": "Breakfast",
     "ingredients": [
       "Eggs",
       "Flour Tortilla",
@@ -70,6 +77,7 @@
   },
   {
     "name": "Breakfast Soft Taco - Egg & Cheese",
+    "category": "Breakfast",
     "ingredients": [
       "Eggs",
       "Flour Tortilla",
@@ -78,6 +86,7 @@
   },
   {
     "name": "Breakfast Soft Taco - Sausage",
+    "category": "Breakfast",
     "ingredients": [
       "Eggs",
       "Flour Tortilla",
@@ -87,24 +96,28 @@
   },
   {
     "name": "Cinnabon® Delights™ (2 Pack)",
+    "category": "Breakfast",
     "ingredients": [
       "Cinnabon® Delights™"
     ]
   },
   {
     "name": "Cinnabon® Delights™ (4 Pack)",
+    "category": "Breakfast",
     "ingredients": [
       "Cinnabon® Delights™"
     ]
   },
   {
     "name": "Cinnabon® Delights™ (12 Pack - Serves 4)",
+    "category": "Breakfast",
     "ingredients": [
       "Cinnabon® Delights™"
     ]
   },
   {
     "name": "Grande Scrambler Burrito - Bacon",
+    "category": "Breakfast",
     "ingredients": [
       "Potato Bites",
       "Flour Tortilla",
@@ -118,6 +131,7 @@
   },
   {
     "name": "Grande Scrambler Burrito - Sausage",
+    "category": "Breakfast",
     "ingredients": [
       "Potato Bites",
       "Flour Tortilla",
@@ -131,6 +145,7 @@
   },
   {
     "name": "Grande Scrambler Burrito - Steak",
+    "category": "Breakfast",
     "ingredients": [
       "Potato Bites",
       "Flour Tortilla",
@@ -144,6 +159,7 @@
   },
   {
     "name": "Grilled Breakfast Burrito - Bacon",
+    "category": "Breakfast",
     "ingredients": [
       "Flour Tortilla",
       "Eggs",
@@ -153,6 +169,7 @@
   },
   {
     "name": "Grilled Breakfast Burrito - Fiesta Potato",
+    "category": "Breakfast",
     "ingredients": [
       "Flour Tortilla",
       "Eggs",
@@ -163,6 +180,7 @@
   },
   {
     "name": "Grilled Breakfast Burrito - Sausage",
+    "category": "Breakfast",
     "ingredients": [
       "Flour Tortilla",
       "Eggs",
@@ -172,18 +190,21 @@
   },
   {
     "name": "Hashbrown",
+    "category": "Breakfast",
     "ingredients": [
       "Hashbrown"
     ]
   },
   {
     "name": "Iced Regular Coffee",
+    "category": "Breakfast",
     "ingredients": [
       "Rainforest Coffee"
     ]
   },
   {
     "name": "Mini Skillet Bowl",
+    "category": "Breakfast",
     "ingredients": [
       "Potato Bites",
       "Eggs",
@@ -193,24 +214,28 @@
   },
   {
     "name": "Mtn Dew® Kickstart™ Orange Citrus",
+    "category": "Breakfast",
     "ingredients": [
       "Mtn Dew® Kickstart™ Orange Citrus (16 fl oz)"
     ]
   },
   {
     "name": "Nestle® Coffee-Mate™ Sweetened Original Creamer (1 portion creamer)",
+    "category": "Breakfast",
     "ingredients": [
       "Nestle® Coffee-Mate™ Sweetened Original Creamer"
     ]
   },
   {
     "name": "Rainforest Coffee",
+    "category": "Breakfast",
     "ingredients": [
       "Rainforest Coffee"
     ]
   },
   {
     "name": "Rainforest Coffee with Nestle® Coffee-Mate™ Sweetened Original Creamer (1 portion creamer)",
+    "category": "Breakfast",
     "ingredients": [
       "Rainforest Coffee",
       "Nestle® Coffee-Mate™ Sweetened Original Creamer"
@@ -218,6 +243,7 @@
   },
   {
     "name": "Sausage Flatbread Quesadilla",
+    "category": "Breakfast",
     "ingredients": [
       "Gordita Flatbread",
       "Eggs",
@@ -227,12 +253,14 @@
   },
   {
     "name": "Tropicana® Orange Juice",
+    "category": "Breakfast",
     "ingredients": [
       "Tropicana® Orange Juice"
     ]
   },
   {
     "name": "Breakfast Soft Taco - Bacon",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Eggs",
       "Flour Tortilla",
@@ -242,6 +270,7 @@
   },
   {
     "name": "Breakfast Soft Taco - Egg & Cheese",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Eggs",
       "Flour Tortilla",
@@ -250,6 +279,7 @@
   },
   {
     "name": "Breakfast Soft Taco - Sausage",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Eggs",
       "Flour Tortilla",
@@ -259,12 +289,14 @@
   },
   {
     "name": "Cinnabon® Delights™ (2 Pack)",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Cinnabon® Delights™"
     ]
   },
   {
     "name": "Grilled Breakfast Burrito - Bacon",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Flour Tortilla",
       "Eggs",
@@ -274,6 +306,7 @@
   },
   {
     "name": "Grilled Breakfast Burrito - Fiesta Potato",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Flour Tortilla",
       "Eggs",
@@ -284,6 +317,7 @@
   },
   {
     "name": "Grilled Breakfast Burrito - Sausage",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Flour Tortilla",
       "Eggs",
@@ -293,18 +327,21 @@
   },
   {
     "name": "Hashbrown",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Hashbrown"
     ]
   },
   {
     "name": "Iced Regular Coffee",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Rainforest Coffee"
     ]
   },
   {
     "name": "Mini Skillet Bowl",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Potato Bites",
       "Eggs",
@@ -314,18 +351,21 @@
   },
   {
     "name": "Mtn Dew® Kickstart™ Orange Citrus",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Mtn Dew® Kickstart™ Orange Citrus (16 fl oz)"
     ]
   },
   {
     "name": "Rainforest Coffee",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Rainforest Coffee"
     ]
   },
   {
     "name": "Rainforest Coffee with Nestle® Coffee-Mate™ Sweetened Original Creamer (1 portion creamer)",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Rainforest Coffee",
       "Nestle® Coffee-Mate™ Sweetened Original Creamer"
@@ -333,6 +373,7 @@
   },
   {
     "name": "Sausage Flatbread Quesadilla",
+    "category": "Morning Dollar Value Menu",
     "ingredients": [
       "Gordita Flatbread",
       "Eggs",
@@ -342,6 +383,7 @@
   },
   {
     "name": "7-Layer Burrito",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Refried Beans",
@@ -355,6 +397,7 @@
   },
   {
     "name": "Bean Burrito",
+    "category": "Burritos",
     "ingredients": [
       "Refried Beans",
       "Flour Tortilla",
@@ -365,6 +408,7 @@
   },
   {
     "name": "Beefy 5-Layer Burrito",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Refried Beans",
@@ -376,6 +420,7 @@
   },
   {
     "name": "Beefy Fritos® Burrito",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Seasoned Beef",
@@ -386,6 +431,7 @@
   },
   {
     "name": "Beefy Nacho Loaded Griller",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Seasoned Beef",
@@ -395,6 +441,7 @@
   },
   {
     "name": "Black Bean Burrito",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Black Beans",
@@ -405,6 +452,7 @@
   },
   {
     "name": "Burrito Supreme® - Beef",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Refried Beans",
@@ -419,6 +467,7 @@
   },
   {
     "name": "Burrito Supreme® - Chicken",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Fire Grilled Chicken",
@@ -433,6 +482,7 @@
   },
   {
     "name": "Burrito Supreme® - Steak",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Refried Beans",
@@ -447,6 +497,7 @@
   },
   {
     "name": "Cheesy Bean & Rice Burrito",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Refried Beans",
@@ -457,6 +508,7 @@
   },
   {
     "name": "Cheesy Potato Griller",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Potato Bites",
@@ -466,6 +518,7 @@
   },
   {
     "name": "Chili Cheese Burrito (regional)",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Chili (Regional)",
@@ -474,6 +527,7 @@
   },
   {
     "name": "Chipotle Chicken Loaded Griller",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Fire Grilled Chicken",
@@ -483,6 +537,7 @@
   },
   {
     "name": "Quesarito - Beef",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Seasoned Beef",
@@ -495,6 +550,7 @@
   },
   {
     "name": "Quesarito - Chicken",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Shredded Chicken",
@@ -507,6 +563,7 @@
   },
   {
     "name": "Quesarito - Steak",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Seasoned Rice",
@@ -519,6 +576,7 @@
   },
   {
     "name": "Shredded Chicken Burrito",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Shredded Chicken",
@@ -529,6 +587,7 @@
   },
   {
     "name": "XXL Grilled Stuft Burrito - Beef",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Seasoned Beef",
@@ -543,6 +602,7 @@
   },
   {
     "name": "XXL Grilled Stuft Burrito - Chicken",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Fire Grilled Chicken",
@@ -557,6 +617,7 @@
   },
   {
     "name": "XXL Grilled Stuft Burrito - Steak",
+    "category": "Burritos",
     "ingredients": [
       "Flour Tortilla",
       "Seasoned Rice",
@@ -571,6 +632,7 @@
   },
   {
     "name": "Beefy Fritos® Burrito",
+    "category": "Dollar Cravings Menu",
     "ingredients": [
       "Flour Tortilla",
       "Seasoned Beef",
@@ -581,6 +643,7 @@
   },
   {
     "name": "Beefy Mini Quesadilla",
+    "category": "Dollar Cravings Menu",
     "ingredients": [
       "Seasoned Beef",
       "Flour Tortilla",
@@ -590,6 +653,7 @@
   },
   {
     "name": "Cheesy Bean & Rice Burrito",
+    "category": "Dollar Cravings Menu",
     "ingredients": [
       "Flour Tortilla",
       "Refried Beans",
@@ -600,6 +664,7 @@
   },
   {
     "name": "Cheesy Roll Up",
+    "category": "Dollar Cravings Menu",
     "ingredients": [
       "Three Cheese Blend",
       "Flour Tortilla"
@@ -607,18 +672,21 @@
   },
   {
     "name": "Cinnabon® Delights™ (2 Pack)",
+    "category": "Dollar Cravings Menu",
     "ingredients": [
       "Cinnabon® Delights™"
     ]
   },
   {
     "name": "Cinnamon Twists",
+    "category": "Dollar Cravings Menu",
     "ingredients": [
       "Cinnamon Twists"
     ]
   },
   {
     "name": "Shredded Chicken Mini Quesadilla",
+    "category": "Dollar Cravings Menu",
     "ingredients": [
       "Shredded Chicken",
       "Flour Tortilla",
@@ -628,6 +696,7 @@
   },
   {
     "name": "Spicy Potato Soft Taco",
+    "category": "Dollar Cravings Menu",
     "ingredients": [
       "Potato Bites",
       "Flour Tortilla",
@@ -638,6 +707,7 @@
   },
   {
     "name": "Spicy Tostada",
+    "category": "Dollar Cravings Menu",
     "ingredients": [
       "Refried Beans",
       "Red Sauce",
@@ -650,6 +720,7 @@
   },
   {
     "name": "Triple Layer Nachos",
+    "category": "Dollar Cravings Menu",
     "ingredients": [
       "Nacho Chips",
       "Refried Beans",
@@ -659,6 +730,7 @@
   },
   {
     "name": "Cherry Sunset Freeze™ (16 oz)",
+    "category": "Freezes",
     "ingredients": [
       "Cherry Flavored Syrup",
       "Pineapple Freeze - 16 oz"
@@ -666,6 +738,7 @@
   },
   {
     "name": "Cherry Sunset Freeze™ (20 oz)",
+    "category": "Freezes",
     "ingredients": [
       "Cherry Flavored Syrup",
       "Pineapple Freeze - 20 oz"
@@ -673,30 +746,35 @@
   },
   {
     "name": "Mtn Dew® Baja Blast Freeze™ (16 oz)",
+    "category": "Freezes",
     "ingredients": [
       "Mtn Dew® Baja Blast Freeze™ (16 oz)"
     ]
   },
   {
     "name": "Mtn Dew® Baja Blast Freeze™ (20 oz)",
+    "category": "Freezes",
     "ingredients": [
       "Mtn Dew® Baja Blast Freeze™ (20 oz)"
     ]
   },
   {
     "name": "Strawberry Skittles Freeze™ (16 oz)",
+    "category": "Freezes",
     "ingredients": [
       "Strawberry Skittles Freeze™"
     ]
   },
   {
     "name": "Strawberry Skittles Freeze™ (20 oz)",
+    "category": "Freezes",
     "ingredients": [
       "Strawberry Skittles Freeze™"
     ]
   },
   {
     "name": "Fresco Bean Burrito",
+    "category": "Fresco Menu",
     "ingredients": [
       "Refried Beans",
       "Flour Tortilla",
@@ -707,6 +785,7 @@
   },
   {
     "name": "Fresco Burrito Supreme® - Chicken",
+    "category": "Fresco Menu",
     "ingredients": [
       "Flour Tortilla",
       "Fire Grilled Chicken",
@@ -720,6 +799,7 @@
   },
   {
     "name": "Fresco Burrito Supreme® - Steak",
+    "category": "Fresco Menu",
     "ingredients": [
       "Flour Tortilla",
       "Refried Beans",
@@ -733,6 +813,7 @@
   },
   {
     "name": "Fresco Crunchy Taco - Beef",
+    "category": "Fresco Menu",
     "ingredients": [
       "Seasoned Beef",
       "Pico de Gallo",
@@ -742,6 +823,7 @@
   },
   {
     "name": "Fresco Soft Taco - Beef",
+    "category": "Fresco Menu",
     "ingredients": [
       "Seasoned Beef",
       "Flour Tortilla",
@@ -751,6 +833,7 @@
   },
   {
     "name": "Fresco Soft Taco - Shredded Chicken",
+    "category": "Fresco Menu",
     "ingredients": [
       "Shredded Chicken",
       "Flour Tortilla",
@@ -760,6 +843,7 @@
   },
   {
     "name": "Fresco Soft Taco - Steak",
+    "category": "Fresco Menu",
     "ingredients": [
       "USDA Select Marinated Grilled Steak",
       "Flour Tortilla",
@@ -770,6 +854,7 @@
   },
   {
     "name": "Triple Double Crunchwrap - Original",
+    "category": "Limited Time Offer",
     "ingredients": [
       "Flour Tortilla",
       "Seasoned Beef",
@@ -782,6 +867,7 @@
   },
   {
     "name": "Power Menu Bowl - Chicken",
+    "category": "Power Menu",
     "ingredients": [
       "Seasoned Rice",
       "Fire Grilled Chicken",
@@ -796,6 +882,7 @@
   },
   {
     "name": "Power Menu Bowl - Steak",
+    "category": "Power Menu",
     "ingredients": [
       "Seasoned Rice",
       "USDA Select Marinated Grilled Steak",
@@ -810,6 +897,7 @@
   },
   {
     "name": "Power Menu Bowl - Veggie",
+    "category": "Power Menu",
     "ingredients": [
       "Black Beans",
       "Seasoned Rice",
@@ -823,6 +911,7 @@
   },
   {
     "name": "Power Menu Burrito - Chicken",
+    "category": "Power Menu",
     "ingredients": [
       "Fire Grilled Chicken",
       "Flour Tortilla",
@@ -836,6 +925,7 @@
   },
   {
     "name": "Power Menu Burrito - Steak",
+    "category": "Power Menu",
     "ingredients": [
       "USDA Select Marinated Grilled Steak",
       "Flour Tortilla",
@@ -849,6 +939,7 @@
   },
   {
     "name": "Power Menu Burrito - Veggie",
+    "category": "Power Menu",
     "ingredients": [
       "Flour Tortilla",
       "Black Beans",
@@ -862,12 +953,14 @@
   },
   {
     "name": "Black Beans",
+    "category": "Sides",
     "ingredients": [
       "Black Beans"
     ]
   },
   {
     "name": "Black Beans & Rice",
+    "category": "Sides",
     "ingredients": [
       "Seasoned Rice",
       "Black Beans"
@@ -875,6 +968,7 @@
   },
   {
     "name": "Cheesy Fiesta Potatoes",
+    "category": "Sides",
     "ingredients": [
       "Potato Bites",
       "Nacho Cheese Sauce",
@@ -883,6 +977,7 @@
   },
   {
     "name": "Chips and Guacamole",
+    "category": "Sides",
     "ingredients": [
       "Premium Guacamole",
       "Nacho Chips"
@@ -890,6 +985,7 @@
   },
   {
     "name": "Chips and Nacho Cheese Sauce",
+    "category": "Sides",
     "ingredients": [
       "Nacho Cheese Sauce",
       "Nacho Chips"
@@ -897,6 +993,7 @@
   },
   {
     "name": "Chips and Pico de Gallo",
+    "category": "Sides",
     "ingredients": [
       "Pico de Gallo",
       "Nacho Chips"
@@ -904,6 +1001,7 @@
   },
   {
     "name": "Chips and Salsa",
+    "category": "Sides",
     "ingredients": [
       "Fire Roasted Salsa",
       "Nacho Chips"
@@ -911,6 +1009,7 @@
   },
   {
     "name": "Pintos 'n Cheese",
+    "category": "Sides",
     "ingredients": [
       "Refried Beans",
       "Red Sauce",
@@ -919,12 +1018,14 @@
   },
   {
     "name": "Seasoned Rice",
+    "category": "Sides",
     "ingredients": [
       "Seasoned Rice"
     ]
   },
   {
     "name": "Beefy Mini Quesadilla",
+    "category": "Specialties",
     "ingredients": [
       "Seasoned Beef",
       "Flour Tortilla",
@@ -934,6 +1035,7 @@
   },
   {
     "name": "Chalupa Supreme® - Beef",
+    "category": "Specialties",
     "ingredients": [
       "Chalupa Shell",
       "Seasoned Beef",
@@ -945,6 +1047,7 @@
   },
   {
     "name": "Chalupa Supreme® - Chicken",
+    "category": "Specialties",
     "ingredients": [
       "Chalupa Shell",
       "Fire Grilled Chicken",
@@ -956,6 +1059,7 @@
   },
   {
     "name": "Chalupa Supreme® - Steak",
+    "category": "Specialties",
     "ingredients": [
       "Chalupa Shell",
       "USDA Select Marinated Grilled Steak",
@@ -967,6 +1071,7 @@
   },
   {
     "name": "Cheesy Gordita Crunch",
+    "category": "Specialties",
     "ingredients": [
       "Gordita Flatbread",
       "Seasoned Beef",
@@ -979,6 +1084,7 @@
   },
   {
     "name": "Cheesy Gordita Crunch Supreme®",
+    "category": "Specialties",
     "ingredients": [
       "Gordita Flatbread",
       "Seasoned Beef",
@@ -993,6 +1099,7 @@
   },
   {
     "name": "Cheesy Roll Up",
+    "category": "Specialties",
     "ingredients": [
       "Three Cheese Blend",
       "Flour Tortilla"
@@ -1000,6 +1107,7 @@
   },
   {
     "name": "Crunchwrap Supreme®",
+    "category": "Specialties",
     "ingredients": [
       "Flour Tortilla",
       "Seasoned Beef",
@@ -1012,6 +1120,7 @@
   },
   {
     "name": "Double Tostada (regional)",
+    "category": "Specialties",
     "ingredients": [
       "Refried Beans",
       "Red Sauce",
@@ -1023,6 +1132,7 @@
   },
   {
     "name": "Express Fiesta Taco Salad (regional)",
+    "category": "Specialties",
     "ingredients": [
       "Seasoned Beef",
       "Iceberg Lettuce",
@@ -1037,6 +1147,7 @@
   },
   {
     "name": "Fiesta Taco Salad - Beef",
+    "category": "Specialties",
     "ingredients": [
       "Seasoned Beef",
       "Iceberg Lettuce",
@@ -1052,6 +1163,7 @@
   },
   {
     "name": "Gordita Supreme® - Beef",
+    "category": "Specialties",
     "ingredients": [
       "Gordita Flatbread",
       "Seasoned Beef",
@@ -1063,6 +1175,7 @@
   },
   {
     "name": "Gordita Supreme® - Chicken",
+    "category": "Specialties",
     "ingredients": [
       "Gordita Flatbread",
       "Fire Grilled Chicken",
@@ -1074,6 +1187,7 @@
   },
   {
     "name": "Gordita Supreme® - Steak",
+    "category": "Specialties",
     "ingredients": [
       "Gordita Flatbread",
       "USDA Select Marinated Grilled Steak",
@@ -1085,6 +1199,7 @@
   },
   {
     "name": "Mexican Pizza",
+    "category": "Specialties",
     "ingredients": [
       "Mexican Pizza Shell",
       "Refried Beans",
@@ -1096,6 +1211,7 @@
   },
   {
     "name": "Meximelt®",
+    "category": "Specialties",
     "ingredients": [
       "Seasoned Beef",
       "Three Cheese Blend",
@@ -1105,6 +1221,7 @@
   },
   {
     "name": "Nachos BellGrande®",
+    "category": "Specialties",
     "ingredients": [
       "Nacho Chips",
       "Refried Beans",
@@ -1116,6 +1233,7 @@
   },
   {
     "name": "Nachos BellGrande® - Chicken",
+    "category": "Specialties",
     "ingredients": [
       "Nacho Chips",
       "Refried Beans",
@@ -1127,6 +1245,7 @@
   },
   {
     "name": "Nachos BellGrande® - Steak",
+    "category": "Specialties",
     "ingredients": [
       "Nacho Chips",
       "Refried Beans",
@@ -1138,6 +1257,7 @@
   },
   {
     "name": "Nachos Supreme®",
+    "category": "Specialties",
     "ingredients": [
       "Nacho Chips",
       "Refried Beans",
@@ -1149,6 +1269,7 @@
   },
   {
     "name": "Quesadilla - Cheese",
+    "category": "Specialties",
     "ingredients": [
       "Flour Tortilla",
       "Three Cheese Blend",
@@ -1157,6 +1278,7 @@
   },
   {
     "name": "Quesadilla - Chicken",
+    "category": "Specialties",
     "ingredients": [
       "Flour Tortilla",
       "Three Cheese Blend",
@@ -1166,6 +1288,7 @@
   },
   {
     "name": "Quesadilla - Steak",
+    "category": "Specialties",
     "ingredients": [
       "Flour Tortilla",
       "Three Cheese Blend",
@@ -1175,6 +1298,7 @@
   },
   {
     "name": "Shredded Chicken Mini Quesadilla",
+    "category": "Specialties",
     "ingredients": [
       "Shredded Chicken",
       "Flour Tortilla",
@@ -1184,6 +1308,7 @@
   },
   {
     "name": "Spicy Tostada",
+    "category": "Specialties",
     "ingredients": [
       "Refried Beans",
       "Red Sauce",
@@ -1196,6 +1321,7 @@
   },
   {
     "name": "Triple Layer Nachos",
+    "category": "Specialties",
     "ingredients": [
       "Nacho Chips",
       "Refried Beans",
@@ -1205,48 +1331,56 @@
   },
   {
     "name": "Cinnabon® Delights™ (2 Pack)",
+    "category": "Drinks & Sweets",
     "ingredients": [
       "Cinnabon® Delights™"
     ]
   },
   {
     "name": "Cinnabon® Delights™ (4 Pack)",
+    "category": "Drinks & Sweets",
     "ingredients": [
       "Cinnabon® Delights™"
     ]
   },
   {
     "name": "Cinnabon® Delights™ (12 Pack - Serves 4)",
+    "category": "Drinks & Sweets",
     "ingredients": [
       "Cinnabon® Delights™"
     ]
   },
   {
     "name": "Cinnamon Twists",
+    "category": "Drinks & Sweets",
     "ingredients": [
       "Cinnamon Twists"
     ]
   },
   {
     "name": "Lowfat Milk - CA (Regional)",
+    "category": "Drinks & Sweets",
     "ingredients": [
       "Lowfat Milk - CA (Regional)"
     ]
   },
   {
     "name": "Lowfat Milk - Federal (Regional)",
+    "category": "Drinks & Sweets",
     "ingredients": [
       "Lowfat Milk - Federal (Regional)"
     ]
   },
   {
     "name": "Water",
+    "category": "Drinks & Sweets",
     "ingredients": [
       "Water"
     ]
   },
   {
     "name": "Cool Ranch® Doritos® Double Decker® Taco",
+    "category": "Tacos",
     "ingredients": [
       "Refried Beans",
       "Seasoned Beef",
@@ -1258,6 +1392,7 @@
   },
   {
     "name": "Cool Ranch® Doritos® Locos Taco",
+    "category": "Tacos",
     "ingredients": [
       "Seasoned Beef",
       "Doritos® Locos Taco Cool Ranch® Shell",
@@ -1267,6 +1402,7 @@
   },
   {
     "name": "Cool Ranch® Doritos® Locos Taco Supreme®",
+    "category": "Tacos",
     "ingredients": [
       "Seasoned Beef",
       "Reduced-Fat Sour Cream",
@@ -1278,6 +1414,7 @@
   },
   {
     "name": "Crunchy Taco",
+    "category": "Tacos",
     "ingredients": [
       "Seasoned Beef",
       "Iceberg Lettuce",
@@ -1287,6 +1424,7 @@
   },
   {
     "name": "Crunchy Taco Supreme®",
+    "category": "Tacos",
     "ingredients": [
       "Seasoned Beef",
       "Reduced-Fat Sour Cream",
@@ -1298,6 +1436,7 @@
   },
   {
     "name": "Double Decker® Taco",
+    "category": "Tacos",
     "ingredients": [
       "Refried Beans",
       "Seasoned Beef",
@@ -1309,6 +1448,7 @@
   },
   {
     "name": "Double Decker® Taco Supreme®",
+    "category": "Tacos",
     "ingredients": [
       "Refried Beans",
       "Seasoned Beef",
@@ -1322,6 +1462,7 @@
   },
   {
     "name": "Fiery Doritos® Double Decker® Taco",
+    "category": "Tacos",
     "ingredients": [
       "Refried Beans",
       "Seasoned Beef",
@@ -1333,6 +1474,7 @@
   },
   {
     "name": "Fiery Doritos® Locos Taco",
+    "category": "Tacos",
     "ingredients": [
       "Seasoned Beef",
       "Doritos® Locos Taco Fiery Shell",
@@ -1342,6 +1484,7 @@
   },
   {
     "name": "Fiery Doritos® Locos Taco Supreme®",
+    "category": "Tacos",
     "ingredients": [
       "Seasoned Beef",
       "Reduced-Fat Sour Cream",
@@ -1353,6 +1496,7 @@
   },
   {
     "name": "Grilled Steak Soft Taco",
+    "category": "Tacos",
     "ingredients": [
       "USDA Select Marinated Grilled Steak",
       "Flour Tortilla",
@@ -1364,6 +1508,7 @@
   },
   {
     "name": "Nacho Cheese Doritos® Double Decker® Taco",
+    "category": "Tacos",
     "ingredients": [
       "Refried Beans",
       "Seasoned Beef",
@@ -1375,6 +1520,7 @@
   },
   {
     "name": "Nacho Cheese Doritos® Locos Taco",
+    "category": "Tacos",
     "ingredients": [
       "Seasoned Beef",
       "Doritos® Locos Taco Nacho Cheese Shell",
@@ -1384,6 +1530,7 @@
   },
   {
     "name": "Nacho Cheese Doritos® Locos Taco Supreme®",
+    "category": "Tacos",
     "ingredients": [
       "Seasoned Beef",
       "Reduced-Fat Sour Cream",
@@ -1395,6 +1542,7 @@
   },
   {
     "name": "Soft Taco - Beef",
+    "category": "Tacos",
     "ingredients": [
       "Seasoned Beef",
       "Flour Tortilla",
@@ -1404,6 +1552,7 @@
   },
   {
     "name": "Soft Taco - Chicken",
+    "category": "Tacos",
     "ingredients": [
       "Shredded Chicken",
       "Flour Tortilla",
@@ -1413,6 +1562,7 @@
   },
   {
     "name": "Soft Taco Supreme® - Beef",
+    "category": "Tacos",
     "ingredients": [
       "Seasoned Beef",
       "Flour Tortilla",
@@ -1424,6 +1574,7 @@
   },
   {
     "name": "Spicy Potato Soft Taco",
+    "category": "Tacos",
     "ingredients": [
       "Potato Bites",
       "Flour Tortilla",
@@ -1434,36 +1585,44 @@
   },
   {
     "name": "Beach Berry Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Beach Berry Freeze™(20 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Berry Sangria Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Berry Sangria Freeze™ (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Blue Raspberry Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Blue Raspberry Freeze™ (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Caleb's Kola (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": [
       "Caleb's Kola"
     ]
   },
   {
     "name": "Chicken Enchilada Nachos",
+    "category": "Cantina Menu",
     "ingredients": [
       "Nacho Chips",
       "Red Sauce",
@@ -1476,6 +1635,7 @@
   },
   {
     "name": "Fiesta Taco Salad Nachos",
+    "category": "Cantina Menu",
     "ingredients": [
       "Nacho Chips",
       "Seasoned Beef",
@@ -1491,100 +1651,122 @@
   },
   {
     "name": "IZZE Sparkling Clementine (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": [
       "IZZE Sparkling Clementine"
     ]
   },
   {
     "name": "Lemonade Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Lemonade Freeze™ (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Margarita Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Margarita Freeze™ (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Mtn Dew® Baja Blast Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Mtn Dew® Baja Blast Freeze™ (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Mtn Dew® Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Mtn Dew® Freeze™ (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Orange Cream Pop Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Orange Cream Pop Freeze™ (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Pepsi® Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Pepsi® Freeze™ (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Pina Colada Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Pina Colada Freeze™ (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Prosecco Sparkling Wine (350 mL)",
+    "category": "Cantina Menu",
     "ingredients": [
       "Prosecco Sparkling Wine"
     ]
   },
   {
     "name": "Red Cherry Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Red Cherry Freeze™ (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Red Sangria (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": [
       "Red Sangria"
     ]
   },
   {
     "name": "Red Wine (6.3 fl oz)",
+    "category": "Cantina Menu",
     "ingredients": [
       "Red Wine"
     ]
   },
   {
     "name": "Rum (80 proof)",
+    "category": "Cantina Menu",
     "ingredients": [
       "Rum (80 proof)"
     ]
   },
   {
     "name": "Steak Nachos",
+    "category": "Cantina Menu",
     "ingredients": [
       "Nacho Chips",
       "Nacho Cheese Sauce",
@@ -1597,990 +1779,1163 @@
   },
   {
     "name": "Strawberry Skittles Freeze™ (16 oz)",
+    "category": "Cantina Menu",
     "ingredients": [
       "Strawberry Skittles Freeze™"
     ]
   },
   {
     "name": "Strawberry Skittles Freeze™ (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": [
       "Strawberry Skittles Freeze™"
     ]
   },
   {
     "name": "Stubborn Soda - Black Cherry Tarragon (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": [
       "Stubborn Soda - Black Cherry with Tarragon"
     ]
   },
   {
     "name": "Stubborn Soda - Classic Root Beer (20 oz)",
+    "category": "Cantina Menu",
     "ingredients": [
       "Stubborn Soda - Classic Root Beer"
     ]
   },
   {
     "name": "Tequila (80 proof)",
+    "category": "Cantina Menu",
     "ingredients": [
       "Tequila (80 proof)"
     ]
   },
   {
     "name": "Vodka (80 proof)",
+    "category": "Cantina Menu",
     "ingredients": [
       "Vodka (80 proof)"
     ]
   },
   {
     "name": "Barrio Blonde (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Barrio Blonde"
     ]
   },
   {
     "name": "Barrio Blonde (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Barrio Blonde"
     ]
   },
   {
     "name": "Beach Bell Beer (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Beach Bell Beer"
     ]
   },
   {
     "name": "Beach Bell Beer (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Beach Bell Beer"
     ]
   },
   {
     "name": "Beer - General (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Beer - General"
     ]
   },
   {
     "name": "Beer - General (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Beer - General"
     ]
   },
   {
     "name": "Bell Tower Cerveza (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Bell Tower Cerveza"
     ]
   },
   {
     "name": "Bell Tower Cerveza (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Bell Tower Cerveza"
     ]
   },
   {
     "name": "Blue Moon Belgian White (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Blue Moon Belgian White"
     ]
   },
   {
     "name": "Blue Moon Belgian White (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Blue Moon Belgian White"
     ]
   },
   {
     "name": "Blue Point Big City Bells Pilsner (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Blue Point Big City Bells Pilsner"
     ]
   },
   {
     "name": "Blue Point Big City Bells Pilsner (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Blue Point Big City Bells Pilsner"
     ]
   },
   {
     "name": "Blue Point Hoptical Illusion IPA (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Blue Point Hoptical Illusion IPA"
     ]
   },
   {
     "name": "Blue Point Hoptical Illusion IPA (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Blue Point Hoptical Illusion IPA"
     ]
   },
   {
     "name": "Blue Point Toasted Lager (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Blue Point Toasted Lager"
     ]
   },
   {
     "name": "Blue Point Toasted Lager (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Blue Point Toasted Lager"
     ]
   },
   {
     "name": "Brooklyn Lager (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Brooklyn Lager"
     ]
   },
   {
     "name": "Brooklyn Lager (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Brooklyn Lager"
     ]
   },
   {
     "name": "Bud Light (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Bud Light"
     ]
   },
   {
     "name": "Bud Light (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Bud Light"
     ]
   },
   {
     "name": "Budweiser (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Budweiser"
     ]
   },
   {
     "name": "Budweiser (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Budweiser"
     ]
   },
   {
     "name": "Coors (Coors Banquet) (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Coors (Coors Banquet)"
     ]
   },
   {
     "name": "Coors (Coors Banquet) (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Coors (Coors Banquet)"
     ]
   },
   {
     "name": "Coors Light (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Coors Light"
     ]
   },
   {
     "name": "Coors Light (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Coors Light"
     ]
   },
   {
     "name": "Copperhead Red (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Copperhead Red"
     ]
   },
   {
     "name": "Copperhead Red (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Copperhead Red"
     ]
   },
   {
     "name": "Corona Extra (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Corona Extra"
     ]
   },
   {
     "name": "Corona Extra (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Corona Extra"
     ]
   },
   {
     "name": "Corona Light (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Corona Light"
     ]
   },
   {
     "name": "Corona Light (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Corona Light"
     ]
   },
   {
     "name": "Corona Premier (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Corona Premier"
     ]
   },
   {
     "name": "Corona Premier (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Corona Premier"
     ]
   },
   {
     "name": "Dos Equis Lager Especial (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Dos Equis Lager Especial"
     ]
   },
   {
     "name": "Dos Equis Lager Especial (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Dos Equis Lager Especial"
     ]
   },
   {
     "name": "Dos Equis Mexican Pale Ale (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Dos Equis Mexican Pale Ale"
     ]
   },
   {
     "name": "Dos Equis Mexican Pale Ale (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Dos Equis Mexican Pale Ale"
     ]
   },
   {
     "name": "Fair Winds® Howling Gail (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Fair Winds® Howling Gale"
     ]
   },
   {
     "name": "Fair Winds® Howling Gail (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Fair Winds® Howling Gale"
     ]
   },
   {
     "name": "Fat Tire Amber Ale (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Fat Tire Amber Ale"
     ]
   },
   {
     "name": "Fat Tire Amber Ale (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Fat Tire Amber Ale"
     ]
   },
   {
     "name": "Firestone 805 (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Firestone 805"
     ]
   },
   {
     "name": "Firestone 805 (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Firestone 805"
     ]
   },
   {
     "name": "Four Peaks Kilt Lifter (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Four Peaks Kilt Lifter"
     ]
   },
   {
     "name": "Four Peaks Kilt Lifter (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Four Peaks Kilt Lifter"
     ]
   },
   {
     "name": "Heineken (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Heineken"
     ]
   },
   {
     "name": "Heineken (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Heineken"
     ]
   },
   {
     "name": "Heineken Light (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Heineken Light"
     ]
   },
   {
     "name": "Heineken Light (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Heineken Light"
     ]
   },
   {
     "name": "Kona Big Wave Golden Ale (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Kona Big Wave Golden Ale"
     ]
   },
   {
     "name": "Kona Big Wave Golden Ale (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Kona Big Wave Golden Ale"
     ]
   },
   {
     "name": "Lagunitas IPA (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Lagunitas IPA"
     ]
   },
   {
     "name": "Lagunitas IPA (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Lagunitas IPA"
     ]
   },
   {
     "name": "Landshark Lager (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Landshark Lager"
     ]
   },
   {
     "name": "Landshark Lager (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Landshark Lager"
     ]
   },
   {
     "name": "Michelob Original Lager (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Michelob Original Lager"
     ]
   },
   {
     "name": "Michelob Original Lager (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Michelob Original Lager"
     ]
   },
   {
     "name": "Michelob Ultra (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Michelob Ultra"
     ]
   },
   {
     "name": "Michelob Ultra (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Michelob Ultra"
     ]
   },
   {
     "name": "Miller Genuine Draft (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Miller Genuine Draft"
     ]
   },
   {
     "name": "Miller Genuine Draft (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Miller Genuine Draft"
     ]
   },
   {
     "name": "Miller High Life (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Miller High Life"
     ]
   },
   {
     "name": "Miller High Life (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Miller High Life"
     ]
   },
   {
     "name": "Miller Lite (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Miller Lite"
     ]
   },
   {
     "name": "Miller Lite (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Miller Lite"
     ]
   },
   {
     "name": "Modelo Especial (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Modelo Especial"
     ]
   },
   {
     "name": "Modelo Especial (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Modelo Especial"
     ]
   },
   {
     "name": "Modelo Negra (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Modelo Negra"
     ]
   },
   {
     "name": "Modelo Negra (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Modelo Negra"
     ]
   },
   {
     "name": "Motorworks Intellectual Property IPA (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Motorworks Intellectual Property IPA"
     ]
   },
   {
     "name": "Motorworks Intellectual Property IPA (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Motorworks Intellectual Property IPA"
     ]
   },
   {
     "name": "Motorworks Pulp Fiction IPA (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Motorworks Pulp Fiction IPA"
     ]
   },
   {
     "name": "Motorworks Pulp Fiction IPA (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Motorworks Pulp Fiction IPA"
     ]
   },
   {
     "name": "Newcastle Brown Ale (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Newcastle Brown Ale"
     ]
   },
   {
     "name": "Newcastle Brown Ale (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Newcastle Brown Ale"
     ]
   },
   {
     "name": "Old Elephant IPA (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Old Elephant IPA"
     ]
   },
   {
     "name": "Old Elephant IPA (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Old Elephant IPA"
     ]
   },
   {
     "name": "Pabst Blue Ribbon Original (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Pabst Blue Ribbon Original"
     ]
   },
   {
     "name": "Pabst Blue Ribbon Original (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Pabst Blue Ribbon Original"
     ]
   },
   {
     "name": "Pacifico (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Pacifico"
     ]
   },
   {
     "name": "Pacifico (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Pacifico"
     ]
   },
   {
     "name": "Patriot Ale (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Patriot Ale"
     ]
   },
   {
     "name": "Patriot Ale (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Patriot Ale"
     ]
   },
   {
     "name": "Revolution Anti Hero (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Revolution Anti Hero"
     ]
   },
   {
     "name": "Revolution Anti Hero (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Revolution Anti Hero"
     ]
   },
   {
     "name": "Road 2 Ruin Double IPA (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Road 2 Ruin Double IPA"
     ]
   },
   {
     "name": "Road 2 Ruin Double IPA (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Road 2 Ruin Double IPA"
     ]
   },
   {
     "name": "Samuel Adams® Winter Lager (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Samuel Adams Winter Lager"
     ]
   },
   {
     "name": "Samuel Adams® Winter Lager (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Samuel Adams Winter Lager"
     ]
   },
   {
     "name": "Sea Hag IPA (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Sea Hag IPA"
     ]
   },
   {
     "name": "Sea Hag IPA (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Sea Hag IPA"
     ]
   },
   {
     "name": "Shock Top Belgian White (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Shock Top Belgian White"
     ]
   },
   {
     "name": "Shock Top Belgian White (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Shock Top Belgian White"
     ]
   },
   {
     "name": "Sol Cervesa (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Sol Cervesa"
     ]
   },
   {
     "name": "Sol Cervesa (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Sol Cervesa"
     ]
   },
   {
     "name": "Stella Artois (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Stella Artois"
     ]
   },
   {
     "name": "Stella Artois (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Stella Artois"
     ]
   },
   {
     "name": "Sweetwater 420 Extra Pale Ale (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Sweetwater 420 Extra Pale Ale"
     ]
   },
   {
     "name": "Sweetwater 420 Extra Pale Ale (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Sweetwater 420 Extra Pale Ale"
     ]
   },
   {
     "name": "Tecate Light (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Tecate Light"
     ]
   },
   {
     "name": "Tecate Light (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Tecate Light"
     ]
   },
   {
     "name": "Tecate Original (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Tecate Original"
     ]
   },
   {
     "name": "Tecate Original (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Tecate Original"
     ]
   },
   {
     "name": "Victoria (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Victoria"
     ]
   },
   {
     "name": "Victoria (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Victoria"
     ]
   },
   {
     "name": "White Claw Hard Seltzer (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "White Claw Hard Seltzer"
     ]
   },
   {
     "name": "Yuengling - Black and Tan (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Black and Tan"
     ]
   },
   {
     "name": "Yuengling - Black and Tan (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Black and Tan"
     ]
   },
   {
     "name": "Yuengling - Golden Pilsner (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Golden Pilsner"
     ]
   },
   {
     "name": "Yuengling - Golden Pilsner (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Golden Pilsner"
     ]
   },
   {
     "name": "Yuengling - Lager (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Lager"
     ]
   },
   {
     "name": "Yuengling - Lager (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Lager"
     ]
   },
   {
     "name": "Yuengling - Light Lager (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Light Lager"
     ]
   },
   {
     "name": "Yuengling - Light Lager (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Light Lager"
     ]
   },
   {
     "name": "Yuengling - Porter (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Porter"
     ]
   },
   {
     "name": "Yuengling - Porter (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Porter"
     ]
   },
   {
     "name": "Yuengling - Premium (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Premium"
     ]
   },
   {
     "name": "Yuengling - Premium (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Premium"
     ]
   },
   {
     "name": "Yuengling - Premium Light (12 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Premium Light"
     ]
   },
   {
     "name": "Yuengling - Premium Light (16 oz)",
+    "category": "Cantina Beer, Wine and Spirits",
     "ingredients": [
       "Yuengling - Premium Light"
     ]
   },
   {
     "name": "Blue Raspberry Freeze™ (16 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Blue Raspberry Freeze™ (20 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Blue Raspberry Freeze™ (32 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Caleb's Kola (20 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Caleb's Kola"
     ]
   },
   {
     "name": "Cherry Freeze™ (16 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Cherry Freeze™ (20 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Cherry Freeze™ (32 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "IZZE Sparkling Clementine (20 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "IZZE Sparkling Clementine"
     ]
   },
   {
     "name": "Lemonade Freeze™ (16 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Lemonade Freeze™ (20 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Lemonade Freeze™ (32 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Margarita Freeze™ (16 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Margarita Freeze™ (20 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Margarita Freeze™ (32 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Mtn Dew® Baja Blast Freeze™ (16 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Mtn Dew® Baja Blast Freeze™ (20 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Mtn Dew® Baja Blast Freeze™ (30 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Orange Cream Pop Freeze™ - LV (16 oz)",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Orange Cream Pop Freeze™ - LV (20 oz)",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Orange Cream Pop Freeze™ - LV (32 oz)",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Pepsi® Freeze™ (16 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Pepsi® Freeze™ (20 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Pepsi® Freeze™ (32 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Pina Colada Freeze™ (16 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Pina Colada Freeze™ (20 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Pina Colada Freeze™ (32 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": []
   },
   {
     "name": "Red Sangria - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Red Sangria - LV"
     ]
   },
   {
     "name": "Rose Wine (10 fl oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Rose Wine"
     ]
   },
   {
     "name": "Rum (80 proof) - Double - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Rum (80 proof)"
     ]
   },
   {
     "name": "Rum (80 proof) - Single - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Rum (80 proof)"
     ]
   },
   {
     "name": "Strawberry Flavor Shot (16 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Strawberry Flavor Shot - LV"
     ]
   },
   {
     "name": "Strawberry Flavor Shot (32 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Strawberry Flavor Shot - LV"
     ]
   },
   {
     "name": "Strawberry Skittles Freeze™ - LV (16 oz)",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Strawberry Skittles Freeze™"
     ]
   },
   {
     "name": "Strawberry Skittles Freeze™ - LV (20 oz)",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Strawberry Skittles Freeze™"
     ]
   },
   {
     "name": "Strawberry Skittles Freeze™ - LV (32 oz)",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Strawberry Skittles Freeze™"
     ]
   },
   {
     "name": "Stubborn Soda - Black Cherry Taragon (20 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Stubborn Soda - Black Cherry with Tarragon"
     ]
   },
   {
     "name": "Stubborn Soda - Classic Root Beer (20 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Stubborn Soda - Classic Root Beer"
     ]
   },
   {
     "name": "Tequila (80 proof) - Double - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Tequila (80 proof)"
     ]
   },
   {
     "name": "Tequila (80 proof) - Single - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Tequila (80 proof)"
     ]
   },
   {
     "name": "Vanilla Flavor Shot (16 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Vanilla Flavor Shot - LV"
     ]
   },
   {
     "name": "Vanilla Flavor Shot (32 oz) - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Vanilla Flavor Shot - LV"
     ]
   },
   {
     "name": "Vodka (80 proof) - Double - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Vodka (80 proof)"
     ]
   },
   {
     "name": "Vodka (80 proof) - Single - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Vodka (80 proof)"
     ]
   },
   {
     "name": "Whiskey (80 proof) - Double - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Whiskey (80 proof) - LV"
     ]
   },
   {
     "name": "Whiskey (80 proof) - Single - LV",
+    "category": "Las Vegas Cantina Menu",
     "ingredients": [
       "Whiskey (80 proof) - LV"
     ]
   },
   {
     "name": "7-Layer Burrito",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Flour Tortilla",
       "Refried Beans",
@@ -2594,6 +2949,7 @@
   },
   {
     "name": "Bean Burrito",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Refried Beans",
       "Flour Tortilla",
@@ -2604,6 +2960,7 @@
   },
   {
     "name": "Black Bean Burrito",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Flour Tortilla",
       "Black Beans",
@@ -2614,6 +2971,7 @@
   },
   {
     "name": "Black Beans & Rice",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Seasoned Rice",
       "Black Beans"
@@ -2621,6 +2979,7 @@
   },
   {
     "name": "Breakfast Soft Taco - Egg & Cheese",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Eggs",
       "Flour Tortilla",
@@ -2629,6 +2988,7 @@
   },
   {
     "name": "Cheesy Roll Up",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Three Cheese Blend",
       "Flour Tortilla"
@@ -2636,6 +2996,7 @@
   },
   {
     "name": "Double Tostada (regional)",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Refried Beans",
       "Red Sauce",
@@ -2647,6 +3008,7 @@
   },
   {
     "name": "Pintos 'n Cheese",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Refried Beans",
       "Red Sauce",
@@ -2655,6 +3017,7 @@
   },
   {
     "name": "Power Menu Bowl - Veggie",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Black Beans",
       "Seasoned Rice",
@@ -2668,6 +3031,7 @@
   },
   {
     "name": "Power Menu Burrito - Veggie",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Flour Tortilla",
       "Black Beans",
@@ -2681,6 +3045,7 @@
   },
   {
     "name": "Quesadilla - Cheese",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Flour Tortilla",
       "Three Cheese Blend",
@@ -2689,6 +3054,7 @@
   },
   {
     "name": "Spicy Tostada",
+    "category": "Vegetarian Menu",
     "ingredients": [
       "Refried Beans",
       "Red Sauce",
