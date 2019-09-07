@@ -7,7 +7,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "fetch-recipes": "ts-node --skip-project scripts/fetchRecipes.ts"
+    "fetch-recipes": "ts-node --skip-project scripts/fetchRecipes.ts",
+    "fetch-images": "ts-node --skip-project scripts/fetchImages.ts"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -9,7 +9,7 @@ const RECIPES_URL = 'https://www.nutritionix.com/taco-bell/ingredient-search/pre
 ( async () =>
 {
   console.log( 'Launching browser...' );
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch( { headless: false } );
 
   console.log( 'Opening new page...' );
   const page = await browser.newPage();
