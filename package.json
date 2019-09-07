@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "parse-ingredients": "ts-node --skip-project scripts/parseIngredients.ts"
+    "fetch-recipes": "ts-node --skip-project scripts/fetchRecipes.ts"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,16 +28,16 @@
     "@material-ui/core": "^4.4.0",
     "@material-ui/icons": "^4.2.1",
     "@material-ui/styles": "^4.3.3",
-    "@types/cheerio": "^0.22.13",
     "@types/d3": "^5.7.2",
     "@types/jest": "24.0.18",
     "@types/node": "^12.7.4",
+    "@types/puppeteer": "^1.19.1",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
     "@types/uuid": "^3.4.5",
     "@types/webpack-env": "^1.14.0",
-    "cheerio": "^1.0.0-rc.3",
     "d3": "^5.11.0",
+    "puppeteer": "^1.19.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
