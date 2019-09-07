@@ -73,7 +73,8 @@
       [
         "components",
         "data",
-        "hooks"
+        "hooks",
+        "utilities"
       ]
     ],
     "no-namespace": false,

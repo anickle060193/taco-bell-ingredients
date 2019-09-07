@@ -7,8 +7,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "fetch-recipes": "ts-node --skip-project scripts/fetchRecipes.ts",
-    "fetch-images": "ts-node --skip-project scripts/fetchImages.ts"
+    "fetch-recipes": "ts-node --project scripts/tsconfig.json scripts/fetchRecipes.ts",
+    "fetch-images": "ts-node --project scripts/tsconfig.json scripts/fetchImages.ts",
+    "combine-recipe-images": "ts-node --project scripts/tsconfig.json scripts/combineRecipeImages.ts"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,12 +1,19 @@
-import * as fs from 'fs';
-import * as path from 'path';
-import * as puppeteer from 'puppeteer';
+import fs from 'fs';
+import path from 'path';
+import puppeteer from 'puppeteer';
 
-const RECIPES_DATA_FILENAME = path.join( __dirname, '..', 'src', 'data', 'recipes.json' );
+const RECIPES_DATA_FILENAME = path.join( __dirname, 'recipes.json' );
 
 const RECIPES_URL = 'https://www.nutritionix.com/taco-bell/ingredient-search/premium';
 
-( async () =>
+interface Recipe
+{
+  name: string;
+  category: string;
+  ingredients: string[];
+}
+
+async function main()
 {
   console.log( 'Launching browser...' );
   const browser = await puppeteer.launch( { headless: false } );
@@ -27,30 +34,55 @@ const RECIPES_URL = 'https://www.nutritionix.com/taco-bell/ingredient-search/pre
   console.log( 'Parsing recipes...' );
   const recipes = await page.evaluate( () =>
   {
-    interface Recipe
-    {
-      name: string;
-      category: string;
-      ingredients: string[];
-    }
-
     const recipeList: Recipe[] = [];
 
-    let firstElement = document.querySelector( '#ingredientSearchGrid tbody' ).firstElementChild;
+    let recipeTable = document.querySelector( '#ingredientSearchGrid tbody' );
+    if( !( recipeTable instanceof HTMLElement ) )
+    {
+      throw new Error( 'Could not find recipe table body.' );
+    }
+
     let category = '';
 
-    for( let iterElement = firstElement; iterElement instanceof HTMLElement; iterElement = iterElement.nextElementSibling )
+    for( let iterElement = recipeTable.firstElementChild; iterElement instanceof HTMLElement; iterElement = iterElement.nextElementSibling )
     {
       if( iterElement.matches( '.subCategory' ) )
       {
-        category = iterElement.querySelector( 'h3' ).textContent;
+        let categoryHeading = iterElement.querySelector( 'h3' );
+        if( !categoryHeading )
+        {
+          throw new Error( 'Category has no heading element.' );
+        }
+        else if( !categoryHeading.textContent )
+        {
+          throw new Error( 'Category heading has no text.' );
+        }
+        category = categoryHeading.textContent;
       }
       else if( iterElement.matches( '.filterTextParent' ) )
       {
-        let itemName = iterElement.querySelector( '.itemName' ).textContent;
-        let ingredients = Array.from( iterElement.querySelector( '.ingredientStatement' ).querySelectorAll( 'strong' ) ).map( ( el ) => el.textContent );
+        let recipe = iterElement.querySelector( '.itemName' );
+        if( !recipe )
+        {
+          throw new Error( 'Recipe row has no recipe item name.' );
+        }
+        else if( !recipe.textContent )
+        {
+          throw new Error( 'Recipe item name has no text.' );
+        }
+
+        let ingredientStatement = iterElement.querySelector( '.ingredientStatement' );
+        if( !ingredientStatement )
+        {
+          throw new Error( 'Recipe row has no ingredient statement.' );
+        }
+
+        let ingredients = Array.from( ingredientStatement.querySelectorAll( 'strong' ) )
+          .map( ( el ) => el.textContent )
+          .filter( ( ingredient ): ingredient is string => typeof ingredient === 'string' );
+
         recipeList.push( {
-          name: itemName,
+          name: recipe.textContent,
           category: category,
           ingredients: ingredients,
         } );
@@ -65,4 +97,9 @@ const RECIPES_URL = 'https://www.nutritionix.com/taco-bell/ingredient-search/pre
 
   console.log( `Writing ${recipes.length} recipes to "${RECIPES_DATA_FILENAME}"...` );
   fs.writeFileSync( RECIPES_DATA_FILENAME, JSON.stringify( recipes, null, 2 ) );
-} )();
+}
+
+if( require.main === module )
+{
+  main();
+}

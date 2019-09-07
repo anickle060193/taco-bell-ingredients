@@ -1,19 +1,23 @@
-import * as fs from 'fs';
-import * as path from 'path';
-import * as puppeteer from 'puppeteer';
+import fs from 'fs';
+import path from 'path';
+import puppeteer from 'puppeteer';
 
-const IMAGES_DATA_FILENAME = path.join( __dirname, '..', 'src', 'data', 'images.json' );
+const IMAGES_DATA_FILENAME = path.join( __dirname, 'images.json' );
 
 const MENU_URL = 'https://www.tacobell.com/food/new';
 
-interface ItemImage
+interface Images
 {
-  name: string;
-  type: 'recipe' | 'ingredient';
-  url: string;
+  recipe: { [ recipe: string ]: string };
+  ingredient: { [ ingredient: string ]: string };
 }
 
-( async () =>
+function formatItemName( name: string )
+{
+  return name.replace( /[®™]/g, '' );
+}
+
+async function main()
 {
   console.log( 'Launching browser...' );
   const browser = await puppeteer.launch( { headless: false } );
@@ -26,9 +30,15 @@ interface ItemImage
   await page.goto( MENU_URL );
 
   console.log( 'Selecting menus...' );
-  const menuUrls = await page.$$eval( 'a[href^="/food/"].clp-ribbon-item', ( links: HTMLAnchorElement[] ) => links.map( ( link ) => link.href ) );
+  const menuUrls = await page.evaluate( () =>
+    Array.from( document.querySelectorAll<HTMLAnchorElement>( 'a[href^="/food/"].clp-ribbon-item' ) )
+      .map( ( link ) => link.href )
+  );
 
-  const images: ItemImage[] = [];
+  const images: Images = {
+    recipe: {},
+    ingredient: {}
+  };
 
   console.log( 'Found', menuUrls.length, 'menus...' );
   for( let menuUrl of menuUrls )
@@ -40,16 +50,19 @@ interface ItemImage
     await page.waitForFunction( () => Array.from( document.querySelectorAll( 'img' ) ).every( ( img ) => img.complete ) );
 
     console.log( '  Selecing recipe images...' );
-    const recipeImages = await page.$$eval( '.product-image img', ( imgs: HTMLImageElement[] ): ItemImage[] =>
-      imgs.map( ( img ) => ( {
-        name: img.alt,
-        type: 'recipe',
-        url: img.currentSrc || img.src || img.srcset,
-      } ) )
+    const recipeImages = await page.evaluate( () =>
+      Array.from( document.querySelectorAll<HTMLImageElement>( '.product-image img' ) )
+        .map( ( img ) => ( {
+          recipe: img.alt,
+          url: img.currentSrc || img.src || img.srcset,
+        } ) )
     );
 
     console.log( '  Found', recipeImages.length, 'recipe images...' );
-    images.push( ...recipeImages );
+    for( let { recipe, url } of recipeImages )
+    {
+      images.recipe[ formatItemName( recipe ) ] = url;
+    }
 
     console.log( 'Selecting customize buttons...' );
     const customizeButtons = await page.$$( '.product-item button.btn-customize:not( .size-select )' );
@@ -65,16 +78,19 @@ interface ItemImage
       await page.waitForFunction( () => Array.from( document.querySelectorAll( 'img' ) ).every( ( img ) => img.complete ) );
 
       console.log( '  Selecting ingredient images...' );
-      const ingredientImages = await page.$$eval( '.js-ingredient-entry img', ( imgs: HTMLImageElement[] ): ItemImage[] =>
-        imgs.map( ( img ) => ( {
-          name: img.alt,
-          type: 'ingredient',
-          url: img.currentSrc || img.src || img.srcset,
-        } ) )
+      const ingredientImages = await page.evaluate( () =>
+        Array.from( document.querySelectorAll<HTMLImageElement>( '.js-ingredient-entry img' ) )
+          .map( ( img ) => ( {
+            ingredient: img.alt,
+            url: img.currentSrc || img.src || img.srcset,
+          } ) )
       );
 
       console.log( '  Found', ingredientImages.length, 'ingredient images...' );
-      images.push( ...ingredientImages );
+      for( let { ingredient, url } of ingredientImages )
+      {
+        images.ingredient[ formatItemName( ingredient ) ] = url;
+      }
 
       console.log( '  Closing customize popup...' );
       await page.keyboard.press( 'Escape' );
@@ -87,7 +103,11 @@ interface ItemImage
   console.log( 'Closing browser...' );
   await browser.close();
 
-  console.log( `Writing ${images.length} images to "${IMAGES_DATA_FILENAME}"...` );
+  console.log( `Writing ${Object.keys( images.recipe ).length + Object.keys( images.ingredient ).length} images to "${IMAGES_DATA_FILENAME}"...` );
   fs.writeFileSync( IMAGES_DATA_FILENAME, JSON.stringify( images, null, 2 ) );
+}
 
-} )();
+if( require.main === module )
+{
+  main();
+}
