@@ -1,11 +1,10 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { makeStyles } from '@material-ui/core';
-
-import { GraphComponent } from 'components/graphs/CommonGraph';
+import * as d3 from 'd3';
 
 import { distinct, reversed } from 'utilities';
 import createColorSet from 'utilities/colorSet';
-import { NodeDatum } from 'data/Simulation';
+import { NodeDatum, LinkDatum } from 'data/Simulation';
 
 const NODE_RADIUS = 32;
 const BORDER_THICKNESS = 4;
@@ -35,6 +34,18 @@ function findNodeByPoint( nodes: NodeDatum[], nodeRadius: number, x: number, y: 
 
     return distance <= nodeRadius;
   } );
+}
+
+interface GraphProps
+{
+  simulationRef: React.MutableRefObject<d3.Simulation<NodeDatum, LinkDatum>>;
+  nodes: NodeDatum[];
+  links: LinkDatum[];
+}
+
+interface GraphComponent extends React.FC<GraphProps>
+{
+  nodeRadius: number;
 }
 
 const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>

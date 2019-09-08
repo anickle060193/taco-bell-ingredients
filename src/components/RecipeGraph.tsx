@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core';
 import * as d3 from 'd3';
 
-import Graph from 'components/graphs/Graph';
+import Graph from 'components/CanvasGraph';
 import RecipesInformation from 'components/RecipesInformation';
 
 import useRefInit from 'hooks/useRefInit';
