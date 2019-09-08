@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { GraphComponent } from 'components/graphs/CommonGraph';
 
 const NODE_RADIUS = 32;
-const LINK_THICKNESS = 1;
+const LINK_THICKNESS = 0.5;
 
 const useStyles = makeStyles( {
   root: {
@@ -41,8 +41,11 @@ const useStyles = makeStyles( {
   },
   link: {
     position: 'absolute',
-    height: LINK_THICKNESS,
-    backgroundColor: 'lightgray',
+    height: 0,
+    borderTopWidth: LINK_THICKNESS,
+    borderTopStyle: 'solid',
+    borderTopColor: 'lightgray',
+    opacity: 0.5,
   }
 } );
 

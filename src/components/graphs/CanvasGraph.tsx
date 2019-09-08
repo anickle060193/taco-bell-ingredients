@@ -1,7 +1,12 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { makeStyles } from '@material-ui/core';
 
-import { GraphComponent } from './CommonGraph';
+import { GraphComponent } from 'components/graphs/CommonGraph';
+
+import { distinct } from 'utilities';
+
+const NODE_RADIUS = 32;
+const BORDER_THICKNESS = 4;
 
 const useStyles = makeStyles( {
   canvasContainer: {
@@ -23,7 +28,7 @@ const CanvasGraph: GraphComponent = ( { nodes, links } ) =>
   const canvasRef = useRef<HTMLCanvasElement>( null );
 
   const [ size, setSize ] = useState( { width: 0, height: 0 } );
-  const [ scale /* , setScale */ ] = useState( 0.5 );
+  const [ scale /* , setScale */ ] = useState( 1.0 );
 
   useEffect( () =>
   {
@@ -63,6 +68,13 @@ const CanvasGraph: GraphComponent = ( { nodes, links } ) =>
     return distance <= CanvasGraph.nodeRadius;
   } );
 
+  const imagesRef = useRef<{ [ src: string ]: HTMLImageElement }>( {} );
+
+  const onSetImage = useCallback( ( image: HTMLImageElement ) =>
+  {
+    imagesRef.current[ image.src ] = image;
+  }, [] );
+
   useEffect( () =>
   {
     if( !canvasRef.current )
@@ -99,20 +111,30 @@ const CanvasGraph: GraphComponent = ( { nodes, links } ) =>
       context.stroke();
     }
 
-    context.fillStyle = 'orange';
-    for( let node of nodes.filter( ( n ) => n.type === 'ingredient' ) )
+    for( let node of nodes )
     {
-      context.beginPath();
-      context.arc( node.x, node.y, CanvasGraph.nodeRadius, 0, 2 * Math.PI, false );
-      context.fill();
-    }
+      let image = imagesRef.current[ node.data.src ];
+      if( image && image.complete )
+      {
+        context.save();
+        context.beginPath();
+        context.arc( node.x, node.y, NODE_RADIUS, 0, 2 * Math.PI, false );
+        context.clip();
+        context.drawImage(
+          image,
+          node.x - NODE_RADIUS,
+          node.y - NODE_RADIUS,
+          2 * NODE_RADIUS,
+          2 * NODE_RADIUS
+        );
+        context.restore();
+      }
 
-    context.fillStyle = 'green';
-    for( let node of nodes.filter( ( n ) => n.type === 'recipe' ) )
-    {
+      context.strokeStyle = node.type === 'ingredient' ? 'orange' : 'green';
+      context.lineWidth = BORDER_THICKNESS;
       context.beginPath();
-      context.arc( node.x, node.y, CanvasGraph.nodeRadius, 0, 2 * Math.PI, false );
-      context.fill();
+      context.arc( node.x, node.y, NODE_RADIUS, 0, 2 * Math.PI, false );
+      context.stroke();
     }
   } );
 
@@ -127,10 +149,20 @@ const CanvasGraph: GraphComponent = ( { nodes, links } ) =>
         onMouseMove={onMouseMove}
         onMouseLeave={( e ) => setMousePosition( undefined )}
       />
+      <div style={{ display: 'none' }}>
+        {distinct( nodes.map( ( node ) => node.data.src ) ).map( ( src ) => (
+          <img
+            key={src}
+            src={src}
+            alt=""
+            ref={onSetImage}
+          />
+        ) )}
+      </div>
     </div>
   );
 };
 
-CanvasGraph.nodeRadius = 6;
+CanvasGraph.nodeRadius = NODE_RADIUS;
 
 export default CanvasGraph;

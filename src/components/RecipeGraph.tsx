@@ -98,7 +98,7 @@ const RecipeGraph: React.FC = () =>
         d3.forceLink<NodeDatum, LinkDatum>( linksRef.current ).id( ( node ) => node.id )
           .distance( Graph.nodeRadius * 10 )
       )
-      .force( 'charge', d3.forceManyBody().strength( -Graph.nodeRadius * 10 ) )
+      .force( 'charge', d3.forceManyBody().strength( -Graph.nodeRadius * 20 ) )
       .force( 'center', d3.forceCenter( 0, 0 ) )
       .force( 'collide', d3.forceCollide( Graph.nodeRadius ) );
   } );
