@@ -1,7 +1,14 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { Typography, makeStyles, createStyles } from '@material-ui/core';
 
 import { Recipe } from 'data/Recipes';
+
+const useStyles = makeStyles( ( theme ) => createStyles( {
+  root: {
+    background: 'rgba( 20, 20, 20, 0.8 )',
+    padding: theme.spacing( 1 ),
+  },
+} ) );
 
 interface Props
 {
@@ -10,6 +17,8 @@ interface Props
 
 const RecipesInformation: React.FC<Props> = ( { recipes } ) =>
 {
+  const styles = useStyles();
+
   let maxIngredientRecipe = recipes.reduce( ( currentMax, recipe ) =>
   {
     if( !currentMax
@@ -24,30 +33,32 @@ const RecipesInformation: React.FC<Props> = ( { recipes } ) =>
   } );
 
   return (
-    <table>
-      <tbody>
-        <tr>
-          <Typography component="td"># of Recipes:</Typography>
-          <Typography component="td">{recipes.length}</Typography>
-        </tr>
-        <tr>
-          <Typography component="td"># of Ingredients:</Typography>
-          <Typography component="td">{recipes.flatMap( ( recipe ) => recipe.ingredients ).length}</Typography>
-        </tr>
-        <tr>
-          <Typography component="td">Avg Ingredient/Recipe:</Typography>
-          <Typography component="td">
-            {( recipes.reduce( ( total, recipe ) => total + recipe.ingredients.length, 0 ) / recipes.length ).toFixed( 2 )}
-          </Typography>
-        </tr>
-        {maxIngredientRecipe && (
+    <div className={styles.root}>
+      <table>
+        <tbody>
           <tr>
-            <Typography component="td">Max Ingredient/Recipe:</Typography>
-            <Typography component="td">{maxIngredientRecipe.ingredients.length} ({maxIngredientRecipe.name})</Typography>
+            <Typography component="td"># of Recipes:</Typography>
+            <Typography component="td">{recipes.length}</Typography>
           </tr>
-        )}
-      </tbody>
-    </table>
+          <tr>
+            <Typography component="td"># of Ingredients:</Typography>
+            <Typography component="td">{recipes.flatMap( ( recipe ) => recipe.ingredients ).length}</Typography>
+          </tr>
+          <tr>
+            <Typography component="td">Avg Ingredient/Recipe:</Typography>
+            <Typography component="td">
+              {( recipes.reduce( ( total, recipe ) => total + recipe.ingredients.length, 0 ) / recipes.length ).toFixed( 2 )}
+            </Typography>
+          </tr>
+          {maxIngredientRecipe && (
+            <tr>
+              <Typography component="td">Max Ingredient/Recipe:</Typography>
+              <Typography component="td">{maxIngredientRecipe.ingredients.length} ({maxIngredientRecipe.name})</Typography>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
