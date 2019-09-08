@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core';
 import { GraphComponent } from 'components/graphs/CommonGraph';
 
 import { distinct } from 'utilities';
+import createColorSet from 'utilities/colorSet';
 
 const NODE_RADIUS = 32;
 const BORDER_THICKNESS = 4;
@@ -20,6 +21,8 @@ const useStyles = makeStyles( {
     height: '100%',
   },
 } );
+
+const colors = createColorSet();
 
 const CanvasGraph: GraphComponent = ( { nodes, links } ) =>
 {
@@ -100,11 +103,11 @@ const CanvasGraph: GraphComponent = ( { nodes, links } ) =>
     context.translate( size.width / 2.0, size.height / 2.0 );
     context.scale( scale, scale );
 
-    context.strokeStyle = 'lightgray';
-    context.lineWidth = 0.5;
+    context.lineWidth = 1.0;
 
     for( let link of links )
     {
+      context.strokeStyle = colors( link.target.id, 100, 50 );
       context.beginPath();
       context.moveTo( link.source.x, link.source.y );
       context.lineTo( link.target.x, link.target.y );
