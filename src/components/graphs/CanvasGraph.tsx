@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useCallback } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core';
 
 import { GraphComponent } from 'components/graphs/CommonGraph';
@@ -71,12 +71,12 @@ const CanvasGraph: GraphComponent = ( { nodes, links } ) =>
     return distance <= CanvasGraph.nodeRadius;
   } );
 
-  const imagesRef = useRef<{ [ src: string ]: HTMLImageElement }>( {} );
+  const imagesRef = useRef<{ [ src: string ]: HTMLImageElement | null | undefined }>( {} );
 
-  const onSetImage = useCallback( ( image: HTMLImageElement ) =>
+  const onSetImage = ( src: string, image: HTMLImageElement | null ) =>
   {
-    imagesRef.current[ image.src ] = image;
-  }, [] );
+    imagesRef.current[ src ] = image;
+  };
 
   useEffect( () =>
   {
@@ -158,7 +158,7 @@ const CanvasGraph: GraphComponent = ( { nodes, links } ) =>
             key={src}
             src={src}
             alt=""
-            ref={onSetImage}
+            ref={( ref ) => onSetImage( src, ref )}
           />
         ) )}
       </div>
