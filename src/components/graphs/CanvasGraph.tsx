@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core';
 
-import { NodeDatum, LinkDatum } from 'data/Simulation';
+import { GraphComponent } from './CommonGraph';
 
 const useStyles = makeStyles( {
   canvasContainer: {
@@ -16,14 +16,7 @@ const useStyles = makeStyles( {
   },
 } );
 
-interface Props
-{
-  nodeRadius: number;
-  nodes: NodeDatum[];
-  links: LinkDatum[];
-}
-
-const CanvasGraph: React.FC<Props> = ( { nodeRadius, nodes, links } ) =>
+const CanvasGraph: GraphComponent = ( { nodes, links } ) =>
 {
   const styles = useStyles();
 
@@ -63,17 +56,11 @@ const CanvasGraph: React.FC<Props> = ( { nodeRadius, nodes, links } ) =>
 
   const hoveredNode = mousePosition && [ ...nodes ].reverse().find( ( node ) =>
   {
-    if( typeof node.x !== 'number'
-      || typeof node.y !== 'number' )
-    {
-      return false;
-    }
-
     const xDistance = node.x - mousePosition.x;
     const yDistance = node.y - mousePosition.y;
     const distance = Math.sqrt( xDistance * xDistance + yDistance * yDistance );
 
-    return distance <= nodeRadius;
+    return distance <= CanvasGraph.nodeRadius;
   } );
 
   useEffect( () =>
@@ -106,16 +93,6 @@ const CanvasGraph: React.FC<Props> = ( { nodeRadius, nodes, links } ) =>
 
     for( let link of links )
     {
-      if( typeof link.source !== 'object'
-        || typeof link.target !== 'object'
-        || typeof link.source.x !== 'number'
-        || typeof link.source.y !== 'number'
-        || typeof link.target.x !== 'number'
-        || typeof link.target.y !== 'number' )
-      {
-        continue;
-      }
-
       context.beginPath();
       context.moveTo( link.source.x, link.source.y );
       context.lineTo( link.target.x, link.target.y );
@@ -125,28 +102,16 @@ const CanvasGraph: React.FC<Props> = ( { nodeRadius, nodes, links } ) =>
     context.fillStyle = 'orange';
     for( let node of nodes.filter( ( n ) => n.type === 'ingredient' ) )
     {
-      if( typeof node.x !== 'number'
-        || typeof node.y !== 'number' )
-      {
-        continue;
-      }
-
       context.beginPath();
-      context.arc( node.x, node.y, nodeRadius, 0, 2 * Math.PI, false );
+      context.arc( node.x, node.y, CanvasGraph.nodeRadius, 0, 2 * Math.PI, false );
       context.fill();
     }
 
     context.fillStyle = 'green';
     for( let node of nodes.filter( ( n ) => n.type === 'recipe' ) )
     {
-      if( typeof node.x !== 'number'
-        || typeof node.y !== 'number' )
-      {
-        continue;
-      }
-
       context.beginPath();
-      context.arc( node.x, node.y, nodeRadius, 0, 2 * Math.PI, false );
+      context.arc( node.x, node.y, CanvasGraph.nodeRadius, 0, 2 * Math.PI, false );
       context.fill();
     }
   } );
@@ -165,5 +130,7 @@ const CanvasGraph: React.FC<Props> = ( { nodeRadius, nodes, links } ) =>
     </div>
   );
 };
+
+CanvasGraph.nodeRadius = 6;
 
 export default CanvasGraph;

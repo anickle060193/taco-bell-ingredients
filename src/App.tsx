@@ -1,6 +1,8 @@
 import React from 'react';
 import { createMuiTheme, MuiThemeProvider, CssBaseline } from '@material-ui/core';
 
+import 'typeface-roboto';
+
 import RecipeGraph from 'components/RecipeGraph';
 
 import './App.css';

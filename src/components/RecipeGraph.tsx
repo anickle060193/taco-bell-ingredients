@@ -2,18 +2,16 @@ import React from 'react';
 import { makeStyles, createStyles } from '@material-ui/core';
 import * as d3 from 'd3';
 
-import CanvasGraph from 'components/CanvasGraph';
+import Graph from 'components/graphs/Graph';
 import RecipesInformation from 'components/RecipesInformation';
 
 import useRefInit from 'hooks/useRefInit';
 import useSimulation from 'hooks/useSimulation';
 
 import { Recipe, Ingredient, recipes as allRecipes } from 'data/Recipes';
-import { NodeDatum, LinkDatum } from 'data/Simulation';
+import { NodeDatum, LinkDatum, UninitializedNodeDatum, UninitializedLinkDatum } from 'data/Simulation';
 
 import { distinct } from 'utilities';
-
-const NODE_RADIUS = 6;
 
 const useStyles = makeStyles( ( theme ) => createStyles( {
   container: {
@@ -66,31 +64,31 @@ const RecipeGraph: React.FC = () =>
     const ingredients = distinct( recipes.flatMap( ( recipe ) => recipe.ingredients ), ( ingredient ) => ingredient.name );
 
     return [
-      ...ingredients.map<NodeDatum>( ( ingredient ) => ( {
+      ...ingredients.map<UninitializedNodeDatum>( ( ingredient ) => ( {
         id: ingredientId( ingredient ),
         name: ingredient.name,
         type: 'ingredient',
         data: ingredient,
       } ) ),
-      ...recipes.map<NodeDatum>( ( recipe ) => ( {
+      ...recipes.map<UninitializedNodeDatum>( ( recipe ) => ( {
         id: recipeId( recipe ),
         name: `${recipe.name} (${recipe.category})`,
         type: 'recipe',
         data: recipe,
       } ) )
-    ];
+    ] as NodeDatum[];
   } );
 
   const linksRef = useRefInit<LinkDatum[]>( () =>
     recipes
-      .flatMap( ( recipe ) =>
+      .flatMap<UninitializedLinkDatum>( ( recipe ) =>
         recipe.ingredients
           .map( ( ingredient ) => ( {
             id: linkId( recipe, ingredient ),
             source: recipeId( recipe ),
             target: ingredientId( ingredient ),
           } ) )
-      )
+      ) as LinkDatum[]
   );
 
   useSimulation( () =>
@@ -98,17 +96,16 @@ const RecipeGraph: React.FC = () =>
     return d3.forceSimulation<NodeDatum, LinkDatum>( nodesRef.current )
       .force( 'link',
         d3.forceLink<NodeDatum, LinkDatum>( linksRef.current ).id( ( node ) => node.id )
-          .distance( 100 )
+          .distance( Graph.nodeRadius * 10 )
       )
-      .force( 'charge', d3.forceManyBody().strength( -200 ) )
+      .force( 'charge', d3.forceManyBody().strength( -Graph.nodeRadius * 10 ) )
       .force( 'center', d3.forceCenter( 0, 0 ) )
-      .force( 'collide', d3.forceCollide( NODE_RADIUS ) );
+      .force( 'collide', d3.forceCollide( Graph.nodeRadius ) );
   } );
 
   return (
     <div className={styles.container}>
-      <CanvasGraph
-        nodeRadius={NODE_RADIUS}
+      <Graph
         nodes={nodesRef.current}
         links={linksRef.current}
       />
