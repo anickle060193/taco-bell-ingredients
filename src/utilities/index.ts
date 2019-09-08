@@ -18,3 +18,8 @@ export function distinct<T extends object>( values: T[], getKey?: ( value: T ) =
 
   return distinctValues;
 }
+
+export function reversed<T>( arr: ArrayLike<T> )
+{
+  return Array.from( arr ).reverse();
+}

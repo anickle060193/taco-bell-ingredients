@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import uuid from 'uuid/v4';
 
 import useRefInit from 'hooks/useRefInit';
 
@@ -10,7 +9,7 @@ export default function useSimulation<N extends d3.SimulationNodeDatum, L extend
 
   useEffect( () =>
   {
-    const tickEvent = `tick.${uuid()}`;
+    const tickEvent = 'tick.setTick';
     const sim = simulationRef.current;
 
     function onTick()

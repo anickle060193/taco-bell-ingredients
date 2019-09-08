@@ -85,7 +85,6 @@
     "no-trailing-whitespace": true,
     "no-unnecessary-initializer": false,
     "no-unused-expression": true,
-    "no-use-before-declare": true,
     "object-literal-key-quotes": [
       true,
       "as-needed"

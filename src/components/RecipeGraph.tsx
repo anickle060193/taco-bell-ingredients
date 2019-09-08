@@ -91,7 +91,7 @@ const RecipeGraph: React.FC = () =>
       ) as LinkDatum[]
   );
 
-  useSimulation( () =>
+  const simulationRef = useSimulation( () =>
   {
     return d3.forceSimulation<NodeDatum, LinkDatum>( nodesRef.current )
       .force( 'link',
@@ -106,6 +106,7 @@ const RecipeGraph: React.FC = () =>
   return (
     <div className={styles.container}>
       <Graph
+        simulationRef={simulationRef}
         nodes={nodesRef.current}
         links={linksRef.current}
       />
