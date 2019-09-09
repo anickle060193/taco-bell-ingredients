@@ -1,12 +1,14 @@
 import React from 'react';
-import { Typography, makeStyles, createStyles } from '@material-ui/core';
+import { Typography, makeStyles, createStyles, Paper } from '@material-ui/core';
+import color from 'color';
 
 import { Recipe } from 'data/Recipes';
 
 const useStyles = makeStyles( ( theme ) => createStyles( {
   root: {
-    background: 'rgba( 20, 20, 20, 0.8 )',
     padding: theme.spacing( 1 ),
+    backgroundColor: color( theme.palette.background.paper ).alpha( 0.6 ).string(),
+    userSelect: 'none',
   },
 } ) );
 
@@ -33,7 +35,7 @@ const RecipesInformation: React.FC<Props> = ( { recipes } ) =>
   } );
 
   return (
-    <div className={styles.root}>
+    <Paper className={styles.root}>
       <table>
         <tbody>
           <tr>
@@ -58,7 +60,7 @@ const RecipesInformation: React.FC<Props> = ( { recipes } ) =>
           )}
         </tbody>
       </table>
-    </div>
+    </Paper>
   );
 };
 
