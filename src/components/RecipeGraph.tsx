@@ -3,7 +3,6 @@ import { makeStyles, createStyles } from '@material-ui/core';
 import * as d3 from 'd3';
 
 import Graph from 'components/CanvasGraph';
-import RecipesInformation from 'components/RecipesInformation';
 
 import useRefInit from 'hooks/useRefInit';
 import useSimulation from 'hooks/useSimulation';
@@ -18,12 +17,6 @@ const useStyles = makeStyles( ( theme ) => createStyles( {
     position: 'relative',
     width: '100%',
     height: '100%',
-  },
-  information: {
-    position: 'absolute',
-    bottom: 0,
-    right: 0,
-    margin: theme.spacing( 2 ),
   },
 } ) );
 
@@ -109,9 +102,6 @@ const RecipeGraph: React.FC = () =>
         nodes={nodesRef.current}
         links={linksRef.current}
       />
-      <div className={styles.information}>
-        <RecipesInformation recipes={recipes} />
-      </div>
     </div>
   );
 };
