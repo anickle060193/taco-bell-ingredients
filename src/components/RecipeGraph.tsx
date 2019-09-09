@@ -49,7 +49,6 @@ const recipes: Recipe[] = distinct(
   allRecipes.filter( ( recipe ) => DISPLAYED_CATEGORIES.has( recipe.category ) ),
   ( recipe ) => recipe.name
 );
-console.log( 'Filtered Recipe Count:', recipes.length, 'Total Recipe Count:', allRecipes.length );
 
 const recipeId = ( recipe: Recipe ) => `recipe_${recipe.name}`;
 const ingredientId = ( ingredient: Ingredient ) => `ingredient_${ingredient.name}`;

@@ -1,15 +1,18 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, createStyles } from '@material-ui/core';
 import * as d3 from 'd3';
+
+import ScaleControl from 'components/ScaleControl';
+
+import { NodeDatum, LinkDatum } from 'data/Simulation';
 
 import { distinct, reversed } from 'utilities';
 import createColorSet from 'utilities/colorSet';
-import { NodeDatum, LinkDatum } from 'data/Simulation';
 
-const NODE_RADIUS = 32;
+const NODE_RADIUS = 16;
 const BORDER_THICKNESS = 4;
 
-const useStyles = makeStyles( {
+const useStyles = makeStyles( ( theme ) => createStyles( {
   canvasContainer: {
     position: 'relative',
     width: '100%',
@@ -20,16 +23,54 @@ const useStyles = makeStyles( {
     width: '100%',
     height: '100%',
   },
-} );
+  scaleContainer: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    margin: theme.spacing( 2 ),
+  }
+} ) );
 
 const colors = createColorSet();
 
-function findNodeByPoint( nodes: NodeDatum[], nodeRadius: number, x: number, y: number )
+interface MousePosition
+{
+  clientX: number;
+  clientY: number;
+}
+
+interface Size
+{
+  width: number;
+  height: number;
+}
+
+interface Translation
+{
+  x: number;
+  y: number;
+}
+
+interface SimulationPosition
+{
+  simX: number;
+  simY: number;
+}
+
+function canvasToSimulationCoords( mousePosition: MousePosition, size: Size, translation: Translation, scale: number ): SimulationPosition
+{
+  return {
+    simX: ( mousePosition.clientX - size.width / 2 - translation.x ) / scale,
+    simY: ( mousePosition.clientY - size.height / 2 - translation.y ) / scale,
+  };
+}
+
+function findNodeByPoint( nodes: NodeDatum[], nodeRadius: number, simulationPosition: SimulationPosition )
 {
   return reversed( nodes ).find( ( node ) =>
   {
-    const xDistance = node.x - x;
-    const yDistance = node.y - y;
+    const xDistance = node.x - simulationPosition.simX;
+    const yDistance = node.y - simulationPosition.simY;
     const distance = Math.sqrt( xDistance * xDistance + yDistance * yDistance );
 
     return distance <= nodeRadius;
@@ -54,7 +95,8 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
 
   const canvasRef = useRef<HTMLCanvasElement>( null );
 
-  const [ size, setSize ] = useState( { width: 0, height: 0 } );
+  const [ size, setSize ] = useState<Size>( { width: 0, height: 0 } );
+  const [ scale, setScale ] = useState( 0.4 );
 
   useEffect( () =>
   {
@@ -76,59 +118,103 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
     return () => window.removeEventListener( 'resize', onResize );
   }, [] );
 
-  const [ mousePosition, setMousePosition ] = useState<{ x: number, y: number }>();
+  const [ mousePosition, setMousePosition ] = useState<MousePosition>();
+  const [ translation, setTranslation ] = useState<Translation>( { x: 0, y: 0 } );
+  const [ mouseDown, setMouseDown ] = useState( false );
   const [ draggingNode, setDraggingNode ] = useState<NodeDatum>();
 
-  function canvasToSimulationCoords( { clientX, clientY }: { clientX: number, clientY: number } )
+  const onMouseDown = useCallback( ( e: React.MouseEvent<HTMLCanvasElement> ) =>
   {
-    return {
-      x: ( clientX - size.width / 2 ),
-      y: ( clientY - size.height / 2 ),
-    };
-  }
+    setMouseDown( true );
 
-  function onMouseMove( e: React.MouseEvent<HTMLCanvasElement> )
-  {
-    let coords = canvasToSimulationCoords( e );
-    setMousePosition( coords );
-
-    if( draggingNode )
-    {
-      simulationRef.current.alpha( 1.0 );
-      simulationRef.current.restart();
-      draggingNode.fx = coords.x;
-      draggingNode.fy = coords.y;
-    }
-  }
-
-  function onMouseDown( e: React.MouseEvent<HTMLCanvasElement> )
-  {
-    let { x, y } = canvasToSimulationCoords( e );
-    let node = findNodeByPoint( nodes, NODE_RADIUS, x, y );
-
-    setDraggingNode( node );
-  }
-
-  const onMouseUp = useCallback( ( e: MouseEvent ) =>
-  {
-    if( draggingNode )
-    {
-      simulationRef.current.alpha( 1.0 );
-      simulationRef.current.restart();
-      draggingNode.fx = null;
-      draggingNode.fy = null;
-    }
-    setDraggingNode( undefined );
-  }, [ simulationRef, draggingNode ] );
+    let simPosition = canvasToSimulationCoords( e, size, translation, scale );
+    setDraggingNode( findNodeByPoint( nodes, NODE_RADIUS, simPosition ) );
+  }, [ nodes, size, translation, scale ] );
 
   useEffect( () =>
   {
+    function onMouseMove( e: MouseEvent )
+    {
+      if( !canvasRef.current )
+      {
+        return;
+      }
+
+      let { left, top } = canvasRef.current.getBoundingClientRect();
+
+      let mouseCoords: MousePosition = {
+        clientX: e.clientX - left,
+        clientY: e.clientY - top,
+      };
+
+      setMousePosition( mouseCoords );
+
+      if( !mouseDown )
+      {
+        return;
+      }
+
+      let coords = canvasToSimulationCoords( mouseCoords, size, translation, scale );
+
+      if( draggingNode )
+      {
+        draggingNode.fx = coords.simX;
+        draggingNode.fy = coords.simY;
+        simulationRef.current.alpha( 1.0 );
+        simulationRef.current.restart();
+      }
+      else
+      {
+        const { movementX, movementY } = e;
+        setTranslation( ( oldTranslation ) => ( {
+          x: oldTranslation.x + movementX,
+          y: oldTranslation.y + movementY,
+        } ) );
+      }
+    }
+
+    window.addEventListener( 'mousemove', onMouseMove );
+
+    return () => window.removeEventListener( 'mousemove', onMouseMove );
+
+  }, [ mouseDown, size, draggingNode, simulationRef, translation, scale ] );
+
+  useEffect( () =>
+  {
+    function onMouseUp( e: MouseEvent )
+    {
+      setMouseDown( false );
+
+      if( draggingNode )
+      {
+        draggingNode.fx = null;
+        draggingNode.fy = null;
+        simulationRef.current.alpha( 1.0 );
+        simulationRef.current.restart();
+      }
+      setDraggingNode( undefined );
+
+      setMousePosition( undefined );
+    }
+
     window.addEventListener( 'mouseup', onMouseUp );
 
     return () => window.removeEventListener( 'mouseup', onMouseUp );
-  }, [ onMouseUp ] );
 
-  const hoveredNode = mousePosition && findNodeByPoint( nodes, NODE_RADIUS, mousePosition.x, mousePosition.y );
+  }, [ simulationRef, draggingNode ] );
+
+  const onWheel = useCallback( ( e: React.WheelEvent<HTMLElement> ) =>
+  {
+    let { simX, simY } = canvasToSimulationCoords( e, size, translation, scale );
+    let newScale = Math.max( 0.1, Math.round( ( scale + e.deltaY * -0.001 ) * 100 ) / 100 );
+
+    let newTranslation: Translation = {
+      x: e.clientX - size.width / 2 - simX * newScale,
+      y: e.clientY - size.height / 2 - simY * newScale,
+    };
+    setTranslation( newTranslation );
+    setScale( newScale );
+  }, [ size, translation, scale ] );
 
   const imagesRef = useRef<{ [ src: string ]: HTMLImageElement | null | undefined }>( {} );
 
@@ -157,9 +243,10 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
       return;
     }
 
-    context.setTransform( 1, 0, 0, 1, 0, 0 );
+    context.resetTransform();
     context.clearRect( 0, 0, size.width, size.height );
-    context.translate( size.width / 2.0, size.height / 2.0 );
+    context.translate( size.width / 2.0 + translation.x, size.height / 2.0 + translation.y );
+    context.scale( scale, scale );
 
     context.lineWidth = 1.0;
 
@@ -197,18 +284,15 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
       context.arc( node.x, node.y, NODE_RADIUS, 0, 2 * Math.PI, false );
       context.stroke();
     }
-  }, [ links, nodes, size ] );
+  }, [ links, nodes, size, translation, scale ] );
 
-  useEffect( () =>
-  {
-    const sim = simulationRef.current;
-    sim.on( 'tick.render', onDrawCanvas );
+  useEffect( onDrawCanvas );
 
-    return () =>
-    {
-      sim.on( 'tick.render', null );
-    };
-  }, [ simulationRef, onDrawCanvas ] );
+  const hoveredNode = mousePosition && findNodeByPoint(
+    nodes,
+    NODE_RADIUS,
+    canvasToSimulationCoords( mousePosition, size, translation, scale )
+  );
 
   return (
     <div className={styles.canvasContainer}>
@@ -219,9 +303,11 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
         width={size.width}
         height={size.height}
         onMouseDown={onMouseDown}
-        onMouseMove={onMouseMove}
-        onMouseLeave={( e ) => setMousePosition( undefined )}
+        onWheel={onWheel}
       />
+      <div className={styles.scaleContainer}>
+        <ScaleControl scale={scale} setScale={setScale} />
+      </div>
       <div style={{ display: 'none' }}>
         {distinct( nodes.map( ( node ) => node.data.src ) ).map( ( src ) => (
           <img
