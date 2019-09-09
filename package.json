@@ -8,6 +8,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve": "yarn run build && serve",
+    "deploy": "yarn run build && gh-pages -d build",
     "fetch-recipes": "ts-node --project scripts/tsconfig.json scripts/fetchRecipes.ts",
     "fetch-images": "ts-node --project scripts/tsconfig.json scripts/fetchImages.ts",
     "combine-recipe-images": "ts-node --project scripts/tsconfig.json scripts/combineRecipeImages.ts"
@@ -43,6 +44,7 @@
     "classnames": "^2.2.6",
     "color": "^3.1.2",
     "d3": "^5.11.0",
+    "gh-pages": "^2.1.1",
     "puppeteer": "^1.19.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
