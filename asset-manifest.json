@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/taco-bell-ingredients/static/css/main.a85955e6.chunk.css",
+    "main.js": "/taco-bell-ingredients/static/js/main.15ff4677.chunk.js",
+    "main.js.map": "/taco-bell-ingredients/static/js/main.15ff4677.chunk.js.map",
+    "runtime~main.js": "/taco-bell-ingredients/static/js/runtime~main.c30f0c67.js",
+    "runtime~main.js.map": "/taco-bell-ingredients/static/js/runtime~main.c30f0c67.js.map",
+    "static/css/2.0bda4073.chunk.css": "/taco-bell-ingredients/static/css/2.0bda4073.chunk.css",
+    "static/js/2.e3c32439.chunk.js": "/taco-bell-ingredients/static/js/2.e3c32439.chunk.js",
+    "static/js/2.e3c32439.chunk.js.map": "/taco-bell-ingredients/static/js/2.e3c32439.chunk.js.map",
+    "index.html": "/taco-bell-ingredients/index.html",
+    "precache-manifest.d799a509386c77c849ec0b6f3d1781f2.js": "/taco-bell-ingredients/precache-manifest.d799a509386c77c849ec0b6f3d1781f2.js",
+    "service-worker.js": "/taco-bell-ingredients/service-worker.js",
+    "static/css/2.0bda4073.chunk.css.map": "/taco-bell-ingredients/static/css/2.0bda4073.chunk.css.map",
+    "static/css/main.a85955e6.chunk.css.map": "/taco-bell-ingredients/static/css/main.a85955e6.chunk.css.map",
+    "static/media/index.css": "/taco-bell-ingredients/static/media/roboto-latin-900italic.ebf6d164.woff2"
+  }
+}
