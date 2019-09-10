@@ -92,6 +92,7 @@ const RecipeGraph: React.FC = () =>
       )
       .force( 'charge', d3.forceManyBody().strength( -Graph.nodeRadius * 20 ) )
       .force( 'center', d3.forceCenter( 0, 0 ) )
+      .force( 'radial', d3.forceRadial( 500 ) )
       .force( 'collide', d3.forceCollide( Graph.nodeRadius ) );
   } );
 
