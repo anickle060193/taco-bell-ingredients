@@ -18,6 +18,7 @@ const useStyles = makeStyles( ( theme ) => createStyles( {
     width: '100%',
     height: '100%',
     overflow: 'hidden',
+    touchAction: 'none',
   },
   canvas: {
     width: '100%',
@@ -61,6 +62,14 @@ interface SimulationPosition
 {
   simX: number;
   simY: number;
+}
+
+type MouseLikeEvent = ClientPosition;
+
+interface MouseMoveLikeEvent extends ClientPosition
+{
+  movementX: number;
+  movementY: number;
 }
 
 function clientToCanvasPosition( canvas: HTMLCanvasElement, clientPosition: ClientPosition ): CanvasPosition
@@ -112,6 +121,7 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
   const canvasRef = useRef<HTMLCanvasElement>( null );
 
   const [ size, setSize ] = useState<Size>( { width: 0, height: 0 } );
+  const [ translation, setTranslation ] = useState<Translation>( { x: 0, y: 0 } );
   const [ scale, setScale ] = useState( 0.4 );
 
   useEffect( () =>
@@ -135,12 +145,14 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
   }, [] );
 
   const [ mousePosition, setMousePosition ] = useState<CanvasPosition>();
-  const [ translation, setTranslation ] = useState<Translation>( { x: 0, y: 0 } );
+  const [ touchId, setTouchId ] = useState<number>();
+  const [ lastTouch, setLastTouch ] = useState<ClientPosition>();
   const [ mouseDown, setMouseDown ] = useState( false );
   const [ draggingNode, setDraggingNode ] = useState<NodeDatum>();
 
-  const onMouseDown = useCallback( ( e: React.MouseEvent<HTMLCanvasElement> ) =>
+  const onMouseDown = useCallback( ( e: MouseLikeEvent ) =>
   {
+
     if( !canvasRef.current )
     {
       return;
@@ -153,69 +165,142 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
     setDraggingNode( findNodeByPoint( nodes, NODE_RADIUS, simPosition ) );
   }, [ nodes, size, translation, scale ] );
 
+  const onTouchStart = useCallback( ( e: React.TouchEvent<HTMLElement> ) =>
+  {
+    e.preventDefault();
+
+    if( e.touches.length === 1 )
+    {
+      const touch = e.touches[ 0 ];
+      setTouchId( touch.identifier );
+      setLastTouch( {
+        clientX: touch.clientX,
+        clientY: touch.clientY,
+      } );
+
+      onMouseDown( touch );
+    }
+  }, [ onMouseDown ] );
+
+  const onMouseMove = useCallback( ( e: MouseMoveLikeEvent ) =>
+  {
+    if( !canvasRef.current )
+    {
+      return;
+    }
+
+    let canvasPosition = clientToCanvasPosition( canvasRef.current, e );
+    setMousePosition( canvasPosition );
+
+    if( !mouseDown )
+    {
+      return;
+    }
+
+    let coords = canvasToSimulationPosition( canvasPosition, size, translation, scale );
+
+    if( draggingNode )
+    {
+      draggingNode.fx = coords.simX;
+      draggingNode.fy = coords.simY;
+      simulationRef.current.alpha( 1.0 );
+      simulationRef.current.restart();
+    }
+    else
+    {
+      const { movementX, movementY } = e;
+      setTranslation( ( oldTranslation ) => ( {
+        x: oldTranslation.x + movementX,
+        y: oldTranslation.y + movementY,
+      } ) );
+    }
+  }, [ mouseDown, size, draggingNode, simulationRef, translation, scale ] );
+
   useEffect( () =>
   {
-    function onMouseMove( e: MouseEvent )
-    {
-      if( !canvasRef.current )
-      {
-        return;
-      }
-
-      let canvasPosition = clientToCanvasPosition( canvasRef.current, e );
-      setMousePosition( canvasPosition );
-
-      if( !mouseDown )
-      {
-        return;
-      }
-
-      let coords = canvasToSimulationPosition( canvasPosition, size, translation, scale );
-
-      if( draggingNode )
-      {
-        draggingNode.fx = coords.simX;
-        draggingNode.fy = coords.simY;
-        simulationRef.current.alpha( 1.0 );
-        simulationRef.current.restart();
-      }
-      else
-      {
-        const { movementX, movementY } = e;
-        setTranslation( ( oldTranslation ) => ( {
-          x: oldTranslation.x + movementX,
-          y: oldTranslation.y + movementY,
-        } ) );
-      }
-    }
 
     window.addEventListener( 'mousemove', onMouseMove );
 
     return () => window.removeEventListener( 'mousemove', onMouseMove );
 
-  }, [ mouseDown, size, draggingNode, simulationRef, translation, scale ] );
+  }, [ onMouseMove ] );
+
+  const onTouchMove = useCallback( ( e: React.TouchEvent<HTMLElement> ) =>
+  {
+    e.preventDefault();
+
+    if( typeof touchId !== 'number'
+      || !lastTouch )
+    {
+      return;
+    }
+
+    const touch = Array.from( e.changedTouches ).find( ( t ) => t.identifier === touchId );
+    if( !touch )
+    {
+      return;
+    }
+
+    const movementX = touch.clientX - lastTouch.clientX;
+    const movementY = touch.clientY - lastTouch.clientY;
+
+    onMouseMove( {
+      clientX: touch.clientX,
+      clientY: touch.clientY,
+      movementX,
+      movementY
+    } );
+
+    setLastTouch( {
+      clientX: touch.clientX,
+      clientY: touch.clientY,
+    } );
+
+  }, [ onMouseMove, lastTouch, touchId ] );
+
+  const onMouseUp = useCallback( ( e: MouseLikeEvent ) =>
+  {
+    if( draggingNode )
+    {
+      draggingNode.fx = null;
+      draggingNode.fy = null;
+      simulationRef.current.alpha( 1.0 );
+      simulationRef.current.restart();
+    }
+
+    setMouseDown( false );
+    setTouchId( undefined );
+    setLastTouch( undefined );
+    setDraggingNode( undefined );
+
+  }, [ draggingNode, simulationRef ] );
 
   useEffect( () =>
   {
-    function onMouseUp( e: MouseEvent )
-    {
-      setMouseDown( false );
-
-      if( draggingNode )
-      {
-        draggingNode.fx = null;
-        draggingNode.fy = null;
-        simulationRef.current.alpha( 1.0 );
-        simulationRef.current.restart();
-      }
-      setDraggingNode( undefined );
-    }
-
     window.addEventListener( 'mouseup', onMouseUp );
 
     return () => window.removeEventListener( 'mouseup', onMouseUp );
 
-  }, [ simulationRef, draggingNode ] );
+  }, [ onMouseUp ] );
+
+  const onTouchEnd = useCallback( ( e: React.TouchEvent<HTMLElement> ) =>
+  {
+    e.preventDefault();
+
+    if( typeof touchId !== 'number' )
+    {
+      return;
+    }
+
+    const touch = Array.from( e.changedTouches ).find( ( t ) => t.identifier === touchId );
+    if( !touch )
+    {
+      return;
+    }
+
+    onMouseUp( touch );
+
+  }, [ touchId, onMouseUp ] );
 
   const onWheel = useCallback( ( e: React.WheelEvent<HTMLElement> ) =>
   {
@@ -353,6 +438,9 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
         width={size.width}
         height={size.height}
         onMouseDown={onMouseDown}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
         onWheel={onWheel}
       />
       <div className={styles.scaleContainer}>
