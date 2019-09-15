@@ -1,8 +1,8 @@
-import * as d3 from 'd3';
+import { SimulationNodeDatum, SimulationLinkDatum } from 'd3-force';
 
 import { Recipe, Ingredient } from 'data/Recipes';
 
-interface BaseUninitializedNodeDatum<T extends string, D> extends d3.SimulationNodeDatum
+interface BaseUninitializedNodeDatum<T extends string, D> extends SimulationNodeDatum
 {
   id: string;
   name: string;
@@ -17,7 +17,7 @@ export type UninitializedNodeDatum = (
 
 export type NodeDatum = Required<UninitializedNodeDatum>;
 
-export interface UninitializedLinkDatum extends d3.SimulationLinkDatum<UninitializedNodeDatum>
+export interface UninitializedLinkDatum extends SimulationLinkDatum<UninitializedNodeDatum>
 {
   id: string;
 }

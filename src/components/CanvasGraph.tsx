@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { makeStyles, createStyles } from '@material-ui/core';
-import * as d3 from 'd3';
 
 import ScaleControl from 'components/ScaleControl';
 
@@ -104,9 +103,10 @@ function findNodeByPoint( nodes: NodeDatum[], nodeRadius: number, simulationPosi
 
 interface GraphProps
 {
-  simulationRef: React.MutableRefObject<d3.Simulation<NodeDatum, LinkDatum>>;
   nodes: NodeDatum[];
   links: LinkDatum[];
+  onNodeDrag: ( nodeId: string, x: number, y: number ) => void;
+  onNodeDragEnd: ( nodeId: string ) => void;
 }
 
 interface GraphComponent extends React.FC<GraphProps>
@@ -114,7 +114,7 @@ interface GraphComponent extends React.FC<GraphProps>
   nodeRadius: number;
 }
 
-const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
+const CanvasGraph: GraphComponent = ( { nodes, links, onNodeDrag, onNodeDragEnd } ) =>
 {
   const styles = useStyles();
 
@@ -201,10 +201,7 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
 
     if( draggingNode )
     {
-      draggingNode.fx = coords.simX;
-      draggingNode.fy = coords.simY;
-      simulationRef.current.alpha( 1.0 );
-      simulationRef.current.restart();
+      onNodeDrag( draggingNode.id, coords.simX, coords.simY );
     }
     else
     {
@@ -214,7 +211,7 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
         y: oldTranslation.y + movementY,
       } ) );
     }
-  }, [ mouseDown, size, draggingNode, simulationRef, translation, scale ] );
+  }, [ mouseDown, size, draggingNode, onNodeDrag, translation, scale ] );
 
   useEffect( () =>
   {
@@ -262,10 +259,7 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
   {
     if( draggingNode )
     {
-      draggingNode.fx = null;
-      draggingNode.fy = null;
-      simulationRef.current.alpha( 1.0 );
-      simulationRef.current.restart();
+      onNodeDragEnd( draggingNode.id );
     }
 
     setMouseDown( false );
@@ -273,7 +267,7 @@ const CanvasGraph: GraphComponent = ( { simulationRef, nodes, links } ) =>
     setLastTouch( undefined );
     setDraggingNode( undefined );
 
-  }, [ draggingNode, simulationRef ] );
+  }, [ draggingNode, onNodeDragEnd ] );
 
   useEffect( () =>
   {

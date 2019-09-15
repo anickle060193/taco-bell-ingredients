@@ -3,7 +3,7 @@ import { createMuiTheme, MuiThemeProvider, CssBaseline } from '@material-ui/core
 
 import 'typeface-roboto';
 
-import RecipeGraph from 'components/RecipeGraph';
+import Main from 'components/Main';
 
 import './App.css';
 
@@ -18,7 +18,7 @@ const App: React.FC = () =>
   return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
-      <RecipeGraph />
+      <Main />
     </MuiThemeProvider>
   );
 };
