@@ -1,12 +1,19 @@
-import React, { useEffect, useRef } from 'react';
-import { makeStyles } from '@material-ui/core';
+import React, { useEffect, useRef, useCallback, useState } from 'react';
+import { makeStyles, Theme, createStyles } from '@material-ui/core';
 import classNames from 'classnames';
+
+import ScaleControl from 'components/ScaleControl';
 
 import { NodeDatum, LinkDatum } from 'data/Simulation';
 
 import createColorSet from 'utilities/colorSet';
 
-const useStyles = makeStyles( {
+interface StyleProps
+{
+  nodeRadius: number;
+}
+
+const useStyles = makeStyles<Theme, StyleProps>( ( theme ) => createStyles( {
   root: {
     position: 'relative',
     width: '100%',
@@ -16,9 +23,10 @@ const useStyles = makeStyles( {
   },
   graph: {
     position: 'relative',
-    width: '100%',
-    height: '100%',
-    transform: 'translate( 50%, 50% )',
+    left: '50%',
+    top: '50%',
+    width: 0,
+    height: 0,
   },
   link: {
     position: 'absolute',
@@ -27,7 +35,7 @@ const useStyles = makeStyles( {
     height: 1,
     transformOrigin: 'top left',
   },
-  node: ( nodeRadius: number ) => ( {
+  node: ( { nodeRadius } ) => ( {
     position: 'absolute',
     left: 0,
     top: 0,
@@ -50,7 +58,13 @@ const useStyles = makeStyles( {
     height: '100%',
     pointerEvents: 'none',
   },
-} );
+  scaleControlContainer: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    padding: theme.spacing( 1 ),
+  },
+} ) );
 
 interface Props
 {
@@ -66,12 +80,15 @@ const colors = createColorSet();
 
 const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onNodeDragEnd, onNodeClick } ) =>
 {
-  const styles = useStyles( nodeRadius );
+  const styles = useStyles( { nodeRadius } );
 
   const containerRef = useRef<HTMLDivElement | null>( null );
   const draggingNodeRef = useRef<NodeDatum | null>( null );
   const firstMoveRef = useRef( true );
   const movedRef = useRef( false );
+
+  const [ scale, setScale ] = useState( 1.0 );
+  const setScaleBounded = useCallback( ( newScale: number ) => setScale( Math.max( 0.1, Math.round( ( newScale ) * 100 ) / 100 ) ), [] );
 
   const onNodeMouseDown = ( node: NodeDatum, e: React.MouseEvent<HTMLElement> ) =>
   {
@@ -97,8 +114,8 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
 
       const { left, top, width, height } = containerRef.current.getBoundingClientRect();
 
-      const x = e.clientX - left - width / 2;
-      const y = e.clientY - top - height / 2;
+      const x = ( e.clientX - left - width / 2 ) / scale;
+      const y = ( e.clientY - top - height / 2 ) / scale;
 
       if( firstMoveRef.current )
       {
@@ -114,7 +131,7 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
 
     return () => window.removeEventListener( 'mousemove', onMouseMove );
 
-  }, [ onNodeDrag ] );
+  }, [ onNodeDrag, scale ] );
 
   useEffect( () =>
   {
@@ -128,7 +145,6 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
 
       draggingNodeRef.current = null;
       firstMoveRef.current = true;
-      movedRef.current = false;
     };
 
     window.addEventListener( 'mouseup', onMouseUp );
@@ -137,12 +153,25 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
 
   }, [ onNodeDragEnd ] );
 
+  const onNodeMouseClick = useCallback( ( node: NodeDatum ) =>
+  {
+    if( !movedRef.current )
+    {
+      onNodeClick( node );
+    }
+  }, [ onNodeClick ] );
+
   return (
     <div
       ref={containerRef}
       className={styles.root}
     >
-      <div className={styles.graph}>
+      <div
+        className={styles.graph}
+        style={{
+          transform: `scale( ${scale} )`,
+        }}
+      >
         {links.map( ( link ) =>
         {
           const xDistance = link.target.x - link.source.x;
@@ -176,7 +205,7 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
               transform: `translate( ${node.x - nodeRadius}px, ${node.y - nodeRadius}px )`,
             }}
             onMouseDown={( e ) => onNodeMouseDown( node, e )}
-            onClick={() => onNodeClick( node )}
+            onClick={() => onNodeMouseClick( node )}
           >
             <img
               src={node.data.src}
@@ -185,6 +214,12 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
             />
           </div>
         ) )}
+      </div>
+      <div className={styles.scaleControlContainer}>
+        <ScaleControl
+          scale={scale}
+          setScale={setScaleBounded}
+        />
       </div>
     </div>
   );

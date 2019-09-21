@@ -38,11 +38,21 @@ const ScaleControl: React.FC<Props> = React.memo( ( { scale, setScale } ) =>
 {
   const styles = useStyles();
 
-  const setScaleBounded = ( newScale: number ) => setScale( Math.max( 0.1, Math.round( ( newScale ) * 100 ) / 100 ) );
+  function onZoomInClick()
+  {
+    if( scale < 1.5 )
+    {
+      setScale( scale + 0.1 );
+    }
+    else
+    {
+      setScale( scale + 0.5 );
+    }
+  }
 
   return (
     <Paper className={styles.root}>
-      {Math.round( scale ) < 1 ?
+      {scale < 1 ?
         (
           <ZoomedOutIcon />
         ) :
@@ -55,7 +65,7 @@ const ScaleControl: React.FC<Props> = React.memo( ( { scale, setScale } ) =>
         color="inherit"
         title="Zoom Out"
         disabled={scale <= 0.1}
-        onClick={() => setScaleBounded( scale - 0.1 )}
+        onClick={() => setScale( scale - 0.1 )}
       >
         <ZoomOutIcon />
       </IconButton>
@@ -66,7 +76,7 @@ const ScaleControl: React.FC<Props> = React.memo( ( { scale, setScale } ) =>
         size="small"
         color="inherit"
         title="Zoom In"
-        onClick={() => setScaleBounded( scale + 0.1 )}
+        onClick={onZoomInClick}
       >
         <ZoomInIcon />
       </IconButton>
