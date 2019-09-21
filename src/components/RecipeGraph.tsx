@@ -48,7 +48,7 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
 {
   const styles = useStyles();
 
-  // const [ hiddenNodes, setHiddenNodes ] = useState<Set<string>>( new Set() );
+  const [ hiddenNodes, setHiddenNodes ] = useState<{ [ nodeId: string ]: boolean | undefined }>( {} );
 
   const simulationRef = useRefInit<Simulation<NodeDatum, LinkDatum>>( () =>
   {
@@ -74,11 +74,11 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
       ...nodesRef.current.filter( ( n ) => allNodes.has( n.id ) ),
       ...ingredients.filter( ( ingredient ) => !existingNodes.has( ingredientId( ingredient ) ) ).map( createIngredientNode ),
       ...recipes.filter( ( recipe ) => !existingNodes.has( recipeId( recipe ) ) ).map( createRecipeNode ),
-    ] as NodeDatum[];
+    ].filter( ( n ) => !hiddenNodes[ n.id ] ) as NodeDatum[];
 
     simulationRef.current.nodes( nodesRef.current );
 
-  }, [ simulationRef, nodesRef, recipes ] );
+  }, [ simulationRef, nodesRef, recipes, hiddenNodes ] );
 
   const linksRef = useRef<LinkDatum[]>( [] );
   useEffect( () =>
@@ -91,7 +91,40 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
             source: recipeId( recipe ),
             target: ingredientId( ingredient ),
           } ) )
-      ) as LinkDatum[];
+      ).filter( ( l ) =>
+      {
+        if( typeof l.source === 'object' )
+        {
+          if( hiddenNodes[ l.source.id ] )
+          {
+            return false;
+          }
+        }
+        else if( typeof l.source === 'string' )
+        {
+          if( hiddenNodes[ l.source ] )
+          {
+            return false;
+          }
+        }
+
+        if( typeof l.target === 'object' )
+        {
+          if( hiddenNodes[ l.target.id ] )
+          {
+            return false;
+          }
+        }
+        else if( typeof l.target === 'string' )
+        {
+          if( hiddenNodes[ l.target ] )
+          {
+            return false;
+          }
+        }
+
+        return true;
+      } ) as LinkDatum[];
 
     simulationRef.current
       .force( 'link',
@@ -99,7 +132,7 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
           .distance( NODE_RADIUS * 10 )
       );
 
-  }, [ simulationRef, recipes ] );
+  }, [ simulationRef, recipes, hiddenNodes ] );
 
   const [ , setUpdateCount ] = useState( 0 );
   useEffect( () =>
@@ -135,6 +168,14 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
     simulationRef.current.restart();
   }, [ simulationRef ] );
 
+  const onNodeClick = useCallback( ( node: NodeDatum ) =>
+  {
+    setHiddenNodes( ( oldHiddenNodes ) => ( {
+      ...oldHiddenNodes,
+      [ node.id ]: !oldHiddenNodes[ node.id ],
+    } ) );
+  }, [] );
+
   return (
     <div className={styles.container}>
       <HtmlGraph
@@ -143,6 +184,7 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
         nodeRadius={NODE_RADIUS}
         onNodeDrag={onNodeDrag}
         onNodeDragEnd={onNodeDragEnd}
+        onNodeClick={onNodeClick}
       />
     </div>
   );

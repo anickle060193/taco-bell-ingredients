@@ -67,21 +67,25 @@ interface Props
   nodeRadius: number;
   onNodeDrag: ( node: NodeDatum, x: number, y: number ) => void;
   onNodeDragEnd: ( node: NodeDatum ) => void;
+  onNodeClick: ( node: NodeDatum ) => void;
 }
 
 const colors = createColorSet();
 
-const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onNodeDragEnd } ) =>
+const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onNodeDragEnd, onNodeClick } ) =>
 {
   const styles = useStyles( nodeRadius );
 
-  const containerRef = useRef<HTMLDivElement>( null );
-
-  const draggingNodeRef = useRef<NodeDatum>();
+  const containerRef = useRef<HTMLDivElement | null>( null );
+  const draggingNodeRef = useRef<NodeDatum | null>( null );
+  const firstMoveRef = useRef( true );
+  const movedRef = useRef( false );
 
   const onNodeMouseDown = ( node: NodeDatum, e: React.MouseEvent<HTMLElement> ) =>
   {
     draggingNodeRef.current = node;
+    firstMoveRef.current = true;
+    movedRef.current = false;
   };
 
   useEffect( () =>
@@ -104,6 +108,13 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
       const x = e.clientX - left - width / 2;
       const y = e.clientY - top - height / 2;
 
+      if( firstMoveRef.current )
+      {
+        firstMoveRef.current = false;
+        return;
+      }
+
+      movedRef.current = true;
       onNodeDrag( draggingNodeRef.current, x, y );
     };
 
@@ -117,12 +128,15 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
   {
     const onMouseUp = ( e: MouseEvent ) =>
     {
-      if( draggingNodeRef.current )
+      if( draggingNodeRef.current
+        && movedRef.current )
       {
         onNodeDragEnd( draggingNodeRef.current );
       }
 
-      draggingNodeRef.current = undefined;
+      draggingNodeRef.current = null;
+      firstMoveRef.current = true;
+      movedRef.current = false;
     };
 
     window.addEventListener( 'mouseup', onMouseUp );
@@ -170,6 +184,7 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
               transform: `translate( ${node.x - nodeRadius}px, ${node.y - nodeRadius}px )`,
             }}
             onMouseDown={( e ) => onNodeMouseDown( node, e )}
+            onClick={() => onNodeClick( node )}
           >
             <img
               src={node.data.src}
