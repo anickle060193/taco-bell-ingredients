@@ -20,15 +20,7 @@ const useStyles = makeStyles( {
     height: '100%',
     transform: 'translate( 50%, 50% )',
   },
-  linksContainer: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-  },
   link: {
-    strokeWidth: 1,
-  },
-  linkDiv: {
     position: 'absolute',
     left: 0,
     top: 0,
@@ -163,7 +155,7 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
           return (
             <div
               key={link.id}
-              className={styles.linkDiv}
+              className={styles.link}
               style={{
                 width: distance,
                 transform: `translate( ${link.source.x}px, ${link.source.y}px ) rotate( ${rotation}rad )`,
