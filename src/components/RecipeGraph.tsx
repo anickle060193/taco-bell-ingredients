@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { makeStyles, createStyles } from '@material-ui/core';
 import { forceSimulation, forceLink, forceManyBody, forceCenter, forceRadial, forceCollide, Simulation } from 'd3-force';
 
-import CanvasGraph from 'components/CanvasGraph';
 import HtmlGraph from 'components/HtmlGraph';
 
 import useRefInit from 'hooks/useRefInit';
@@ -13,11 +12,6 @@ import { NodeDatum, LinkDatum, UninitializedNodeDatum, UninitializedLinkDatum } 
 import { distinct } from 'utilities';
 
 const NODE_RADIUS = 16;
-
-const GRAPH_COMPONENTS = {
-  '#canvas': CanvasGraph,
-  '#html': HtmlGraph,
-};
 
 const useStyles = makeStyles( ( theme ) => createStyles( {
   container: {
@@ -153,11 +147,9 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
     simulationRef.current.restart();
   }, [ nodesRef, simulationRef ] );
 
-  const GraphComponent = GRAPH_COMPONENTS[ window.location.hash as keyof typeof GRAPH_COMPONENTS ] || GRAPH_COMPONENTS[ '#html' ];
-
   return (
     <div className={styles.container}>
-      <GraphComponent
+      <HtmlGraph
         nodes={nodesRef.current}
         links={linksRef.current}
         nodeRadius={NODE_RADIUS}
