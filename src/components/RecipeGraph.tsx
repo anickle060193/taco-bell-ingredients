@@ -39,6 +39,28 @@ const createRecipeNode = ( recipe: Recipe ): UninitializedNodeDatum => ( {
   data: recipe,
 } );
 
+interface HiddeNodes { [ nodeId: string ]: boolean | undefined; }
+
+function isLinkNodeHidden( linkNode: UninitializedLinkDatum[ 'source' ] | UninitializedLinkDatum[ 'target' ], hiddenNodes: HiddeNodes )
+{
+  if( typeof linkNode === 'object' )
+  {
+    if( hiddenNodes[ linkNode.id ] )
+    {
+      return true;
+    }
+  }
+  else if( typeof linkNode === 'string' )
+  {
+    if( hiddenNodes[ linkNode ] )
+    {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 interface Props
 {
   recipes: Recipe[];
@@ -48,7 +70,7 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
 {
   const styles = useStyles();
 
-  const [ hiddenNodes, setHiddenNodes ] = useState<{ [ nodeId: string ]: boolean | undefined }>( {} );
+  const [ hiddenNodes, setHiddenNodes ] = useState<HiddeNodes>( {} );
 
   const simulationRef = useRefInit<Simulation<NodeDatum, LinkDatum>>( () =>
   {
@@ -91,40 +113,7 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
             source: recipeId( recipe ),
             target: ingredientId( ingredient ),
           } ) )
-      ).filter( ( l ) =>
-      {
-        if( typeof l.source === 'object' )
-        {
-          if( hiddenNodes[ l.source.id ] )
-          {
-            return false;
-          }
-        }
-        else if( typeof l.source === 'string' )
-        {
-          if( hiddenNodes[ l.source ] )
-          {
-            return false;
-          }
-        }
-
-        if( typeof l.target === 'object' )
-        {
-          if( hiddenNodes[ l.target.id ] )
-          {
-            return false;
-          }
-        }
-        else if( typeof l.target === 'string' )
-        {
-          if( hiddenNodes[ l.target ] )
-          {
-            return false;
-          }
-        }
-
-        return true;
-      } ) as LinkDatum[];
+      ).filter( ( l ) => !isLinkNodeHidden( l.source, hiddenNodes ) && !isLinkNodeHidden( l.target, hiddenNodes ) ) as LinkDatum[];
 
     simulationRef.current
       .force( 'link',
