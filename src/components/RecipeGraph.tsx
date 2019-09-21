@@ -119,33 +119,21 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
     };
   }, [ simulationRef ] );
 
-  const onNodeDrag = useCallback( ( nodeId: string, x: number, y: number ) =>
+  const onNodeDrag = useCallback( ( node: NodeDatum, x: number, y: number ) =>
   {
-    const draggingNode = nodesRef.current.find( ( n ) => n.id === nodeId );
-    if( !draggingNode )
-    {
-      return;
-    }
-
-    draggingNode.fx = x;
-    draggingNode.fy = y;
+    node.fx = x;
+    node.fy = y;
     simulationRef.current.alpha( 1.0 );
     simulationRef.current.restart();
-  }, [ nodesRef, simulationRef ] );
+  }, [ simulationRef ] );
 
-  const onNodeDragEnd = useCallback( ( nodeId: string ) =>
+  const onNodeDragEnd = useCallback( ( node: NodeDatum ) =>
   {
-    const draggingNode = nodesRef.current.find( ( n ) => n.id === nodeId );
-    if( !draggingNode )
-    {
-      return;
-    }
-
-    draggingNode.fx = null;
-    draggingNode.fy = null;
+    node.fx = null;
+    node.fy = null;
     simulationRef.current.alpha( 1.0 );
     simulationRef.current.restart();
-  }, [ nodesRef, simulationRef ] );
+  }, [ simulationRef ] );
 
   return (
     <div className={styles.container}>

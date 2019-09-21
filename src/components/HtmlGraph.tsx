@@ -1,19 +1,10 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { makeStyles } from '@material-ui/core';
 import classNames from 'classnames';
 
 import { NodeDatum, LinkDatum } from 'data/Simulation';
 
 import createColorSet from 'utilities/colorSet';
-
-interface Props
-{
-  nodes: NodeDatum[];
-  links: LinkDatum[];
-  nodeRadius: number;
-  onNodeDrag: ( nodeId: string, x: number, y: number ) => void;
-  onNodeDragEnd: ( nodeId: string ) => void;
-}
 
 const useStyles = makeStyles( {
   root: {
@@ -44,12 +35,12 @@ const useStyles = makeStyles( {
     height: 1,
     transformOrigin: 'top left',
   },
-  node: ( props: Props ) => ( {
+  node: ( nodeRadius: number ) => ( {
     position: 'absolute',
     left: 0,
     top: 0,
-    width: props.nodeRadius * 2,
-    height: props.nodeRadius * 2,
+    width: nodeRadius * 2,
+    height: nodeRadius * 2,
     borderRadius: '50%',
     borderWidth: 4,
     borderStyle: 'solid',
@@ -69,16 +60,82 @@ const useStyles = makeStyles( {
   },
 } );
 
+interface Props
+{
+  nodes: NodeDatum[];
+  links: LinkDatum[];
+  nodeRadius: number;
+  onNodeDrag: ( node: NodeDatum, x: number, y: number ) => void;
+  onNodeDragEnd: ( node: NodeDatum ) => void;
+}
+
 const colors = createColorSet();
 
-const HtmlGraph: React.FC<Props> = ( props ) =>
+const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onNodeDragEnd } ) =>
 {
-  const { nodes, links, nodeRadius } = props;
+  const styles = useStyles( nodeRadius );
 
-  const styles = useStyles( props );
+  const containerRef = useRef<HTMLDivElement>( null );
+
+  const draggingNodeRef = useRef<NodeDatum>();
+
+  const onNodeMouseDown = ( node: NodeDatum, e: React.MouseEvent<HTMLElement> ) =>
+  {
+    draggingNodeRef.current = node;
+  };
+
+  useEffect( () =>
+  {
+    const onMouseMove = ( e: MouseEvent ) =>
+    {
+      if( !containerRef.current )
+      {
+        console.error( 'No container ref on mousemove.' );
+        return;
+      }
+
+      if( !draggingNodeRef.current )
+      {
+        return;
+      }
+
+      const { left, top, width, height } = containerRef.current.getBoundingClientRect();
+
+      const x = e.clientX - left - width / 2;
+      const y = e.clientY - top - height / 2;
+
+      onNodeDrag( draggingNodeRef.current, x, y );
+    };
+
+    window.addEventListener( 'mousemove', onMouseMove );
+
+    return () => window.removeEventListener( 'mousemove', onMouseMove );
+
+  }, [ onNodeDrag ] );
+
+  useEffect( () =>
+  {
+    const onMouseUp = ( e: MouseEvent ) =>
+    {
+      if( draggingNodeRef.current )
+      {
+        onNodeDragEnd( draggingNodeRef.current );
+      }
+
+      draggingNodeRef.current = undefined;
+    };
+
+    window.addEventListener( 'mouseup', onMouseUp );
+
+    return () => window.removeEventListener( 'mouseup', onMouseUp );
+
+  }, [ onNodeDragEnd ] );
 
   return (
-    <div className={styles.root}>
+    <div
+      ref={containerRef}
+      className={styles.root}
+    >
       <div className={styles.graph}>
         {links.map( ( link ) =>
         {
@@ -112,6 +169,7 @@ const HtmlGraph: React.FC<Props> = ( props ) =>
             style={{
               transform: `translate( ${node.x - nodeRadius}px, ${node.y - nodeRadius}px )`,
             }}
+            onMouseDown={( e ) => onNodeMouseDown( node, e )}
           >
             <img
               src={node.data.src}
