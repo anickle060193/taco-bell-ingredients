@@ -8,7 +8,6 @@ import { NodeDatum, LinkDatum } from 'data/Simulation';
 import { distinct, reversed } from 'utilities';
 import createColorSet from 'utilities/colorSet';
 
-const NODE_RADIUS = 16;
 const BORDER_THICKNESS = 4;
 
 const useStyles = makeStyles( ( theme ) => createStyles( {
@@ -101,20 +100,16 @@ function findNodeByPoint( nodes: NodeDatum[], nodeRadius: number, simulationPosi
   } );
 }
 
-interface GraphProps
+interface Props
 {
   nodes: NodeDatum[];
   links: LinkDatum[];
+  nodeRadius: number;
   onNodeDrag: ( nodeId: string, x: number, y: number ) => void;
   onNodeDragEnd: ( nodeId: string ) => void;
 }
 
-interface GraphComponent extends React.FC<GraphProps>
-{
-  nodeRadius: number;
-}
-
-const CanvasGraph: GraphComponent = ( { nodes, links, onNodeDrag, onNodeDragEnd } ) =>
+const CanvasGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onNodeDragEnd } ) =>
 {
   const styles = useStyles();
 
@@ -162,8 +157,8 @@ const CanvasGraph: GraphComponent = ( { nodes, links, onNodeDrag, onNodeDragEnd 
 
     let canvasPosition = clientToCanvasPosition( canvasRef.current, e );
     let simPosition = canvasToSimulationPosition( canvasPosition, size, translation, scale );
-    setDraggingNode( findNodeByPoint( nodes, NODE_RADIUS, simPosition ) );
-  }, [ nodes, size, translation, scale ] );
+    setDraggingNode( findNodeByPoint( nodes, nodeRadius, simPosition ) );
+  }, [ nodes, size, translation, scale, nodeRadius ] );
 
   const onTouchStart = useCallback( ( e: React.TouchEvent<HTMLElement> ) =>
   {
@@ -365,14 +360,14 @@ const CanvasGraph: GraphComponent = ( { nodes, links, onNodeDrag, onNodeDragEnd 
       {
         context.save();
         context.beginPath();
-        context.arc( node.x, node.y, NODE_RADIUS, 0, 2 * Math.PI, false );
+        context.arc( node.x, node.y, nodeRadius, 0, 2 * Math.PI, false );
         context.clip();
         context.drawImage(
           image,
-          node.x - NODE_RADIUS,
-          node.y - NODE_RADIUS,
-          2 * NODE_RADIUS,
-          2 * NODE_RADIUS
+          node.x - nodeRadius,
+          node.y - nodeRadius,
+          2 * nodeRadius,
+          2 * nodeRadius
         );
         context.restore();
       }
@@ -380,14 +375,14 @@ const CanvasGraph: GraphComponent = ( { nodes, links, onNodeDrag, onNodeDragEnd 
       context.strokeStyle = node.type === 'ingredient' ? 'orange' : 'green';
       context.lineWidth = BORDER_THICKNESS;
       context.beginPath();
-      context.arc( node.x, node.y, NODE_RADIUS - BORDER_THICKNESS / 2, 0, 2 * Math.PI, false );
+      context.arc( node.x, node.y, nodeRadius - BORDER_THICKNESS / 2, 0, 2 * Math.PI, false );
       context.stroke();
     }
   } );
 
   const hoveredNode = mousePosition && findNodeByPoint(
     nodes,
-    NODE_RADIUS,
+    nodeRadius,
     canvasToSimulationPosition( mousePosition, size, translation, scale )
   );
 
@@ -453,7 +448,5 @@ const CanvasGraph: GraphComponent = ( { nodes, links, onNodeDrag, onNodeDragEnd 
     </div>
   );
 };
-
-CanvasGraph.nodeRadius = NODE_RADIUS;
 
 export default CanvasGraph;

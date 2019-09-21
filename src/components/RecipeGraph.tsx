@@ -2,7 +2,8 @@ import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { makeStyles, createStyles } from '@material-ui/core';
 import { forceSimulation, forceLink, forceManyBody, forceCenter, forceRadial, forceCollide, Simulation } from 'd3-force';
 
-import Graph from 'components/CanvasGraph';
+import CanvasGraph from 'components/CanvasGraph';
+import HtmlGraph from 'components/HtmlGraph';
 
 import useRefInit from 'hooks/useRefInit';
 
@@ -10,6 +11,13 @@ import { Recipe, Ingredient } from 'data/Recipes';
 import { NodeDatum, LinkDatum, UninitializedNodeDatum, UninitializedLinkDatum } from 'data/Simulation';
 
 import { distinct } from 'utilities';
+
+const NODE_RADIUS = 16;
+
+const GRAPH_COMPONENTS = {
+  '#canvas': CanvasGraph,
+  '#html': HtmlGraph,
+};
 
 const useStyles = makeStyles( ( theme ) => createStyles( {
   container: {
@@ -51,10 +59,10 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
   const simulationRef = useRefInit<Simulation<NodeDatum, LinkDatum>>( () =>
   {
     return forceSimulation<NodeDatum, LinkDatum>()
-      .force( 'charge', forceManyBody().strength( -Graph.nodeRadius * 20 ) )
+      .force( 'charge', forceManyBody().strength( -NODE_RADIUS * 20 ) )
       .force( 'center', forceCenter( 0, 0 ) )
       .force( 'radial', forceRadial( 500 ) )
-      .force( 'collide', forceCollide( Graph.nodeRadius ) );
+      .force( 'collide', forceCollide( NODE_RADIUS ) );
   } );
 
   const nodesRef = useRef<NodeDatum[]>( [] );
@@ -94,7 +102,7 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
     simulationRef.current
       .force( 'link',
         forceLink<NodeDatum, LinkDatum>( linksRef.current ).id( ( node ) => node.id )
-          .distance( Graph.nodeRadius * 10 )
+          .distance( NODE_RADIUS * 10 )
       );
 
   }, [ simulationRef, recipes ] );
@@ -145,11 +153,14 @@ const RecipeGraph: React.FC<Props> = ( { recipes } ) =>
     simulationRef.current.restart();
   }, [ nodesRef, simulationRef ] );
 
+  const GraphComponent = GRAPH_COMPONENTS[ window.location.hash as keyof typeof GRAPH_COMPONENTS ] || GRAPH_COMPONENTS[ '#html' ];
+
   return (
     <div className={styles.container}>
-      <Graph
+      <GraphComponent
         nodes={nodesRef.current}
         links={linksRef.current}
+        nodeRadius={NODE_RADIUS}
         onNodeDrag={onNodeDrag}
         onNodeDragEnd={onNodeDragEnd}
       />
