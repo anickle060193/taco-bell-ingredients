@@ -9,12 +9,13 @@ export default function createColorSet()
 
   return ( value: string, s: number = 100, v: number = 100 ) =>
   {
-    if( !( value in colors ) )
+    const key = `${value}_${s}_${v}`;
+    if( !( key in colors ) )
     {
       h += GOLDEN_RATIO_GONJUGATE;
       h %= 1;
-      colors[ value ] = color.hsv( h * 360, s, v ).hex();
+      colors[ key ] = color.hsv( h * 360, s, v ).hex();
     }
-    return colors[ value ];
+    return colors[ key ];
   };
 }
