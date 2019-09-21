@@ -3,6 +3,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core';
 import classNames from 'classnames';
 
 import ScaleControl from 'components/ScaleControl';
+import TranslationControl from 'components/TranslationControl';
 
 import { NodeDatum, LinkDatum } from 'data/Simulation';
 
@@ -58,11 +59,17 @@ const useStyles = makeStyles<Theme, StyleProps>( ( theme ) => createStyles( {
     height: '100%',
     pointerEvents: 'none',
   },
-  scaleControlContainer: {
+  controls: {
     position: 'absolute',
     top: 0,
     right: 0,
     padding: theme.spacing( 1 ),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-end',
+    '& > *:not( :last-child )': {
+      marginBottom: theme.spacing( 1 ),
+    },
   },
 } ) );
 
@@ -83,16 +90,35 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
   const styles = useStyles( { nodeRadius } );
 
   const containerRef = useRef<HTMLDivElement | null>( null );
+  const draggingBackgroundRef = useRef( false );
   const draggingNodeRef = useRef<NodeDatum | null>( null );
   const firstMoveRef = useRef( true );
   const movedRef = useRef( false );
 
-  const [ scale, setScale ] = useState( 1.0 );
+  const [ scale, setScale ] = useState( 0.5 );
+  const [ translation, setTranslation ] = useState( { x: 0, y: 0 } );
   const setScaleBounded = useCallback( ( newScale: number ) => setScale( Math.max( 0.1, Math.round( ( newScale ) * 100 ) / 100 ) ), [] );
+
+  const onResetTranslation = useCallback( () =>
+  {
+    setTranslation( { x: 0, y: 0 } );
+  }, [] );
+
+  const onBackgroundMouseDown = useCallback( () =>
+  {
+    draggingNodeRef.current = null;
+    draggingBackgroundRef.current = true;
+    firstMoveRef.current = true;
+    movedRef.current = false;
+  }, [] );
 
   const onNodeMouseDown = ( node: NodeDatum, e: React.MouseEvent<HTMLElement> ) =>
   {
+    e.preventDefault();
+    e.stopPropagation();
+
     draggingNodeRef.current = node;
+    draggingBackgroundRef.current = false;
     firstMoveRef.current = true;
     movedRef.current = false;
   };
@@ -101,37 +127,51 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
   {
     const onMouseMove = ( e: MouseEvent ) =>
     {
-      if( !containerRef.current )
+      if( draggingBackgroundRef.current )
       {
-        console.error( 'No container ref on mousemove.' );
-        return;
-      }
+        const movementX = e.movementX;
+        const movementY = e.movementY;
 
-      if( !draggingNodeRef.current )
+        setTranslation( ( { x, y } ) => ( {
+          x: x + movementX,
+          y: y + movementY,
+        } ) );
+      }
+      else
       {
-        return;
+
+        if( !containerRef.current )
+        {
+          console.error( 'No container ref on mousemove.' );
+          return;
+        }
+
+        if( !draggingNodeRef.current )
+        {
+          return;
+        }
+
+        const { left, top, width, height } = containerRef.current.getBoundingClientRect();
+
+        const x = ( e.clientX - left - width / 2 - translation.x ) / scale;
+        const y = ( e.clientY - top - height / 2 - translation.y ) / scale;
+
+        if( firstMoveRef.current )
+        {
+          firstMoveRef.current = false;
+          return;
+        }
+
+        movedRef.current = true;
+        onNodeDrag( draggingNodeRef.current, x, y );
       }
-
-      const { left, top, width, height } = containerRef.current.getBoundingClientRect();
-
-      const x = ( e.clientX - left - width / 2 ) / scale;
-      const y = ( e.clientY - top - height / 2 ) / scale;
-
-      if( firstMoveRef.current )
-      {
-        firstMoveRef.current = false;
-        return;
-      }
-
-      movedRef.current = true;
-      onNodeDrag( draggingNodeRef.current, x, y );
     };
 
     window.addEventListener( 'mousemove', onMouseMove );
 
     return () => window.removeEventListener( 'mousemove', onMouseMove );
 
-  }, [ onNodeDrag, scale ] );
+  }, [ onNodeDrag, scale, translation ] );
 
   useEffect( () =>
   {
@@ -144,6 +184,7 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
       }
 
       draggingNodeRef.current = null;
+      draggingBackgroundRef.current = false;
       firstMoveRef.current = true;
     };
 
@@ -165,11 +206,12 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
     <div
       ref={containerRef}
       className={styles.root}
+      onMouseDown={onBackgroundMouseDown}
     >
       <div
         className={styles.graph}
         style={{
-          transform: `scale( ${scale} )`,
+          transform: `translate( ${translation.x}px, ${translation.y}px ) scale( ${scale} )`,
         }}
       >
         {links.map( ( link ) =>
@@ -215,10 +257,14 @@ const HtmlGraph: React.FC<Props> = ( { nodes, links, nodeRadius, onNodeDrag, onN
           </div>
         ) )}
       </div>
-      <div className={styles.scaleControlContainer}>
+      <div className={styles.controls}>
         <ScaleControl
           scale={scale}
           setScale={setScaleBounded}
+        />
+        <TranslationControl
+          centered={translation.x === 0 && translation.y === 0}
+          onResetTranslation={onResetTranslation}
         />
       </div>
     </div>
